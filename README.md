@@ -8,3 +8,6 @@
 | 171044095 | Djuro Radusinovic | Devoloper (Backend) 
 | 1801042667 | Mehdi Kurtcebe | Devoloper (Backend)
 | 1801042605 | Muhammed Emin Karakaya | Frontend, Testing and Quality control
+
+### Brief Description
+- Details of this project can be found on the wiki [Home Page](https://github.com/akifkartal03/sandwich-recipe-app/wiki).
