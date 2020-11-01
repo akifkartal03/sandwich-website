@@ -2,6 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
+const categoriesRouter = require("./routes/categories");
+const ingredientsRouter = require("./routes/ingredients");
+const recipesRouter = require("./routes/recipes");
+
 require("dotenv").config();
 
 const app = express();
@@ -20,6 +24,10 @@ const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
+
+app.use("/categories", categoriesRouter);
+app.use("/ingredients", ingredientsRouter);
+app.use("/recipes", recipesRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
