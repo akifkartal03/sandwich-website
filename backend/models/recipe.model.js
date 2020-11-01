@@ -7,8 +7,8 @@ const recipeSchema = new Schema(
   {
     name: { type: String, required: true },
     directions: { type: String, required: true },
-    ingredients: { type: [Ingredient], required: true },
-    category: { type: Category, required: true },
+    ingredients: { type: [Ingredient.schema], required: true },
+    category: { type: Category.schema, required: true },
   },
   {
     timestamps: true,
