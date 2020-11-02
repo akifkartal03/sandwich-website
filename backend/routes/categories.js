@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { response } = require("express");
 let Category = require("../models/category.model");
 
 router.route("/").get((req, res) => {
@@ -24,7 +25,7 @@ router.route("/:id").get((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/:id").delete((req, res) => {
+router.route("/delete/:id").delete((req, res) => {
   Category.findByIdAndDelete(req.params.id)
     .then(() => res.json("Category deleted."))
     .catch((err) => res.status(400).json("Error: " + err));
