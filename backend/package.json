@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r ./test/*"
+    "test": "mocha -r esm --timeout 15000"
   },
   "keywords": [],
   "author": "",
@@ -12,12 +12,14 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "mongoose": "^5.10.11"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "mocha": "^8.2.0"
+    "mocha": "^8.2.0",
+    "supertest": "^6.0.0"
   }
 }
