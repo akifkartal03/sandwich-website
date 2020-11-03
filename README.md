@@ -1,5 +1,5 @@
 # sandwich-recipe-recommendation-website
-#### CSE343 Software Engineering Course Fall 2020 Term Project
+#### Incomplete codes will not be included in master branch check [development branch.](https://github.com/akifkartal03/sandwich-recipe-app/tree/dev)
 ## Team Members
 | Number | Name | Role
 | --- | --- | --- |
