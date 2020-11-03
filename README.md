@@ -1,4 +1,4 @@
-# sandwich-recipe-finder-website
+# sandwich-recipe-recommendation-website
 #### CSE343 Software Engineering Course Fall 2020 Term Project
 ## Team Members
 | Number | Name | Role
@@ -11,3 +11,6 @@
 
 ### Brief Description
 - Details of this project can be found on the wiki [Home Page](https://github.com/akifkartal03/sandwich-recipe-app/wiki).
+
+### Test
+- Details of unit test can be found on the wiki [Unit Test](https://github.com/akifkartal03/sandwich-recipe-app/wiki/Unit-Test).
