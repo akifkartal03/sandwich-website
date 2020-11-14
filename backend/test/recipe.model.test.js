@@ -23,6 +23,7 @@ describe("Sandwich API endpoint tests: recipe", function () {
 
   it("add a recipe", function (done) {
     data = {
+    img: "https://i.ibb.co/9vbDqnr/2774889-810x458.jpg",   
 	  name: "Poğaça",
 	  directions: "Hamur yap, pişir",
 	  ingredients: [{ name: "Un" }, { name: "Su" }, { name: "Kabartma Tozu" }],
@@ -56,6 +57,7 @@ describe("Sandwich API endpoint tests: recipe", function () {
 
   it("update a recipe", function (done) {
     data = {
+    img: "https://i.ibb.co/9vbDqnr/2774889-810x458.jpg",  
 	  name: "Poğaça",
 	  directions: "Hamur yap, fırında pişir",
 	  ingredients: [{ name: "Un" }, { name: "Su" }, { name: "Kabartma Tozu" }],
