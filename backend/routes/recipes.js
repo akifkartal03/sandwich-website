@@ -8,12 +8,13 @@ router.route("/").get((req, res) => {
 });
 
 router.route("/add").post((req, res) => {
+  const img = req.body.img;
   const name = req.body.name;
   const directions = req.body.directions;
   const ingredients = req.body.ingredients;
   const category = req.body.category;
 
-  const newRecipe = new Recipe({ name, directions, ingredients, category });
+  const newRecipe = new Recipe({ img, name, directions, ingredients, category });
 
   newRecipe
     .save()
@@ -36,6 +37,7 @@ router.route("/delete/:id").delete((req, res) => {
 router.route("/update/:id").post((req, res) => {
   Recipe.findById(req.params.id)
     .then((recipes) => {
+      recipes.img = req.body.img;
       recipes.name = req.body.name;
       recipes.directions = req.body.directions;
       recipes.ingredients = req.body.ingredients;
