@@ -9,13 +9,12 @@ const Footer = props => {
                     <a href="#">Back to top</a>
                 </p>
                 <p>
-                    Album example is &copy; Bootstrap, but please download and
-                    customize it for yourself!
+                    Copyright to &copy; Sandwich
                 </p>
                 <p>
-                    This reactstrap adaptation available for download{' '}
-                    <a href="https://github.com/nas5w/react-bootstrap-album-template">
-                        here
+                    Project's Github available on:
+                    <a href="https://github.com/akifkartal03/sandwich-recipe-app">
+                        Visit our github page
                     </a>
                     .
                 </p>
