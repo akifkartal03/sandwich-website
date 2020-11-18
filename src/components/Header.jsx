@@ -17,32 +17,14 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                     <Collapse isOpen={!collapsed} navbar>
                         <Row>
                             <Col sm="8" md="7" className="py-4">
-                                <h4 className="text-white">About</h4>
+                                <h4 className="text-white">Sandwich</h4>
                                 <p className="text-muted">
-                                    Add some information about the album below,
-                                    the author, or any other background context.
-                                    Make it a few sentences long so folks can
-                                    pick up some informative tidbits. Then, link
-                                    them off to some social networking sites or
-                                    contact information.
+                                    Welcome to Sandwich Recipe Website Project!
                                 </p>
                             </Col>
                             <Col sm="4" md={{ offset: 1 }} className="py-4">
                                 <h4 className="text-white">Contact</h4>
-                                <ul className="list-unstyled">
-                                    {socialLinks.map((link, key) => {
-                                        return (
-                                            <li key={key}>
-                                                <a
-                                                    href={link.url}
-                                                    className="text-white"
-                                                >
-                                                    {link.text}
-                                                </a>
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
+                                <p className="text-white">Dissapointer Group INC.</p>
                             </Col>
                         </Row>
                     </Collapse>
@@ -65,7 +47,11 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
                             <circle cx="12" cy="13" r="4" />
                         </svg>
-                        <strong>Album</strong>
+
+                        <a to="/react"><strong>Logo</strong></a>
+                        <a to="/react"><strong>Homepage</strong></a>
+                        <a to="/react"><strong>All Recipes</strong></a>
+            
                     </NavbarBrand>
                     <NavbarToggler onClick={toggleNavbar} className="mr-2" />
                 </Container>

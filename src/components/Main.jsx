@@ -1,27 +1,33 @@
 import React from 'react';
-import { Container } from 'reactstrap';
+import Album from './Album';
+import { Button, Container, Jumbotron, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
-const Footer = props => {
+const Main = ({ album }) => {
     return (
-        <footer className="text-muted">
-            <Container>
-                <p className="float-right">
-                    <a href="#">Back to top</a>
-                </p>
-                <p>
-                    Album example is &copy; Bootstrap, but please download and
-                    customize it for yourself!
-                </p>
-                <p>
-                    This reactstrap adaptation available for download{' '}
-                    <a href="https://github.com/nas5w/react-bootstrap-album-template">
-                        here
-                    </a>
-                    .
-                </p>
-            </Container>
-        </footer>
+        <main role="main">
+            <Jumbotron className="text-center">
+                <Container>
+                    <h1 className="jumbotron-heading">Sandwich Search </h1>
+                    <p className="lead text-muted">
+                        Enter ingredients you want to search for
+                    </p>
+                    <p>
+                        <InputGroup>
+                            <InputGroupAddon addonType="prepend"><Button>Search</Button></InputGroupAddon>
+                            <Input />
+                        </InputGroup>
+                        {/* <Button color="primary" className="mx-1 my-2">
+                            Main call to action
+                        </Button>
+                        <Button color="secondary" className="my-2">
+                            Secondary action
+                        </Button> */}
+                    </p>
+                </Container>
+            </Jumbotron>
+            <Album album={album} />
+        </main>
     );
 };
 
-export default Footer;
+export default Main;

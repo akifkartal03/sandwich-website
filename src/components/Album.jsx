@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Button,
-    ButtonGroup,
+    // ButtonGroup,
     Card,
     CardImg,
     CardText,
@@ -27,9 +27,20 @@ const Album = ({ album }) => {
                                         alt={item.altText}
                                     />
                                     <CardBody>
+                                        {/*THERE WILL AN item OBJECT IN DATABASE AND IT WILL BE PRINTED IN HERE*/}
                                         <CardText>{item.description}</CardText>
+                                        
                                         <div className="d-flex justify-content-between align-items-center">
-                                            <ButtonGroup>
+                                                <a href="https://www.google.com">
+                                                    <Button
+                                                    outline
+                                                    color="secondary"
+                                                    size="sm"
+                                                >
+                                                    Cook Now!
+                                                </Button>
+                                                </a> 
+                                            {/* <ButtonGroup>
                                                 <Button
                                                     outline
                                                     color="secondary"
@@ -45,9 +56,16 @@ const Album = ({ album }) => {
                                                     Edit
                                                 </Button>
                                             </ButtonGroup>
+                                             */}
+                                            
+                                            
+                                            
+{/*                                             
                                             <small className="text-muted">
                                                 {item.time}
-                                            </small>
+                                            </small> */}
+
+
                                         </div>
                                     </CardBody>
                                 </Card>
