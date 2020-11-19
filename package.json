@@ -1,12 +1,16 @@
 {
-  "name": "react-bootstrap-album-template",
-  "version": "0.1.0",
+  "name": "sandwich-recipe-recommendation-website",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "react": "^16.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.15",
+    "react": "^16.14.0",
     "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.7.0",
+    "react-dom": "^16.14.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.2",
@@ -26,5 +30,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-refresh": "^0.9.0"
+  }
 }

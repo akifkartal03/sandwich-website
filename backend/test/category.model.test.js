@@ -44,8 +44,7 @@ describe("Sandwich API endpoint tests: category", function () {
       if (err) {
         return done(err);
       }
-      id = res.body[0]._id;
-      expect(res.body.length).to.equal(1);
+      expect(res.body.length).to.equal(14);
       expect(res.body[0].name).to.equal("Beef");
       done();
     });
