@@ -5,11 +5,12 @@ const Category = require("./category.model");
 
 const recipeSchema = new Schema(
   {
-    img: { type: String, required: true },
+    imgURL: { type: String, required: true },
     name: { type: String, required: true },
     directions: { type: String, required: true },
-    ingredients: { type: [Ingredient.schema], required: true },
-    category: { type: Category.schema, required: true },
+    ingredients: { type: [String], required: true },
+    ingredients_quantities: { type: [String], required: true },
+    category: { type: String, required: true },
   },
   {
     timestamps: true,

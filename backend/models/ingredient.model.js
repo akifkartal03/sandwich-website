@@ -9,10 +9,6 @@ const ingredientSchema = new Schema(
       unique: true,
       trim: true,
     },
-    quantity: {
-      type: String,
-      trim: true,
-    },
   },
   {
     timestamps: true,
