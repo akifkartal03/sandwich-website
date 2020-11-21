@@ -1,5 +1,5 @@
 import React from 'react';
-import Album from './Album';
+import Album from './Recipies';
 import { Button, Container, Jumbotron, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
 const Main = ({ album }) => {

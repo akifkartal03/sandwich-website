@@ -1,9 +1,9 @@
-import React from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import albumItems from './data/album';
-import socialLinks from './data/socialLinks';
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/HomePage/Header';
+import Main from './components/HomePage/Main';
+import Footer from './components/HomePage/Footer';
+
 import './App.css';
 
 export default class Example extends React.Component {
@@ -13,14 +13,12 @@ export default class Example extends React.Component {
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
             collapsed: true,
-            socialLinks: socialLinks,
-            album: albumItems
         };
     }
 
     toggleNavbar() {
         this.setState({
-            collapsed: !this.state.collapsed
+            collapsed: !this.state.collapsed,
         });
     }
     render() {
@@ -29,7 +27,6 @@ export default class Example extends React.Component {
                 <Header
                     collapsed={this.state.collapsed}
                     toggleNavbar={this.toggleNavbar}
-                    socialLinks={this.state.socialLinks}
                 />
                 <Main album={this.state.album} />
                 <Footer />

@@ -10,7 +10,7 @@ const recipeSchema = new Schema(
     directions: { type: String, required: true },
     ingredients: { type: [String], required: true },
     ingredients_quantities: { type: [String], required: true },
-    category: { type: String, required: true },
+    category: { type: [String], required: true },
   },
   {
     timestamps: true,
