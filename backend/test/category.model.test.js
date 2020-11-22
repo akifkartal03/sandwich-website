@@ -8,7 +8,7 @@ let id;
 const uri = process.env.ATLAS_URI;
 
 describe("Sandwich API endpoint tests: category", function () {
-  //open database
+  //connect to the database
   before(function (done) {
     mongoose.connect(
       uri,
@@ -21,7 +21,7 @@ describe("Sandwich API endpoint tests: category", function () {
     );
   });
 
-  /*it("add a category", function (done) {
+  it("add a category", function (done) {
     data = {
       name: "İçecekler",
     };
@@ -35,7 +35,7 @@ describe("Sandwich API endpoint tests: category", function () {
       expect(res.body).to.equal("Category added!");
       done();
     });
-  });*/
+  });
 
   it("gets all categories", function (done) {
     const res = request(App).get("/categories");
@@ -50,7 +50,7 @@ describe("Sandwich API endpoint tests: category", function () {
     });
   });
 
-  /*it("updates a category", function (done) {
+  it("updates a category", function (done) {
     data = {
       name: "Sıcak İçecekler",
     };
@@ -76,7 +76,7 @@ describe("Sandwich API endpoint tests: category", function () {
       expect(res.body).to.equal("Category deleted.");
       done();
     });
-  });*/
+  });
   
   //After all tests are finished drop database and close connection
   after(function (done) {
