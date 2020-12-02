@@ -1,6 +1,7 @@
 import React from 'react';
 import Album from './Recipies';
 import { Button, Container, Jumbotron, InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 const Main = ({ album }) => {
     return (
@@ -13,7 +14,7 @@ const Main = ({ album }) => {
                     </p>
                     <p>
                         <InputGroup>
-                            <InputGroupAddon addonType="prepend"><Button>Search</Button></InputGroupAddon>
+                            <InputGroupAddon addonType="prepend"><Button tag = {Link} to="/allrecipespage">Search</Button></InputGroupAddon>
                             <Input />
                         </InputGroup>
                         {/* <Button color="primary" className="mx-1 my-2">

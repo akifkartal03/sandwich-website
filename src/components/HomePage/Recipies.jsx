@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import RecipieDataService from '../../services/RecipieService';
-import { Link } from 'react-router-dom';
 import {
     Button,
     // ButtonGroup,
@@ -64,7 +63,7 @@ const Album = ({ album }) => {
 
                                         <div className="d-flex justify-content-between align-items-center">
                                             <Button
-                                                href="#"
+                                                href={`/recipe/${recipie._id}`}
                                                 variant = "outline-dark"
                                                 color="secondary"
                                                 size="lg"

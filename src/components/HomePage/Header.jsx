@@ -9,13 +9,15 @@ import {
     NavLink,
     Row
 } from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
+    
     return (
         <header>
             <Navbar color="dark" dark>
                 <Container>
-                    <Collapse isOpen={!collapsed} navbar>
+                    {/* <Collapse isOpen={!collapsed} navbar>
                         <Row>
                             <Col sm="8" md="7" className="py-4">
                                 <h4 className="text-white">Sandwich</h4>
@@ -30,7 +32,7 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                                 </p>
                             </Col>
                         </Row>
-                    </Collapse>
+                    </Collapse> */}
                     <NavbarBrand
                         href="/"
                         className="d-flex align-items-center mr-auto"
@@ -47,7 +49,7 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                             strokeLinejoin="round"
                             className="mr-2"
                         />
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand">
                             <img
                                 src="https://i.ibb.co/12pWKWZ/Sandwich2.png"
                                 width="70"
@@ -57,10 +59,11 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                                 loading="lazy"
                             />
                         </a>
-                        <NavLink style={{color: 'white'}} href="#">Home</NavLink>
-                        <NavLink style={{color: 'white'}} href="#">All Recipies</NavLink>
+                        <NavLink style={{color: 'white'}} tag={Link} to="/"> Home </NavLink>
+                        <NavLink style={{color: 'white'}} tag={Link} to="/allrecipespage"> All Recipies </NavLink>
+
                     </NavbarBrand>
-                    <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+                    {/* <NavbarToggler onClick={toggleNavbar} className="mr-2" /> */}
                 </Container>
             </Navbar>
         </header>
