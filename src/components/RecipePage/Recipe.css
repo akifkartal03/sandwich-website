@@ -9,12 +9,19 @@
     text-decoration:none;
     width:100%;
   }
+  .Recipe-directions{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+  }
   .row {
     float: left;
   }
   .Recipe {
       align-self: flex-start;
       float:left;
+      margin-left: 5%;
+      margin-right: 5%;
       text-align: center;
       padding:10px;
   }
@@ -25,32 +32,33 @@
       text-align: left;
       justify-content: space-evenly;
   }
-  #gorsel {
+  #image {
     height: 300px;
       cursor: pointer;}
-  #gorsel img{
+  #image img{
       border: 10px solid #f6f7f4;
       -webkit-box-shadow: 0px 0px 10px #000000;
       box-shadow: 0px 0px 10px #000000;
       transition:1s;
   }
-  #gorsel img:hover{
+  #image img:hover{
       transform: scale(1.5);
       box-shadow: 0px 0px 10px #000000;
       border: 5px solid #574d4d;
   }
+
   
-  #gorselsmall {
+  #imagesmall {
       height: 200px;
       cursor: pointer;}
   
-  #gorselsmall img{  
+  #imagesmall img{  
       border: 10px solid #f6f7f4;
       -webkit-box-shadow: 0px 0px 5px lightgray;
       box-shadow: 0px 0px 5px gray;
       transition:1s;
   }
-  #gorselsmall img:hover{
+  #imagesmall img:hover{
       transform: scale(1.2);
       box-shadow: 0px 0px 10px #000000;
       border: 5px solid #574d4d;
