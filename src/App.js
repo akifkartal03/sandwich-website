@@ -1,36 +1,29 @@
 import React, { Component } from 'react';
-
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './components/HomePage/Main';
 import Footer from './components/HomePage/Footer';
-
-import './App.css';
 import Header from './components/HomePage/Header';
+import './BrandFilter.css';
+import './App.css';
 
+import AllRecipies from './components/AllRecipesPage/AllRecipies';
+import Recipe from './components/RecipePage/Recipe';
 export default class Example extends React.Component {
-    // constructor(props) {
-    //     super(props);
-
-    //     this.toggleNavbar = this.toggleNavbar.bind(this);
-    //     this.state = {
-    //         collapsed: true,
-    //     };
-    // }
-
-    // toggleNavbar() {
-    //     this.setState({
-    //         collapsed: !this.state.collapsed,
-    //     });
-    // }
     render() {
         return (
             <div>
-                {/* <Header 
-                    collapsed={this.state.collapsed}
-                    toggleNavbar={this.toggleNavbar}
-                /> */}
-                <Main/>
-                {/* <Footer /> */}
+                <Header />
+                <Switch>
+                    <Route path="/" exact component={Main} />
+                    <Route path="/recipe/:id" exact component={Recipe} />
+                    <Route
+                        path="/allrecipespage"
+                        component={AllRecipies}
+                    />
+                </Switch>
+                <Footer />
             </div>
         );
     }
