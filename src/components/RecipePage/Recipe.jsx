@@ -81,7 +81,7 @@ const Recipe = props => {
         <div className="App">
             <div className="Recipe">
                 <div>
-                    <elemnt id="gorsel">
+                    <elemnt id="image">
                         <img src={recipe.imgURL} width="300px" height="300px" />
                     </elemnt>
                 </div>
@@ -109,17 +109,17 @@ const Recipe = props => {
                 <p>{recipe.directions}</p>
             </div>
             <div className="Recipe">
-                <div id="gorselsmall">
+                <div id="imagesmall">
                     <a href={`/recipe/${link1}`}>
                         <img src={img1} height="100" width="100" />
                     </a>
                 </div>
-                <div id="gorselsmall">
+                <div id="imagesmall">
                     <a href={`/recipe/${link2}`}>
                         <img src={img2} height="100" width="100" />
                     </a>
                 </div>
-                <div id="gorselsmall">
+                <div id="imagesmall">
                     <a href={`/recipe/${link3}`}>
                         <img src={img3} height="100" width="100" />
                     </a>
