@@ -14,11 +14,11 @@ const Recipe = props => {
     const [currentRecipie, setCurrentRecipie] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(-1);
 
-    console.log(all_recipies)
+    console.log(all_recipies);
 
     useEffect(() => {
         retrieveRecipies();
-        retrieveRecipiesAll()
+        retrieveRecipiesAll();
     }, []);
 
     const retrieveRecipies = () => {
@@ -43,23 +43,39 @@ const Recipe = props => {
             });
     };
 
-    var random = parseInt(Math.random()*all_recipies.length)
-    var img1,img2,img3
-    var link1, link2, link3
-    {if (all_recipies  && all_recipies.length > 0 && all_recipies[random] && all_recipies[(random+1)%all_recipies.length] ){
-        img1 = all_recipies[random].imgURL
-        link1 = all_recipies[random]._id
-        random += 1
-        if (all_recipies  && all_recipies.length > 0 && all_recipies[random] && all_recipies[(random+1)%all_recipies.length] ){
-        img2 = all_recipies[random].imgURL
-        link2 = all_recipies[random]._id
+    var random = parseInt(Math.random() * all_recipies.length);
+    var img1, img2, img3;
+    var link1, link2, link3;
+    {
+        if (
+            all_recipies &&
+            all_recipies.length > 0 &&
+            all_recipies[random] &&
+            all_recipies[(random + 1) % all_recipies.length]
+        ) {
+            img1 = all_recipies[random].imgURL;
+            link1 = all_recipies[random]._id;
+            random = (random+1)%all_recipies.length;
+            if (
+                all_recipies &&
+                all_recipies.length > 0 &&
+                all_recipies[random] &&
+                all_recipies[(random + 1) % all_recipies.length]
+            ) {
+                img2 = all_recipies[random].imgURL;
+                link2 = all_recipies[random]._id;
+            }
+            random = (random+1)%all_recipies.length;
+            if (
+                all_recipies &&
+                all_recipies.length > 0 &&
+                all_recipies[random] &&
+                all_recipies[(random + 1) % all_recipies.length]
+            ) {
+                img3 = all_recipies[random].imgURL;
+                link3 = all_recipies[random]._id;
+            }
         }
-        random += 1
-        if (all_recipies  && all_recipies.length > 0 && all_recipies[random] && all_recipies[(random+1)%all_recipies.length] ){
-        img3 = all_recipies[random].imgURL
-        link3 = all_recipies[random]._id
-        }
-        }   
     }
     return (
         <div className="App">

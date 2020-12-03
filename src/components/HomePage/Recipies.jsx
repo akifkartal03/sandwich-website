@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import RecipieDataService from '../../services/RecipieService';
 import {
     Button,
-    // ButtonGroup,
     Card,
     CardImg,
     CardText,
@@ -12,7 +11,7 @@ import {
     Row
 } from 'reactstrap';
 
-const Album = ({ album }) => {
+const Recipies = () => {
     const [recipies, setRecipies] = useState([]);
     const [currentRecipie, setCurrentRecipie] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(-1);
@@ -83,4 +82,4 @@ const Album = ({ album }) => {
     );
 };
 
-export default Album;
+export default Recipies;

@@ -22,15 +22,15 @@ const Album = ({ recipies }) => {
                                         top
                                         width="180" 
                                         height="250"
-                                        src="https://i.ibb.co/x6ZdLxZ/Sandwich.png"
+                                        src={recipie.imgURL}
                                     />
                                     <CardBody className="text-center">
                                         {/*THERE WILL AN item OBJECT IN DATABASE AND IT WILL BE PRINTED IN HERE*/}
-                                        <CardText><strong >Sandwich</strong></CardText>
+                                        <CardText><strong >{recipie.name}</strong></CardText>
 
                                         <div className="d-flex justify-content-between align-items-center">
                                             <Button
-                                                href="#"
+                                                href={`/recipe/${recipie._id}`}
                                                 variant = "outline-dark"
                                                 color="secondary"
                                                 size="lg"
