@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import * as serviceWorker from './serviceWorker';
-import AllRecipes from './components/AllRecipesPage/AllRecipes'
+import AllRecipies from './components/AllRecipesPage/AllRecipies'
 import Recipe from './components/RecipePage/Recipe';
 
 import Footer from './components/HomePage/Footer';
@@ -18,7 +18,7 @@ const routing = (
         <Header/>
         <Switch>
             <Route path="/" exact component={App}/>
-            <Route path="/allrecipespage" exact component={AllRecipes}/>
+            <Route path="/allrecipespage" exact component={AllRecipies}/>
             <Route path="/recipe/:id" exact component={Recipe}/>
         </Switch>
         <Footer />
