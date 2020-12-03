@@ -3,7 +3,9 @@ import http from "../http-common";
 const getAll = () => {
   return http.get("/recipes");
 };
-
+const getCategories = () => {
+  return http.get("/categories");
+};
 const get = id => {
   return http.get(`/recipes/${id}`);
 };
@@ -35,5 +37,6 @@ export default {
   update,
   remove,
   removeAll,
-  findByTitle
+  findByTitle,
+  getCategories
 };
