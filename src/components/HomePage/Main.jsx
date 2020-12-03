@@ -1,9 +1,15 @@
-import React from 'react';
-import Album from './Recipies';
+
+import React, { useState, useEffect } from 'react';
+import Recipies from './Recipies';
 import { Button, Container, Jumbotron, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import {Link} from 'react-router-dom'
 
-const Main = ({ album }) => {
+const Main = () => {
+    const [user_input, setInput] = useState("");
+    const onChange = e => {
+        setInput(e)
+    };
+    console.log(user_input)
     return (
         <main role="main">
             <Jumbotron className="text-center">
@@ -14,8 +20,8 @@ const Main = ({ album }) => {
                     </p>
                     <p>
                         <InputGroup>
-                            <InputGroupAddon addonType="prepend"><Button tag = {Link} to="/allrecipespage">Search</Button></InputGroupAddon>
-                            <Input />
+                            <InputGroupAddon addonType="prepend"><Button tag = {Link} to={`/allrecipespage/${user_input}`}>Search</Button></InputGroupAddon>
+                            <Input onChange={(e) => onChange(`${e.target.value}`)} />
                         </InputGroup>
                         {/* <Button color="primary" className="mx-1 my-2">
                             Main call to action
@@ -26,7 +32,7 @@ const Main = ({ album }) => {
                     </p>
                 </Container>
             </Jumbotron>
-            <Album album={album} />
+            <Recipies />
         </main>
     );
 };

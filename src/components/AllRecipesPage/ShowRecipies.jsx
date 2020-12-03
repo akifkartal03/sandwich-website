@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import RecipieDataService from '../../services/RecipieService';
+import React from 'react';
 import {
     Button,
     Card,
@@ -10,43 +9,12 @@ import {
     Container,
     Row
 } from 'reactstrap';
-
-const Recipies = () => {
-    const [recipies, setRecipies] = useState([]);
-    const [currentRecipie, setCurrentRecipie] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(-1);
-
-    useEffect(() => {
-        retrieveRecipies();
-    }, []);
-
-    const retrieveRecipies = () => {
-        RecipieDataService.getAll()
-            .then(response => {
-                setRecipies(response.data);
-                console.log(response.data);
-            })
-            .catch(e => {
-                console.log(e);
-            });
-    };
-
-    const refreshList = () => {
-        retrieveRecipies();
-        setCurrentRecipie(null);
-        setCurrentIndex(-1);
-    };
-
-    const setActiveRecipie = (Recipie, index) => {
-        setCurrentRecipie(Recipie);
-        setCurrentIndex(index);
-    };
-
+const Album = ({ recipies }) => {
     return (
         <div className="recipies py-5 bg-light">
             <Container>
                 <Row>
-                    {recipies.slice(0, 6).map((recipie, index) => {
+                    {recipies.map((recipie, index) => {
                         return (
                             <Col md="4" key={index}>
                                 <Card className="mb-4 box-shadow">
@@ -82,4 +50,4 @@ const Recipies = () => {
     );
 };
 
-export default Recipies;
+export default Album;
