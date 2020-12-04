@@ -9,14 +9,17 @@ import {
     Container,
     Row
 } from 'reactstrap';
-const Album = ({ recipies }) => {
+const Recipies = ({ recipies }) => {
+    let len =4;
+    if(recipies.length===1 && recipies[0]._id === "5fb967aed21567abd722a076")
+        len =14;
     return (
-        <div className="recipies py-5 bg-light">
+        <div className="test">  
             <Container>
                 <Row>
                     {recipies.map((recipie, index) => {
                         return (
-                            <Col md="4" key={index}>
+                            <Col md={len} key={index}>
                                 <Card className="mb-4 box-shadow">
                                     <CardImg
                                         top
@@ -50,4 +53,4 @@ const Album = ({ recipies }) => {
     );
 };
 
-export default Album;
+export default Recipies;

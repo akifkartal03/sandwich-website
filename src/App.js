@@ -7,7 +7,7 @@ import Footer from './components/HomePage/Footer';
 import Header from './components/HomePage/Header';
 import './BrandFilter.css';
 import './App.css';
-import AllRecipies from './components/AllRecipesPage/AllRecipies';
+import AllRecipies from './components/AllRecipesPage/All';
 import Recipe from './components/RecipePage/Recipe';
 export default class Example extends React.Component {
     render() {

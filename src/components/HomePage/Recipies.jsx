@@ -43,7 +43,7 @@ const Recipies = () => {
     };
 
     return (
-        <div className="recipies py-5 bg-light">
+        <div className="recipies">
             <Container>
                 <Row>
                     {recipies.slice(0, 6).map((recipie, index) => {

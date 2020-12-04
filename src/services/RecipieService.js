@@ -26,8 +26,8 @@ const removeAll = () => {
   return http.delete(`/recipes`);
 };
 
-const findByTitle = title => {
-  return http.get(`/recipes?title=${title}`);
+const findById = id => {
+  return http.get(`/recipes?_id=${id}`);
 };
 
 export default {
@@ -37,6 +37,6 @@ export default {
   update,
   remove,
   removeAll,
-  findByTitle,
+  findById,
   getCategories
 };
