@@ -57,7 +57,7 @@ const Recipe = props => {
             img1 = all_recipies[random].imgURL;
             link1 = all_recipies[random]._id;
             name1 = all_recipies[random].name;
-            random = (random+1)%all_recipies.length;
+            random = (random + 1) % all_recipies.length;
             if (
                 all_recipies &&
                 all_recipies.length > 0 &&
@@ -68,7 +68,7 @@ const Recipe = props => {
                 link2 = all_recipies[random]._id;
                 name2 = all_recipies[random].name;
             }
-            random = (random+1)%all_recipies.length;
+            random = (random + 1) % all_recipies.length;
             if (
                 all_recipies &&
                 all_recipies.length > 0 &&
@@ -108,10 +108,19 @@ const Recipe = props => {
                 </div>
             </div>
             <div className="Recipe-directions">
-                <h3 style={{ color: '#af1507', fontWeight: 'bolder' }}> Directions </h3>
+                <h3 style={{ color: '#af1507', fontWeight: 'bolder' }}>
+                    {' '}
+                    Directions{' '}
+                </h3>
                 <p>{recipe.directions}</p>
             </div>
-            <div className="Recipe">
+            <div className="SmallRecipeies">
+                <div className="title">
+                    <h3 style={{fontWeight: 'bolder' }}>
+                        {' '}
+                        Browse More{' '}
+                    </h3>
+                </div>
                 <div id="imagesmall">
                     <a href={`/recipe/${link1}`}>
                         <img src={img1} height="150px" width="150px" />

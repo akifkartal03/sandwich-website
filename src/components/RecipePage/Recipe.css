@@ -11,13 +11,25 @@
     
     margin-left: 2%;
     margin-right: 2%;
-    margin-top: 5%;
+    margin-top: 3%;
   }
   .Recipe-name{
     color:rgb(7, 9, 78);
     margin-bottom: 10%;
     font-weight: bolder;
 
+
+  }
+  .title{
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:20px;
+    padding-top:10px;
   }
 
   .row {
@@ -31,6 +43,15 @@
       text-align: center;
       padding:10px;
   }
+  .SmallRecipeies {
+    align-self: flex-start;
+    float:left;
+    margin-left: 5%;
+    margin-right: 3%;
+    text-align: center;
+    padding:10px;
+
+}
   .IngredientInfo{
       display:flex;
       flex-direction: row;
