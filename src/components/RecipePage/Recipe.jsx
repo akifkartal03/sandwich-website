@@ -82,14 +82,12 @@ const Recipe = props => {
             <div className="Recipe">
                 <div>
                     <elemnt id="image">
-                        <img src={recipe.imgURL} width="300px" height="300px" />
+                        <img src={recipe.imgURL} width="320px" height="320px" />
                     </elemnt>
                 </div>
                 <br />
                 <br />
-                <br />
-                <br />
-                <h3>{recipe.name}</h3>
+                <h3 className="Recipe-name">{recipe.name}</h3>
                 <div className="IngredientInfo">
                     <div>
                         {recipe.ingredients_quantities &&
@@ -105,23 +103,24 @@ const Recipe = props => {
                     </div>
                 </div>
             </div>
-            <div className="Recipe Recipe-directions">
+            <div className="Recipe-directions">
+                <h3 style={{ color: 'red', fontWeight: 'bolder' }}> Directions </h3>
                 <p>{recipe.directions}</p>
             </div>
             <div className="Recipe">
                 <div id="imagesmall">
                     <a href={`/recipe/${link1}`}>
-                        <img src={img1} height="100" width="100" />
+                        <img src={img1} height="150px" width="150px" />
                     </a>
                 </div>
                 <div id="imagesmall">
                     <a href={`/recipe/${link2}`}>
-                        <img src={img2} height="100" width="100" />
+                        <img src={img2} height="150px" width="150px" />
                     </a>
                 </div>
                 <div id="imagesmall">
                     <a href={`/recipe/${link3}`}>
-                        <img src={img3} height="100" width="100" />
+                        <img src={img3} height="150px" width="150px" />
                     </a>
                 </div>
             </div>
