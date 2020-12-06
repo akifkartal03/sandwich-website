@@ -46,7 +46,7 @@ const Recipies = () => {
         <div className="recipies">
             <Container>
                 <Row>
-                    {recipies.slice(0, 6).map((recipie, index) => {
+                    {recipies.slice(12, recipies.length).map((recipie, index) => {
                         return (
                             <Col md="4" key={index}>
                                 <Card className="mb-4 box-shadow">
