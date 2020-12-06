@@ -6,7 +6,7 @@ const Footer = (props) => {
         <footer className="text-muted">
             <Container>
                 <p className="float-right">
-                    <a href="#">Back to top</a>
+                    <a href="/">Back to top</a>
                 </p>
                 <p>Copyright to &copy; Sandwich</p>
                 <p>

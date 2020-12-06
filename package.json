@@ -12,13 +12,14 @@
     "react": "^16.14.0",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.14.0",
+    "react-responsive": "^8.2.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.2",
     "reactstrap": "^6.5.0"
   },
   "scripts": {
-    "start": "react-scripts start" ,
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

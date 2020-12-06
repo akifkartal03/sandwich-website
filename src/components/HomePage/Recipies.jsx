@@ -13,8 +13,7 @@ import {
 
 const Recipies = () => {
     const [recipies, setRecipies] = useState([]);
-    const [currentRecipie, setCurrentRecipie] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(-1);
+    
 
     useEffect(() => {
         retrieveRecipies();
@@ -29,17 +28,6 @@ const Recipies = () => {
             .catch(e => {
                 console.log(e);
             });
-    };
-
-    const refreshList = () => {
-        retrieveRecipies();
-        setCurrentRecipie(null);
-        setCurrentIndex(-1);
-    };
-
-    const setActiveRecipie = (Recipie, index) => {
-        setCurrentRecipie(Recipie);
-        setCurrentIndex(index);
     };
 
     return (

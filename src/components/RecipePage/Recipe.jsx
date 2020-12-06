@@ -1,6 +1,7 @@
 import './Recipe.css';
 import React, { useState, useEffect } from 'react';
 import RecipieDataService from '../../services/RecipieService';
+import { useMediaQuery } from 'react-responsive'
 
 const Recipe = props => {
     const id = window.location.pathname.split('/')[
@@ -11,8 +12,6 @@ const Recipe = props => {
 
     const [all_recipies, setRecipiesAll] = useState([]);
 
-    const [currentRecipie, setCurrentRecipie] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(-1);
 
     console.log(all_recipies);
 
@@ -47,7 +46,7 @@ const Recipe = props => {
     var img1, img2, img3;
     var link1, link2, link3;
     var name1, name2, name3;
-    {
+    
         if (
             all_recipies &&
             all_recipies.length > 0 &&
@@ -80,13 +79,22 @@ const Recipe = props => {
                 name3 = all_recipies[random].name;
             }
         }
+    const Desktop = ({ children }) => {
+        const isDesktop = useMediaQuery({ minWidth: 992 })
+        return isDesktop ? children : null
     }
+      const Mobile = ({ children }) => {
+        const isMobile = useMediaQuery({ maxWidth: 767 })
+        return isMobile ? children : null
+      }
+ 
     return (
         <div className="App">
+            <Desktop>
             <div className="Recipe">
                 <div>
-                    <elemnt id="image">
-                        <img src={recipe.imgURL} width="320px" height="320px" />
+                    <elemnt id="image" >
+                        <img src={recipe.imgURL} width="320px" height="320px" alt=' ' />
                     </elemnt>
                 </div>
                 <br />
@@ -123,23 +131,84 @@ const Recipe = props => {
                 </div>
                 <div id="imagesmall">
                     <a href={`/recipe/${link1}`}>
-                        <img src={img1} height="150px" width="150px" />
+                        <img src={img1} height="150px" width="150px" alt=' ' />
                         <p className="small-image-name">{name1}</p>
                     </a>
                 </div>
                 <div id="imagesmall">
                     <a href={`/recipe/${link2}`}>
-                        <img src={img2} height="150px" width="150px" />
+                        <img src={img2} height="150px" width="150px" alt=' '/>
                         <p className="small-image-name">{name2}</p>
                     </a>
                 </div>
                 <div id="imagesmall">
                     <a href={`/recipe/${link3}`}>
-                        <img src={img3} height="150px" width="150px" />
+                        <img src={img3} height="150px" width="150px"  alt=' '/>
                         <p className="small-image-name">{name3}</p>
                     </a>
                 </div>
             </div>
+            </Desktop>
+            <Mobile>
+            <div className="Recipe">
+                <div>
+                    <elemnt id="image">
+                        <img src={recipe.imgURL} width="320px" height="320px" alt=' '/>
+                    </elemnt>
+                </div>
+                <br />
+                <br />
+                <h3 className="Recipe-name">{recipe.name}</h3>
+                <div className="IngredientInfo">
+                    <div>
+                        {recipe.ingredients_quantities &&
+                            recipe.ingredients_quantities.map((data, index) => {
+                                return <div>{data}</div>;
+                            })}
+                    </div>
+                    <div>
+                        {recipe.ingredients &&
+                            recipe.ingredients.map((data, index) => {
+                                return <div>{data}</div>;
+                            })}
+                    </div>
+                </div>
+            
+            <div className="Recipe-directions">
+                <h3 style={{ color: '#af1507', fontWeight: 'bolder' }}>
+                    {' '}
+                    Directions{' '}
+                </h3>
+                <p>{recipe.directions}</p>
+            </div>
+            <div className="SmallRecipeies">
+                <div className="title">
+                    <h3 style={{fontWeight: 'bolder' }}>
+                        {' '}
+                        Browse More{' '}
+                    </h3>
+                </div>
+                <div id="imagesmall">
+                    <a href={`/recipe/${link1}`}>
+                        <img src={img1} height="150px" width="150px" alt=' '/>
+                        <p className="small-image-name">{name1}</p>
+                    </a>
+                </div>
+                <div id="imagesmall">
+                    <a href={`/recipe/${link2}`}>
+                        <img src={img2} height="150px" width="150px" alt=' '/>
+                        <p className="small-image-name">{name2}</p>
+                    </a>
+                </div>
+                <div id="imagesmall">
+                    <a href={`/recipe/${link3}`}>
+                        <img src={img3} height="150px" width="150px" alt=' '/>
+                        <p className="small-image-name">{name3}</p>
+                    </a>
+                </div>
+            </div>
+            </div>
+            </Mobile>
         </div>
     );
 };
