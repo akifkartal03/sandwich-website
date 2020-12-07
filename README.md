@@ -11,6 +11,7 @@
 
 ### Brief Description
 - Details of this project can be found on the wiki [Home Page](https://github.com/akifkartal03/sandwich-recipe-app/wiki).
-
+### System Description
+- Details of system can be found on the wiki [System Description](https://github.com/akifkartal03/sandwich-recipe-app/wiki/SystemDescriptionDoc).
 ### Test
-- Details of unit test can be found on the wiki [Unit Test](https://github.com/akifkartal03/sandwich-recipe-app/wiki/Unit-Test).
+- Details of testing can be found on the wiki [Testing](https://github.com/akifkartal03/sandwich-recipe-app/wiki/Testing).
