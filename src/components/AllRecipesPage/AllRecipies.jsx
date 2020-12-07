@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
 const Recipies = ({ brands, handleSelectBox }) => {
     return (
         <div className="col-lg-3" style={{ paddingRight: '3rem' }}>
