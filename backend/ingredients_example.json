@@ -3418,5 +3418,29 @@
         "name": "Sushi Rice",
         "strDescription": "As the dietary staple of Japan, knowing how to cook Japanese rice is an important first step to becoming a Japanese cooking master. Perfectly prepared Japanese rice should be light, fluffy, and slightly sticky when cooked",
         "strType": "Rice"
+    },
+    {
+        "idIngredient": "602",
+        "name": "Harissa"
+    },
+    {
+        "idIngredient": "603",
+        "name": "Ground Cinnamon"
+    },
+    {
+        "idIngredient": "604",
+        "name": "Red Lentils"
+    },
+    {
+        "idIngredient": "605",
+        "name": "Green Lentils"
+    },
+    {
+        "idIngredient": "606",
+        "name": "Tomato Paste"
+    },
+    {
+        "idIngredient": "607",
+        "name": "Pistachios"
     }
 ]
