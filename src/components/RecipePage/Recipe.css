@@ -1,72 +1,100 @@
-.App {
+  .App {
     text-align: center;
     display: flex;
+    font-family:Comic Sans MS, Comic Sans, cursive;
+    font-size: medium;
+    font-weight: bold;
     justify-content: space-evenly;
   }
-  ul#menu li a {
-    color:#be3f3f;
-    display:block;
-    text-decoration:none;
-    width:100%;
-  }
+ 
   .Recipe-directions{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
+    
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 3%;
   }
-  .row {
-    float: left;
+  .Recipe-name{
+    color:rgb(7, 9, 78);
+    margin-bottom: 10%;
+    font-weight: bolder;
+
+
   }
+  .title{
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:20px;
+    padding-top:10px;
+  }
+
+
   .Recipe {
       align-self: flex-start;
-      float:left;
+      float:center;
       margin-left: 5%;
       margin-right: 5%;
       text-align: center;
-      padding:10px;
+      margin-top: 3%;
   }
+  .SmallRecipeies {
+    align-self: flex-start;
+    float:center;
+    margin-left: 5%;
+    margin-right: 3%;
+    text-align: center;
+    padding:2%;
+
+}
   .IngredientInfo{
       display:flex;
       flex-direction: row;
       width:100%;
+      color: rgb(54, 45, 45);
       text-align: left;
       justify-content: space-evenly;
   }
   #image {
-    height: 300px;
+    
       cursor: pointer;}
   #image img{
-      border: 10px solid #f6f7f4;
+      /*border: 5px solid rgb(7, 6, 6);
       -webkit-box-shadow: 0px 0px 10px #000000;
       box-shadow: 0px 0px 10px #000000;
+      */
+      border-radius: 20%;
       transition:1s;
   }
   #image img:hover{
-      transform: scale(1.5);
+      transform: scale(1.3);
       box-shadow: 0px 0px 10px #000000;
-      border: 5px solid #574d4d;
+      border: 5px solid #000000;
   }
 
   
   #imagesmall {
-      height: 200px;
+      height: 20%;
       cursor: pointer;}
   
   #imagesmall img{  
-      border: 10px solid #f6f7f4;
+      /*border: 5px solid  rgb(78, 78, 78);
       -webkit-box-shadow: 0px 0px 5px lightgray;
-      box-shadow: 0px 0px 5px gray;
+      box-shadow: 0px 0px 5px gray;*/
+      border-radius: 20%;
+      
       transition:1s;
   }
   #imagesmall img:hover{
       transform: scale(1.2);
       box-shadow: 0px 0px 10px #000000;
-      border: 5px solid #574d4d;
+      border: 5px solid #000000;
   }
   
-  
-  .column {
-    float: left;
-    width: 50%;
-    padding-left: 350px;
+  .small-image-name{
+    color: rgb(7, 9, 78);
+    margin-bottom: 20%;
   }

@@ -1,13 +1,9 @@
 import React from 'react';
 import {
-    Col,
-    Collapse,
     Container,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     NavLink,
-    Row
 } from 'reactstrap';
 import {Link} from 'react-router-dom'
 
@@ -49,7 +45,7 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                             strokeLinejoin="round"
                             className="mr-2"
                         />
-                        <a class="navbar-brand">
+                        <a class="navbar-brand" href="/">
                             <img
                                 src="https://i.ibb.co/12pWKWZ/Sandwich2.png"
                                 width="70"

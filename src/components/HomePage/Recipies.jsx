@@ -13,8 +13,7 @@ import {
 
 const Recipies = () => {
     const [recipies, setRecipies] = useState([]);
-    const [currentRecipie, setCurrentRecipie] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(-1);
+    
 
     useEffect(() => {
         retrieveRecipies();
@@ -31,22 +30,11 @@ const Recipies = () => {
             });
     };
 
-    const refreshList = () => {
-        retrieveRecipies();
-        setCurrentRecipie(null);
-        setCurrentIndex(-1);
-    };
-
-    const setActiveRecipie = (Recipie, index) => {
-        setCurrentRecipie(Recipie);
-        setCurrentIndex(index);
-    };
-
     return (
         <div className="recipies">
             <Container>
                 <Row>
-                    {recipies.slice(0, 6).map((recipie, index) => {
+                    {recipies.slice(12, recipies.length).map((recipie, index) => {
                         return (
                             <Col md="4" key={index}>
                                 <Card className="mb-4 box-shadow">

@@ -38,14 +38,13 @@ class All extends Component {
     }
     handleSelectBox = e => {
         const name = e.target.name;
-        const value = e.target.checked;
         if (this.state.selectedCheckboxes.has(name)) {
             this.state.selectedCheckboxes.delete(name);
         } else {
             this.state.selectedCheckboxes.add(name);
         }
         this.setState({ selectedBoxes: this.state.selectedCheckboxes });
-        if (this.state.selectedCheckboxes.size != 0) {
+        if (this.state.selectedCheckboxes.size !== 0) {
             this.setRecipies();
         } else {
             this.setState({ current_recipies: this.state.recipies });

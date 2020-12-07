@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React from 'react';
+import {Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './components/HomePage/Main';
 import Footer from './components/HomePage/Footer';
