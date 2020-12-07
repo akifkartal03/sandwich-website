@@ -79,18 +79,18 @@ const Recipe = props => {
                 name3 = all_recipies[random].name;
             }
         }
-    const Desktop = ({ children }) => {
-        const isDesktop = useMediaQuery({ minWidth: 992 })
-        return isDesktop ? children : null
-    }
-      const Mobile = ({ children }) => {
-        const isMobile = useMediaQuery({ maxWidth: 767 })
-        return isMobile ? children : null
+    const Default = ({ children }) => {
+        const isNotMobile = useMediaQuery({ minWidth: 992 })
+        return isNotMobile ? children : null
+      }
+      const MobileorTablet = ({ children }) => {
+        const isMobileorTablet = useMediaQuery({ maxWidth: 991 })
+        return isMobileorTablet ? children : null
       }
  
     return (
         <div className="App">
-            <Desktop>
+            <Default>
             <div className="Recipe">
                 <div>
                     <elemnt id="image" >
@@ -148,8 +148,8 @@ const Recipe = props => {
                     </a>
                 </div>
             </div>
-            </Desktop>
-            <Mobile>
+            </Default>
+            <MobileorTablet>
             <div className="Recipe">
                 <div>
                     <elemnt id="image">
@@ -208,7 +208,7 @@ const Recipe = props => {
                 </div>
             </div>
             </div>
-            </Mobile>
+            </MobileorTablet>
         </div>
     );
 };

@@ -32,24 +32,22 @@
     padding-top:10px;
   }
 
-  .row {
-    float: left;
-  }
+
   .Recipe {
       align-self: flex-start;
-      float:left;
+      float:center;
       margin-left: 5%;
       margin-right: 5%;
       text-align: center;
-      padding:10px;
+      margin-top: 3%;
   }
   .SmallRecipeies {
     align-self: flex-start;
-    float:left;
+    float:center;
     margin-left: 5%;
     margin-right: 3%;
     text-align: center;
-    padding:10px;
+    padding:2%;
 
 }
   .IngredientInfo{
@@ -61,7 +59,7 @@
       justify-content: space-evenly;
   }
   #image {
-    height: 300px;
+    
       cursor: pointer;}
   #image img{
       /*border: 5px solid rgb(7, 6, 6);
@@ -96,12 +94,6 @@
       border: 5px solid #000000;
   }
   
-  
-  .column {
-    float: left;
-    width: 50%;
-    padding-left: 350px;
-  }
   .small-image-name{
     color: rgb(7, 9, 78);
     margin-bottom: 20%;
