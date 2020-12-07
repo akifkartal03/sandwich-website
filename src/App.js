@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch } from "react-router-dom";
+import {Route, Switch, } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './components/HomePage/Main';
 import Footer from './components/HomePage/Footer';
@@ -16,10 +16,7 @@ export default class Example extends React.Component {
                 <Switch>
                     <Route path="/" exact component={Main} />
                     <Route path="/recipe/:id" exact component={Recipe} />
-                    <Route
-                        path="/allrecipespage"
-                        component={AllRecipies}
-                    />
+                    <Route path="/allrecipespage" component={AllRecipies} />
                 </Switch>
                 <Footer />
             </div>

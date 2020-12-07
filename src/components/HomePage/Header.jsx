@@ -5,7 +5,7 @@ import {
     NavbarBrand,
     NavLink,
 } from 'reactstrap';
-import {Link} from 'react-router-dom'
+import {Link as RRLink} from 'react-router-dom'
 
 const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
     
@@ -45,18 +45,18 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                             strokeLinejoin="round"
                             className="mr-2"
                         />
-                        <a class="navbar-brand" href="/">
+                        <a className="navbar-brand" href="/">
                             <img
                                 src="https://i.ibb.co/12pWKWZ/Sandwich2.png"
                                 width="70"
                                 height="50"
-                                class="d-inline-block align-top"
+                                className="d-inline-block align-top"
                                 alt=""
                                 loading="lazy"
                             />
                         </a>
-                        <NavLink style={{color: 'white'}} tag={Link} to="/"> Home </NavLink>
-                        <NavLink style={{color: 'white'}} tag={Link} to="/allrecipespage"> All Recipies </NavLink>
+                        <NavLink style={{color: 'white'}} tag={RRLink} to="/"> Home </NavLink>
+                        <NavLink style={{color: 'white'}} tag={RRLink} to="/allrecipespage"> All Recipies </NavLink>
 
                     </NavbarBrand>
                     {/* <NavbarToggler onClick={toggleNavbar} className="mr-2" /> */}
