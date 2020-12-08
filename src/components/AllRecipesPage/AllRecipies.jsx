@@ -10,6 +10,7 @@ class All extends Component {
         selectedCheckboxes: new Set(),
         current_recipies: []
     };
+    
     retrieveBrands = () => {
         RecipieDataService.getCategories()
             .then(response => {
@@ -34,7 +35,7 @@ class All extends Component {
     componentDidMount() {
         this.retrieveBrands();
         this.retrieveRecipies();
-        this.setState({ selectedCheckboxes: new Set() });;
+        this.setState({ selectedCheckboxes: new Set() });
     }
     handleSelectBox = e => {
         const name = e.target.name;
