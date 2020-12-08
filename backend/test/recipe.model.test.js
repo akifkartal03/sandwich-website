@@ -9,7 +9,7 @@ const uri = process.env.ATLAS_URI;
 
 describe("Sandwich API endpoint tests: recipe", function () {
   // open database
-  before(function (done) {
+ /* before(function (done) {
     mongoose.connect(
       uri,
       { useNewUrlParser: true, useFindAndModify: false },
@@ -92,5 +92,5 @@ describe("Sandwich API endpoint tests: recipe", function () {
     mongoose.connection.db.dropDatabase(function () {
       mongoose.connection.close(done);
     });
-  });
+  });*/
 });
