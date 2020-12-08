@@ -1,41 +1,84 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-const Recipies = ({ brands, handleSelectBox }) => {
-    return (
-        <div className="col-lg-3" style={{ paddingRight: '3rem' }}>
-            <div className="row">
-                <div className="col-15">
-                    <div className="card mb-3">
-                        <div className="card-header">
-                            <h3>Categories</h3>
-                        </div>
-                        <ul className="list-group flex-row flex-wrap">
-                            {brands.map(brand => (
-                                <li
-                                    className="list-group-item flex-50"
-                                    key={brand._id}
-                                >
-                                    <label className="custom-checkbox text-capitalize">
-                                        {' '}
-                                        {brand.name}
-                                        <input
-                                                type="checkbox"
-                                                name={brand.name}
-                                                className="custom-checkbox__input"
-                                                //onInput={handleSelectBox}
-                                                onClick={handleSelectBox}
-                                                key={brand._id}
-                                            />
-                                        <span className="custom-checkbox__span" />
-                                    </label>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+import RecipieDataService from '../../services/RecipieService';
+import RecipeList from './RecipeList';
+import FilterBox from './FilterBox';
+import React, { Component } from 'react';
+
+class All extends Component {
+    state = {
+        brands: [],
+        recipies:[],
+        selectedCheckboxes: new Set(),
+        current_recipies: []
+    };
+    retrieveBrands = () => {
+        RecipieDataService.getCategories()
+            .then(response => {
+                this.setState({ brands: response.data });
+                console.log(response.data);
+            })
+            .catch(e => {
+                console.log(e);
+            });
+    };
+    retrieveRecipies = () => {
+        RecipieDataService.getAll()
+            .then(response => {
+                this.setState({ recipies: response.data });
+                this.setState({ current_recipies: response.data });
+                console.log(response.data);
+            })
+            .catch(e => {
+                console.log(e);
+            });
+    };
+    componentDidMount() {
+        this.retrieveBrands();
+        this.retrieveRecipies();
+        this.setState({ selectedCheckboxes: new Set() });;
+    }
+    handleSelectBox = e => {
+        const name = e.target.name;
+        if (this.state.selectedCheckboxes.has(name)) {
+            this.state.selectedCheckboxes.delete(name);
+        } else {
+            this.state.selectedCheckboxes.add(name);
+        }
+        this.setState({ selectedBoxes: this.state.selectedCheckboxes });
+        if (this.state.selectedCheckboxes.size !== 0) {
+            this.setRecipies();
+        } else {
+            this.setState({ current_recipies: this.state.recipies });
+        }
+    };
+    setRecipies = () => {
+       let temp=[]
+       for (let item of this.state.selectedCheckboxes){
+            for (let rec of this.state.recipies){
+                if(rec.category.includes(item) && !temp.includes(rec)){
+                    temp.push(rec)
+                }
+            }
+       }
+        this.setState({ current_recipies: temp });
+    };
+    render() {
+        return (
+            <div
+                className="container" 
+                style={{ paddingTop: '2rem', paddingLeft: '0rem' }}
+            >
+                <div className="row" style={{ marginLeft: '-5rem' }}>
+                    <FilterBox id='categori_filter'
+                        brands={this.state.brands}
+                        handleSelectBox={this.handleSelectBox}
+                    />
+                    <RecipeList id='recipie_list'
+                        recipies={this.state.current_recipies}
+                    />
                 </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
-export default Recipies;
+export default All;
