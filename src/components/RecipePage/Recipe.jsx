@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import RecipieDataService from '../../services/RecipieService';
 import { useMediaQuery } from 'react-responsive'
 
-const Recipe = props => {
+const Recipe = () => {
     const id = window.location.pathname.split('/')[
         window.location.pathname.split('/').length - 1
     ];

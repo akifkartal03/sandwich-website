@@ -16,7 +16,7 @@ const Recipies = ({ recipies }) => {
     return (
         <div className="test">  
             <Container>
-                <Row>
+                <Row className="row">
                     {recipies.map((recipie, index) => {
                         return (
                             <Col md={len} key={index}>

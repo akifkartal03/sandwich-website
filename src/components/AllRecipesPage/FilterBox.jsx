@@ -7,7 +7,7 @@ const Recipies = ({ brands, handleSelectBox }) => {
                 <div className="col-15">
                     <div className="card mb-3">
                         <div className="card-header">
-                            <h3>Categories</h3>
+                            <h3 className="filter_title">Categories</h3>
                         </div>
                         <ul className="list-group flex-row flex-wrap" id='ul1'>
                             {brands.map(brand => (
