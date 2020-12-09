@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import Recipe from './Recipe';
+import Recipe from '../RecipePage/Recipe';
 import { mount,shallow} from 'enzyme'
 import RecipieDataService from '../../services/RecipieService';
 
