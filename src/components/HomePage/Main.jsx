@@ -30,7 +30,7 @@ const Main = () => {
                                 <InputGroupAddon addonType="prepend">
                                     <Button
                                         tag={RRLink}
-                                        to={`/allrecipespage/${user_input}`}
+                                        to={`/search/${user_input}`}
                                     >
                                         Search
                                     </Button>
