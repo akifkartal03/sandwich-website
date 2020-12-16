@@ -22,13 +22,15 @@ const Search = ({ recipes, param }) => {
     };
 
     var results = [];
-    var searchList = param.toLowerCase().split(',%20');
+    var searchList = param.toLowerCase().split(',');
 
     for (var i = 0; i < searchList.length; i++) {
+        searchList[i] = searchList[i].replace(/%20/g, " ").trim();
         searchList[i] = searchList[i].replace(/(^\w{1})|(\s+\w{1})/g, letter =>
             letter.toUpperCase()
         );
     }
+    console.log("list:" + searchList);
 
     recipes.forEach(element => {
         if (searchList.every(val => element.ingredients.includes(val))) {
