@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Recipies from './Recipies';
-import { useHistory } from 'react-router-dom';
+import './Search.css';
+import { useHistory } from "react-router-dom";
 import {
     Button,
     Container,
@@ -11,26 +11,25 @@ import {
 } from 'reactstrap';
 import { Link as RRLink } from 'react-router-dom';
 
-const Main = () => {
+const SearchBar = () => {
     const [user_input, setInput] = useState('');
     let history = useHistory();
     const onChange = e => {
         setInput(e);
     };
-    const handleKeyPress = target => {
-        if (target.charCode === 13) {
+    const handleKeyPress= target => {
+        if(target.charCode===13){
             history.push(`/search/${user_input}`);
         }
     };
     return (
-        <div>
+        <div className="container">
             <main role="main">
-                <Jumbotron className="text-center">
+                <Jumbotron className="text-center" id = "jumbotron">
                     <Container>
                         <h1 className="jumbotron-heading">Sandwich Search </h1>
                         <p className="lead text-muted">
-                            Enter ingredients by separating with comma you want
-                            to search for
+                            Enter ingredients by separating with comma you want to search for
                         </p>
                         <div>
                             <InputGroup>
@@ -42,8 +41,7 @@ const Main = () => {
                                         Search
                                     </Button>
                                 </InputGroupAddon>
-                                <Input
-                                    placeholder="e.g. Sugar,Salt,Water,Tomato"
+                                <Input placeholder="e.g. Sugar,Salt,Water,Tomato"
                                     onChange={e =>
                                         onChange(`${e.target.value}`)
                                     }
@@ -52,11 +50,11 @@ const Main = () => {
                             </InputGroup>
                         </div>
                     </Container>
+                    <br/><br/><h2 className="head" style={{textAlign:'left',color: '#af1507', fontWeight: 'bolder'}}>Search Results </h2>
                 </Jumbotron>
-                <Recipies />
             </main>
         </div>
     );
 };
 
-export default Main;
+export default SearchBar;

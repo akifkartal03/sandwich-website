@@ -1,6 +1,6 @@
 import RecipieDataService from '../../services/RecipieService';
 import React, { useState, useEffect } from 'react';
-import Recipe from './Recipe'
+import Recipe from './Recipe';
 
 const RecipeData = () => {
     const [recipe, setRecipies] = useState([]);
@@ -39,11 +39,8 @@ const RecipeData = () => {
     };
     return (
         <div>
-            <Recipe recipe={recipe} all_recipies={all_recipies}/>
+            <Recipe recipe={recipe} all_recipies={all_recipies} />
         </div>
-
-
     );
-
 };
 export default RecipeData;
