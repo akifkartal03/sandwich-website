@@ -14,7 +14,7 @@ const Search = ({ recipes, param }) => {
     recipes.forEach(element => {
         counter = 0;
         searchList.forEach(val => isInclude(element, val));
-        if (counter >= element.ingredients.length * 0.7) {
+        if (counter >= searchList.length * 0.7) {
             results.push(element);
         }
     });
