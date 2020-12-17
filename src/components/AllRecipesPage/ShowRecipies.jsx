@@ -10,11 +10,11 @@ import {
     Row
 } from 'reactstrap';
 const Recipies = ({ recipies }) => {
-    let len =4;
-    if(recipies.length===1 && recipies[0]._id === "5fb967aed21567abd722a076")
-        len =14;
+    let len = 4;
+    if (recipies && recipies.length === 1 && recipies[0]._id === '5fb967aed21567abd722a076')
+        len = 14;
     return (
-        <div className="test">  
+        <div className="container">
             <Container>
                 <Row className="row">
                     {recipies.map((recipie, index) => {
@@ -23,23 +23,28 @@ const Recipies = ({ recipies }) => {
                                 <Card className="mb-4 box-shadow">
                                     <CardImg
                                         top
-                                        width="180" 
+                                        width="180"
                                         height="250"
                                         src={recipie.imgURL}
                                     />
                                     <CardBody className="text-center">
                                         {/*THERE WILL AN item OBJECT IN DATABASE AND IT WILL BE PRINTED IN HERE*/}
-                                        <CardText className="cardText"><strong className="strong">{recipie.name}</strong></CardText>
+                                        <CardText className="cardText">
+                                            <strong className="strong">
+                                                {recipie.name}
+                                            </strong>
+                                        </CardText>
 
                                         <div className="d-flex justify-content-between align-items-center">
-                                            <Button className="showButton"
+                                            <Button
+                                                className="showButton"
                                                 href={`/recipe/${recipie._id}`}
-                                                variant = "outline-dark"
+                                                variant="outline-dark"
                                                 color="secondary"
                                                 size="lg"
                                                 block
                                             >
-                                            <strong>Show</strong>
+                                                <strong>Show</strong>
                                             </Button>
                                         </div>
                                     </CardBody>
