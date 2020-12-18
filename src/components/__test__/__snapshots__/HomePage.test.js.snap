@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Recipies Page Component Tests renders without crashing 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "getWrappingComponentRenderer": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+    "wrapInvoke": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "all_recipies": Array [],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="recipies"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="row"
+          />
+        </div>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Container
+          tag="div"
+        >
+          <Row
+            tag="div"
+          />
+        </Container>,
+        "className": "recipies",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Row
+              tag="div"
+            />,
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div
+              class="container"
+            >
+              <div
+                class="row"
+              />
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Row
+                tag="div"
+              />,
+              "className": "container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [],
+                  "tag": "div",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": <div
+                    class="row"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [],
+                    "className": "row",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Array [],
+                  ],
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "all_recipies": Array [],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="recipies"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="row"
+            />
+          </div>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Container
+            tag="div"
+          >
+            <Row
+              tag="div"
+            />
+          </Container>,
+          "className": "recipies",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Row
+                tag="div"
+              />,
+              "tag": "div",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="container"
+              >
+                <div
+                  class="row"
+                />
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Row
+                  tag="div"
+                />,
+                "className": "container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [],
+                    "tag": "div",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": <div
+                      class="row"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [],
+                      "className": "row",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Array [],
+                    ],
+                    "type": "div",
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSeventeenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__linkedRoots__): Array [],
+  Symbol(enzyme.__unrendered__): <Recipies
+    all_recipies={Array []}
+  />,
+  Symbol(enzyme.__updatedBy__): null,
+}
+`;
