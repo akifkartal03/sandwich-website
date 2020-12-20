@@ -8,13 +8,14 @@ router.route("/").get((req, res) => {
 });
 
 router.route("/add").post((req, res) => {
-  const img = req.body.img;
+  const imgURL = req.body.imgURL;
   const name = req.body.name;
   const directions = req.body.directions;
   const ingredients = req.body.ingredients;
+  const ingredients_quantities=req.body.ingredients_quantities;
   const category = req.body.category;
 
-  const newRecipe = new Recipe({ img, name, directions, ingredients, category });
+  const newRecipe = new Recipe({ imgURL, name, directions, ingredients, ingredients_quantities, category });
 
   newRecipe
     .save()
@@ -41,8 +42,8 @@ router.route("/update/:id").post((req, res) => {
       recipes.name = req.body.name;
       recipes.directions = req.body.directions;
       recipes.ingredients = req.body.ingredients;
+      recipes.ingredients_quantities=req.body.ingredients_quantities;
       recipes.category = req.body.category;
-
       recipes
         .save()
         .then(() => res.json("Recipe updated!"))
