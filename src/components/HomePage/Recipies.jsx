@@ -1,0 +1,73 @@
+import React, { useState, useEffect } from 'react';
+import RecipieDataService from '../../services/RecipieService';
+import {
+    Button,
+    Card,
+    CardImg,
+    CardText,
+    CardBody,
+    Col,
+    Container,
+    Row
+} from 'reactstrap';
+
+const Recipies = () => {
+    const [recipies, setRecipies] = useState([]);
+    
+
+    useEffect(() => {
+        retrieveRecipies();
+    }, []);
+
+    const retrieveRecipies = () => {
+        RecipieDataService.getAll()
+            .then(response => {
+                setRecipies(response.data);
+                console.log(response.data);
+            })
+            .catch(e => {
+                console.log(e);
+            });
+    };
+
+    return (
+        <div className="recipies">
+            <Container>
+                <Row>
+                    {recipies.slice(12, recipies.length).map((recipie, index) => {
+                        return (
+                            <Col md="4" key={index}>
+                                <Card className="mb-4 box-shadow">
+                                    <CardImg
+                                        top
+                                        width="180" 
+                                        height="250"
+                                        src={recipie.imgURL}
+                                    />
+                                    <CardBody className="text-center">
+                                        {/*THERE WILL AN item OBJECT IN DATABASE AND IT WILL BE PRINTED IN HERE*/}
+                                        <CardText><strong >{recipie.name}</strong></CardText>
+
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            <Button
+                                                href={`/recipe/${recipie._id}`}
+                                                variant = "outline-dark"
+                                                color="secondary"
+                                                size="lg"
+                                                block
+                                            >
+                                            <strong>Show</strong>
+                                            </Button>
+                                        </div>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                        );
+                    })}
+                </Row>
+            </Container>
+        </div>
+    );
+};
+
+export default Recipies;

@@ -1,0 +1,626 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Recipies Page Component Tests renders without crashing 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "getWrappingComponentRenderer": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+    "wrapInvoke": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "brands": Array [],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="col-lg-3"
+        style="padding-right: 3rem;"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-15"
+          >
+            <div
+              class="card mb-3"
+            >
+              <div
+                class="card-header"
+              >
+                <h3
+                  class="filter_title"
+                >
+                  Categories
+                </h3>
+              </div>
+              <ul
+                class="list-group flex-row flex-wrap"
+                id="ul1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="row"
+        >
+          <div
+            className="col-15"
+          >
+            <div
+              className="card mb-3"
+            >
+              <div
+                className="card-header"
+              >
+                <h3
+                  className="filter_title"
+                >
+                  Categories
+                </h3>
+              </div>
+              <ul
+                className="list-group flex-row flex-wrap"
+                id="ul1"
+              />
+            </div>
+          </div>
+        </div>,
+        "className": "col-lg-3",
+        "style": Object {
+          "paddingRight": "3rem",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="row"
+          >
+            <div
+              class="col-15"
+            >
+              <div
+                class="card mb-3"
+              >
+                <div
+                  class="card-header"
+                >
+                  <h3
+                    class="filter_title"
+                  >
+                    Categories
+                  </h3>
+                </div>
+                <ul
+                  class="list-group flex-row flex-wrap"
+                  id="ul1"
+                />
+              </div>
+            </div>
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="col-15"
+            >
+              <div
+                className="card mb-3"
+              >
+                <div
+                  className="card-header"
+                >
+                  <h3
+                    className="filter_title"
+                  >
+                    Categories
+                  </h3>
+                </div>
+                <ul
+                  className="list-group flex-row flex-wrap"
+                  id="ul1"
+                />
+              </div>
+            </div>,
+            "className": "row",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <div
+                class="col-15"
+              >
+                <div
+                  class="card mb-3"
+                >
+                  <div
+                    class="card-header"
+                  >
+                    <h3
+                      class="filter_title"
+                    >
+                      Categories
+                    </h3>
+                  </div>
+                  <ul
+                    class="list-group flex-row flex-wrap"
+                    id="ul1"
+                  />
+                </div>
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="card mb-3"
+                >
+                  <div
+                    className="card-header"
+                  >
+                    <h3
+                      className="filter_title"
+                    >
+                      Categories
+                    </h3>
+                  </div>
+                  <ul
+                    className="list-group flex-row flex-wrap"
+                    id="ul1"
+                  />
+                </div>,
+                "className": "col-15",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <div
+                    class="card mb-3"
+                  >
+                    <div
+                      class="card-header"
+                    >
+                      <h3
+                        class="filter_title"
+                      >
+                        Categories
+                      </h3>
+                    </div>
+                    <ul
+                      class="list-group flex-row flex-wrap"
+                      id="ul1"
+                    />
+                  </div>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="card-header"
+                      >
+                        <h3
+                          className="filter_title"
+                        >
+                          Categories
+                        </h3>
+                      </div>,
+                      <ul
+                        className="list-group flex-row flex-wrap"
+                        id="ul1"
+                      />,
+                    ],
+                    "className": "card mb-3",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <div
+                        class="card-header"
+                      >
+                        <h3
+                          class="filter_title"
+                        >
+                          Categories
+                        </h3>
+                      </div>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <h3
+                          className="filter_title"
+                        >
+                          Categories
+                        </h3>,
+                        "className": "card-header",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": <h3
+                            class="filter_title"
+                          >
+                            Categories
+                          </h3>,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Categories",
+                            "className": "filter_title",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Categories",
+                          ],
+                          "type": "h3",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": <ul
+                        class="list-group flex-row flex-wrap"
+                        id="ul1"
+                      />,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [],
+                        "className": "list-group flex-row flex-wrap",
+                        "id": "ul1",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Array [],
+                      ],
+                      "type": "ul",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "brands": Array [],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="col-lg-3"
+          style="padding-right: 3rem;"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-15"
+            >
+              <div
+                class="card mb-3"
+              >
+                <div
+                  class="card-header"
+                >
+                  <h3
+                    class="filter_title"
+                  >
+                    Categories
+                  </h3>
+                </div>
+                <ul
+                  class="list-group flex-row flex-wrap"
+                  id="ul1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="row"
+          >
+            <div
+              className="col-15"
+            >
+              <div
+                className="card mb-3"
+              >
+                <div
+                  className="card-header"
+                >
+                  <h3
+                    className="filter_title"
+                  >
+                    Categories
+                  </h3>
+                </div>
+                <ul
+                  className="list-group flex-row flex-wrap"
+                  id="ul1"
+                />
+              </div>
+            </div>
+          </div>,
+          "className": "col-lg-3",
+          "style": Object {
+            "paddingRight": "3rem",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="row"
+            >
+              <div
+                class="col-15"
+              >
+                <div
+                  class="card mb-3"
+                >
+                  <div
+                    class="card-header"
+                  >
+                    <h3
+                      class="filter_title"
+                    >
+                      Categories
+                    </h3>
+                  </div>
+                  <ul
+                    class="list-group flex-row flex-wrap"
+                    id="ul1"
+                  />
+                </div>
+              </div>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="col-15"
+              >
+                <div
+                  className="card mb-3"
+                >
+                  <div
+                    className="card-header"
+                  >
+                    <h3
+                      className="filter_title"
+                    >
+                      Categories
+                    </h3>
+                  </div>
+                  <ul
+                    className="list-group flex-row flex-wrap"
+                    id="ul1"
+                  />
+                </div>
+              </div>,
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <div
+                  class="col-15"
+                >
+                  <div
+                    class="card mb-3"
+                  >
+                    <div
+                      class="card-header"
+                    >
+                      <h3
+                        class="filter_title"
+                      >
+                        Categories
+                      </h3>
+                    </div>
+                    <ul
+                      class="list-group flex-row flex-wrap"
+                      id="ul1"
+                    />
+                  </div>
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="card mb-3"
+                  >
+                    <div
+                      className="card-header"
+                    >
+                      <h3
+                        className="filter_title"
+                      >
+                        Categories
+                      </h3>
+                    </div>
+                    <ul
+                      className="list-group flex-row flex-wrap"
+                      id="ul1"
+                    />
+                  </div>,
+                  "className": "col-15",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <div
+                      class="card mb-3"
+                    >
+                      <div
+                        class="card-header"
+                      >
+                        <h3
+                          class="filter_title"
+                        >
+                          Categories
+                        </h3>
+                      </div>
+                      <ul
+                        class="list-group flex-row flex-wrap"
+                        id="ul1"
+                      />
+                    </div>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div
+                          className="card-header"
+                        >
+                          <h3
+                            className="filter_title"
+                          >
+                            Categories
+                          </h3>
+                        </div>,
+                        <ul
+                          className="list-group flex-row flex-wrap"
+                          id="ul1"
+                        />,
+                      ],
+                      "className": "card mb-3",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": <div
+                          class="card-header"
+                        >
+                          <h3
+                            class="filter_title"
+                          >
+                            Categories
+                          </h3>
+                        </div>,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <h3
+                            className="filter_title"
+                          >
+                            Categories
+                          </h3>,
+                          "className": "card-header",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": <h3
+                              class="filter_title"
+                            >
+                              Categories
+                            </h3>,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Categories",
+                              "className": "filter_title",
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              "Categories",
+                            ],
+                            "type": "h3",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": <ul
+                          class="list-group flex-row flex-wrap"
+                          id="ul1"
+                        />,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [],
+                          "className": "list-group flex-row flex-wrap",
+                          "id": "ul1",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Array [],
+                        ],
+                        "type": "ul",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSeventeenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__linkedRoots__): Array [],
+  Symbol(enzyme.__unrendered__): <Recipies
+    brands={Array []}
+  />,
+  Symbol(enzyme.__updatedBy__): null,
+}
+`;
