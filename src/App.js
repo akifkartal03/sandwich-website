@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './components/HomePage/Main';
 import Footer from './components/HomePage/Footer';
 import Header from './components/HomePage/Header';
-import './BrandFilter.css';
+import './Filter.css';
 import './App.css';
 import AllRecipies from './components/AllRecipesPage/AllRecipies';
 import Recipe from './components/RecipePage/RecipeData';
