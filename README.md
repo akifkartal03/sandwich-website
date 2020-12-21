@@ -1,5 +1,4 @@
 # sandwich-recipe-recommendation-website
-#### Incomplete codes will not be included in master branch check [development branch.](https://github.com/akifkartal03/sandwich-recipe-app/tree/dev)
 ## Team Members
 | Number | Name | Role
 | --- | --- | --- |
@@ -15,4 +14,3 @@
 - Details of system can be found on the wiki [System Description](https://github.com/akifkartal03/sandwich-recipe-app/wiki/SystemDescriptionDoc).
 ### Test
 - Details of testing can be found on the wiki [Testing](https://github.com/akifkartal03/sandwich-recipe-app/wiki/Testing).
-
