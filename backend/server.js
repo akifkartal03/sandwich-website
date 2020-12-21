@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-
+const path = require("path");
 const categoriesRouter = require("./routes/categories");
 const ingredientsRouter = require("./routes/ingredients");
 const recipesRouter = require("./routes/recipes");
@@ -28,6 +28,13 @@ connection.once("open", () => {
 app.use("/categories", categoriesRouter);
 app.use("/ingredients", ingredientsRouter);
 app.use("/recipes", recipesRouter);
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('../build'));
+  app.get('*', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'..','build','index.html'));
+  });
+}
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
