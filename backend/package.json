@@ -4,7 +4,11 @@
   "description": "Sandwich Backend",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "client-install": "npm install --prefix ..",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ..",
+    "dev": "concurrently \"npm run server\" \"npm run ..\"",
     "test": "mocha -r esm --timeout 15000",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix .. && npm run build --prefix .."
   },
