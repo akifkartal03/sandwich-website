@@ -25,7 +25,7 @@ const SearchBar = () => {
     return (
         <div className="container">
             <main role="main">
-                <Jumbotron className="text-center" id = "jumbotron">
+                <Jumbotron className="text-center">
                     <Container>
                         <h1 className="jumbotron-heading">Sandwich Search </h1>
                         <p className="lead text-muted">
