@@ -4,12 +4,15 @@
   "description": "Sandwich Backend",
   "main": "server.js",
   "scripts": {
-    "client-install": "npm install --prefix ..",
+    "client-install": "cd client && npm install",
+    "build": "cd client && npm run build",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix ..",
-    "test": "mocha -r esm --timeout 15000",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix .. && npm run build --prefix .."
+    "client": "npm start --prefix client",
+    "testAPI": "mocha -r esm --timeout 15000",
+    "test": "cd client && npm test a -- -u --silent",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build"
   },
   "keywords": [],
   "author": "",
