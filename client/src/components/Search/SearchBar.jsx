@@ -25,11 +25,7 @@ const SearchBar = () => {
     return (
         <div className="container">
             <main role="main">
-<<<<<<< HEAD:src/components/Search/SearchBar.jsx
-                <Jumbotron className="text-center" id="jumbotron">
-=======
                 <Jumbotron className="text-center">
->>>>>>> 6cf2807a43985db240ee7edba131290cc7a0555c:client/src/components/Search/SearchBar.jsx
                     <Container>
                         <h1 className="jumbotron-heading">Sandwich Search </h1>
                         <p className="lead text-muted">
