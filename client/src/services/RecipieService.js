@@ -1,42 +1,38 @@
-import http from "../http-common";
+import http from '../http-common';
 
 const getAll = () => {
-  return http.get("/recipes");
+    return http.get('/recipes');
 };
 const getCategories = () => {
-  return http.get("/categories");
+    return http.get('/categories');
 };
+
 const get = id => {
-  return http.get(`/recipes/${id}`);
+    return http.get(`/recipes/${id}`);
 };
 
 const create = data => {
-  return http.post("/recipes", data);
+    return http.post('/recipes/add', data);
 };
 
 const update = (id, data) => {
-  return http.put(`/recipes/${id}`, data);
+    return http.put(`/recipes/update/${id}`, data);
 };
 
 const remove = id => {
-  return http.delete(`/recipes/${id}`);
-};
-
-const removeAll = () => {
-  return http.delete(`/recipes`);
+    return http.delete(`/recipes/delete/${id}`);
 };
 
 const findById = id => {
-  return http.get(`/recipes?_id=${id}`);
+    return http.get(`/recipes?_id=${id}`);
 };
 
 export default {
-  getAll,
-  get,
-  create,
-  update,
-  remove,
-  removeAll,
-  findById,
-  getCategories
+    getAll,
+    get,
+    create,
+    update,
+    remove,
+    findById,
+    getCategories
 };
