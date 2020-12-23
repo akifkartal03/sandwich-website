@@ -18,7 +18,7 @@ describe("Sandwich API endpoint tests: user", function () {
       .end((err, response) => {
         response.should.have.status(200);
         response.body.should.be.a("array");
-        response.body.length.should.be.eq(1);
+        response.body.length.should.be.eq(2);
         done();
       });
   });
@@ -32,7 +32,7 @@ describe("Sandwich API endpoint tests: user", function () {
       });
   });
   it("It should GET a user by ID", (done) => {
-    const userID = "5fe38176df1ada4b70424a2c";
+    const userID = "5fe38c9c7940f700c0e06809";
     chai
       .request(App)
       .get("/users/" + userID)
@@ -41,7 +41,7 @@ describe("Sandwich API endpoint tests: user", function () {
         response.body.should.be.a("object");
         response.body.should.have.property("_id");
         response.body.should.have.property("username");
-        response.body.should.have.property("username").eq("eagle");
+        response.body.should.have.property("name").eq("Mehdi");
         done();
       });
   });
@@ -55,8 +55,22 @@ describe("Sandwich API endpoint tests: user", function () {
         done();
       });
   });
+  it("It should GET a user by username", (done) => {
+    const username = "eagle";
+    chai
+      .request(App)
+      .get("/users/get/" + username)
+      .end((err, response) => {
+        response.should.have.status(200);
+        response.body.should.be.a("object");
+        response.body.should.have.property("_id");
+        response.body.should.have.property("username");
+        response.body.should.have.property("name").eq("Akif");
+        done();
+      });
+  });
   it("It should DELETE an existing user", (done) => {
-    const userID = "5fe38176df1ada4b70424a2c";
+    const userID = "5fe394616c64ee23ec3a53be";
     chai
       .request(App)
       .delete("/users/delete/" + userID)
@@ -88,7 +102,7 @@ describe("Sandwich API endpoint tests: user", function () {
     id = "5fe38c9c7940f700c0e06809";
     data = {
       name: "Mehdi",
-      surname: "Kurtcebe",
+      surname: "Kurt",
       username: "sanane",
       password: "deneme",
       favoriteRecipes: [],
@@ -107,8 +121,8 @@ describe("Sandwich API endpoint tests: user", function () {
     id = "5fe38c9c7940f700c0e06809";
     data = {
       name: "Mehdi",
-      surname: "K*rt",
-      username: "meho",
+      surname: "Kurtcebe",
+      username: "kurt",
       password: "123",
       favoriteRecipes: [],
     };

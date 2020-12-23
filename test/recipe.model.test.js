@@ -54,7 +54,7 @@ describe('Sandwich API endpoint tests: recipe', function() {
             });
     });
     it('It should DELETE an existing recipe', done => {
-        const recipieID = '5fde9c71837cb74224cea867';
+        const recipieID = '5fe3b2e30d5a862b74341cd4';
         chai.request(App)
             .delete('/recipes/delete/' + recipieID)
             .end((err, response) => {

@@ -6,7 +6,11 @@ router.route("/").get((req, res) => {
     .then((users) => res.json(users))
     .catch((err) => res.status(400).json("Error: " + err));
 });
-
+router.route("/get/:username").get((req, res) => {
+  User.findOne({username:new RegExp('^'+req.params.username+'$', "i")})
+    .then((users) => res.json(users))
+    .catch((err) => res.status(400).json("Error: " + err));
+});
 router.route("/add").post((req, res) => {
   const name = req.body.name;
   const surname = req.body.surname;
