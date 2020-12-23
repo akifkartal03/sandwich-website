@@ -5,7 +5,7 @@ const path = require("path");
 const categoriesRouter = require("./routes/categories");
 const ingredientsRouter = require("./routes/ingredients");
 const recipesRouter = require("./routes/recipes");
-
+const usersRouter = require("./routes/users");
 require("dotenv").config();
 
 const app = express();
@@ -28,6 +28,7 @@ connection.once("open", () => {
 app.use("/categories", categoriesRouter);
 app.use("/ingredients", ingredientsRouter);
 app.use("/recipes", recipesRouter);
+app.use("/users", usersRouter);
 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('client/build'));
@@ -40,4 +41,4 @@ app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
 
-//export default app;
+export default app;
