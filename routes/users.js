@@ -11,10 +11,16 @@ router.route("/add").post((req, res) => {
   const name = req.body.name;
   const surname = req.body.surname;
   const username = req.body.username;
-  const password=req.body.password;
-  const favoriRecipes = req.body.favoriRecipes;
+  const password = req.body.password;
+  const favoriteRecipes = req.body.favoriteRecipes;
 
-  const newUser = new User({ name, surname, username, password, favoriRecipes });
+  const newUser = new User({
+    name,
+    surname,
+    username,
+    password,
+    favoriteRecipes: favoriteRecipes,
+  });
 
   newUser
     .save()
@@ -37,11 +43,11 @@ router.route("/delete/:id").delete((req, res) => {
 router.route("/update/:id").post((req, res) => {
   User.findById(req.params.id)
     .then((users) => {
-        users.name = req.body.name;
-        users.surname = req.body.surname;
-        users.username = req.body.username;
-        users.password=req.body.password;
-        users.favoriRecipes = req.body.favoriRecipes;
+      users.name = req.body.name;
+      users.surname = req.body.surname;
+      users.username = req.body.username;
+      users.password = req.body.password;
+      users.favoriteRecipes = req.body.favoriteRecipes;
       users
         .save()
         .then(() => res.json("User updated!"))
