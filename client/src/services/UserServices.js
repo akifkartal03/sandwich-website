@@ -23,6 +23,9 @@ const remove = id => {
 const findById = id => {
     return http.get(`/users?_id=${id}`);
 };
+const getByUsername = username => {
+    return http.delete(`/users/get/${username}`);
+};
 
 export default {
     getAll,
@@ -30,5 +33,6 @@ export default {
     create,
     update,
     remove,
-    findById
+    findById,
+    getByUsername
 };
