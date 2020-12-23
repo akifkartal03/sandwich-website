@@ -52,7 +52,7 @@ describe('Sandwich API endpoint tests: ingredient', function() {
             });
     });
     it('It should DELETE an existing ingredient', done => {
-        const ingredientID = '5fb6ec2c74615f41ace9cdb2';
+        const ingredientID = '5fb6ec2c74615f41ace9cdb4';
         chai.request(App)
             .delete('/ingredients/delete/' + ingredientID)
             .end((err, response) => {
@@ -62,7 +62,7 @@ describe('Sandwich API endpoint tests: ingredient', function() {
     });
     it('It should POST a new ingredient', done => {
         data = {
-            name: 'Beef Stock'
+            name: 'Biryani Masala'
         };
         const res = request(App)
             .post('/ingredients/add')
