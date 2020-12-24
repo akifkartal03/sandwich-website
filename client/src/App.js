@@ -10,6 +10,7 @@ import AllRecipies from './components/AllRecipesPage/AllRecipies';
 import Recipe from './components/RecipePage/RecipeData';
 import SearchData from './components/Search/SearchData'
 import ErrorPage from './components/Error_Page/Error'
+import LoginPage from './components/LoginPage/LoginPage';
 export default class Example extends React.Component {
     render() {
         return (
@@ -20,6 +21,7 @@ export default class Example extends React.Component {
                     <Route path="/recipe/:id" exact component={Recipe} />
                     <Route path="/allrecipespage" component={AllRecipies} />
                     <Route path="/search" component={SearchData} />
+                    <Route path="/login" component={LoginPage} />
                     <Route path="/notFound" component={ErrorPage} />
                 </Switch>
                 <Footer />
