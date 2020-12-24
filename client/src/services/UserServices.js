@@ -24,7 +24,7 @@ const findById = id => {
     return http.get(`/users?_id=${id}`);
 };
 const getByUsername = username => {
-    return http.delete(`/users/get/${username}`);
+    return http.get(`/users/get/${username}`);
 };
 
 export default {
