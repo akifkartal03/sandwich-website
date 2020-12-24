@@ -43,6 +43,7 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                         <NavLink style={{color: 'white'}} tag={RouterNavLink} to="/allrecipespage"> All Recipes </NavLink>
 
                     </NavbarBrand>
+                    <NavLink style={{color: 'white'}} tag={RouterNavLink} to="/login"> Login </NavLink>
                 </Container>
             </Navbar>
         </header>
