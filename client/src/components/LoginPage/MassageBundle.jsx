@@ -13,7 +13,9 @@ export const ERROR_IN_LOGIN = 'Error in Login'
 
 export const COMMON_FIELDS = {
 	USER_NAME : 'Username',
-	PASSWORD : 'Password'
+	PASSWORD : 'Password',
+	FIRST_NAME : 'First name',
+	LAST_NAME : 'Last name'
 }
 
 export const LOGIN_FIELDS = {

@@ -108,7 +108,7 @@ class LoginPage extends Component {
                                 {LOGIN_FIELDS.LOGIN}
                             </button>
                             {'    '}
-                            <Link to="/">{REGISTRATION_FIELDS.REGISTER} </Link>
+                            <Link to="/signup">{REGISTRATION_FIELDS.REGISTER} </Link>
                         </div>
                     </div>
                 </form>
