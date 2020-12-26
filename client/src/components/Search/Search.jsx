@@ -1,9 +1,11 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import ShowResults from '../AllRecipesPage/ShowRecipies';
+import ErrorPage from '../Error_Page/NotFound';
 const Search = ({ recipes, param }) => {
     var counter = 0;
     var results = [];
+    var isFound = false;
     var searchList = param.toLowerCase().split(',');
     for (var i = 0; i < searchList.length; i++) {
         searchList[i] = searchList[i].replace(/%20/g, ' ').trim();
@@ -16,6 +18,7 @@ const Search = ({ recipes, param }) => {
         searchList.forEach(val => isInclude(element, val));
         if (counter >= element.ingredients.length * 0.7) {
             results.push(element);
+            isFound = true;
         }
     });
     function isInclude(element, val) {
@@ -26,12 +29,7 @@ const Search = ({ recipes, param }) => {
     return (
         <div className="container">
             <SearchBar />
-            if(isExist(counter)){
-            <ShowResults recipies={results}/>
-            }
-            else{
-                <h1>There is no recipe</h1>
-            }
+            {isFound ? <ShowResults recipies={results} /> : <ErrorPage />}
         </div>
     );
 };
