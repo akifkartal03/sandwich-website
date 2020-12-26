@@ -9,7 +9,6 @@ import './App.css';
 import AllRecipies from './components/AllRecipesPage/AllRecipies';
 import Recipe from './components/RecipePage/RecipeData';
 import SearchData from './components/Search/SearchData'
-import ErrorPage from './components/Error_Page/NotFound'
 import Redirect from './components/Error_Page/Redirect'
 import LoginPage from './components/LoginPage/LoginPage';
 export default class Example extends React.Component {
@@ -23,7 +22,6 @@ export default class Example extends React.Component {
                     <Route path="/allrecipespage" component={AllRecipies} />
                     <Route path="/search" component={SearchData} />
                     <Route path="/login" component={LoginPage} />
-                    <Route path="/notFound" component={ErrorPage} />
                     <Route path="" component={Redirect} />
                 </Switch>
                 <Footer />

@@ -8,8 +8,10 @@ import {
     ButtonDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem
+    DropdownItem,
+    Button
 } from 'reactstrap';
+import './button.css';
 import { useStore } from '../../contextAPI/store/Provider';
 import { clear } from '../../contextAPI/actions/LoginAction';
 const Header = () => {
@@ -67,27 +69,35 @@ const Header = () => {
                         </NavLink>
                     </NavbarBrand>
                     {isLogged ? (
-              <div className="d-flex align-items-right">
-                <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
-                  <DropdownToggle caret>{user.name}</DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem tag={RouterNavLink}
-                to="allrecipespage">Favorite Recipes</DropdownItem>
-                <DropdownItem tag={RouterNavLink}
-                to="/" onClick={onLogout}>Logout</DropdownItem>
-                  </DropdownMenu>
-                </ButtonDropdown>
-              </div>
-            ) : (
-              <NavLink
-                style={{ color: "white" }}
-                tag={RouterNavLink}
-                to="/login"
-              >
-                {" "}
-                <strong> Login </strong>
-              </NavLink>
-            )}
+                        <div className="d-flex align-items-right">
+                            <ButtonDropdown
+                                isOpen={dropdownOpen}
+                                toggle={toggle}
+                            >
+                                <DropdownToggle caret>
+                                    {user.name}
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem
+                                        tag={RouterNavLink}
+                                        to="/allrecipespage"
+                                    >
+                                        Favorite Recipes
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </ButtonDropdown>
+                            <Button className="mybutton" color="danger" onClick={onLogout} to="/">Logout</Button>
+                        </div>
+                    ) : (
+                        <NavLink
+                            style={{ color: 'white' }}
+                            tag={RouterNavLink}
+                            to="/login"
+                        >
+                            {' '}
+                            <strong> Login </strong>
+                        </NavLink>
+                    )}
                 </Container>
             </Navbar>
         </header>
