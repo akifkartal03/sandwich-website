@@ -5,6 +5,9 @@ import Message from './Massage';
 import Error from './Error';
 import UserDataService from '../../services/UserServices';
 import loginImg from './login.png';
+import {useStore} from '../../contextAPI/store/Provider';
+import {setUSer} from '../../contextAPI/actions/LoginAction';
+import { useHistory } from 'react-router-dom';
 import {
     COMMON_FIELDS,
     REGISTRATION_FIELDS,
@@ -17,7 +20,8 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(false);
     const [loginSuccess, setloginSuccess] = useState(false);
-
+    const [store,dispatch] = useStore();
+    let history = useHistory();
     const handleOnChangeUserName = e => {
         setUserName(e.target.value);
     };
@@ -39,6 +43,8 @@ const LoginPage = () => {
                 } else {
                     setError(false);
                     setloginSuccess(true);
+                    dispatch(setUSer(response.data));
+                    history.push("/");
                 }
             })
             .catch(e => {
