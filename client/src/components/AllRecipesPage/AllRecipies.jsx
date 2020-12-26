@@ -2,6 +2,7 @@ import RecipieDataService from '../../services/RecipieService';
 import RecipeList from './RecipeList';
 import FilterBox from './FilterBox';
 import React, { Component } from 'react';
+import { useMediaQuery } from 'react-responsive'
 
 class All extends Component {
     state = {
@@ -62,12 +63,21 @@ class All extends Component {
        }
         this.setState({ current_recipies: temp });
     };
+    Default = ({ children }) => {
+        var  isNotMobile = useMediaQuery({ minWidth: 992 })
+        return isNotMobile ? children : null
+      }
+    MobileorTablet = ({ children }) => {
+        var isMobileorTablet = useMediaQuery({ maxWidth: 991 })
+        return isMobileorTablet ? children : null
+      }
+
     render() {
         return (
             <div
                 className="container" 
                 style={{ paddingTop: '2rem', paddingLeft: '0rem' }}
-            >
+            >   <this.Default>
                 <div className="row" style={{ marginLeft: '-5rem' }}>
                     <FilterBox id='categori_filter'
                         brands={this.state.brands}
@@ -77,6 +87,18 @@ class All extends Component {
                         recipies={this.state.current_recipies}
                     />
                 </div>
+                </this.Default>
+                <this.MobileorTablet>
+                <div className="row" style={{ marginLeft: '1rem' }}>
+                    <FilterBox id='categori_filter'
+                        brands={this.state.brands}
+                        handleSelectBox={this.handleSelectBox}
+                    />
+                    <RecipeList id='recipie_list'
+                        recipies={this.state.current_recipies}
+                    />
+                </div>
+                </this.MobileorTablet>
             </div>
         );
     }

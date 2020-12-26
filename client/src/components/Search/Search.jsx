@@ -26,7 +26,12 @@ const Search = ({ recipes, param }) => {
     return (
         <div className="container">
             <SearchBar />
+            if(isExist(counter)){
             <ShowResults recipies={results}/>
+            }
+            else{
+                <h1>There is no recipe</h1>
+            }
         </div>
     );
 };

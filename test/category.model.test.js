@@ -1,7 +1,7 @@
 import request from 'supertest';
 import mongoose from 'mongoose';
 import { expect } from 'chai';
-import App from '../server.js';
+import App from '../server';
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 chai.should();
@@ -53,7 +53,7 @@ describe('Sandwich API endpoint tests: category', function() {
             });
     });
     it('It should DELETE an existing category', done => {
-        const categoryID = '5fde97738c82b23f3835efa6';
+        const categoryID = '5fe3b2e00d5a862b74341cd2';
         chai.request(App)
             .delete('/categories/delete/' + categoryID)
             .end((err, response) => {
