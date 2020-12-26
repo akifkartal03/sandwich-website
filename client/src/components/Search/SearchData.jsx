@@ -4,6 +4,11 @@ import Search from './Search';
 
 const SearchData = () => {
     const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        getRecipes();
+    }, []);
+
     const getRecipes = () => {
         RecipieDataService.getAll()
             .then(response => {
@@ -15,8 +20,8 @@ const SearchData = () => {
     };
 
     const searchParam = window.location.pathname.substring(8);
+
     console.log('Search param = ' + searchParam);
-    getRecipes();
     return (
         <div>
             <Search recipes={recipes} param={searchParam} />

@@ -80,23 +80,16 @@ const Header = () => {
                                 <DropdownMenu>
                                     <DropdownItem
                                         tag={RouterNavLink}
-                                        to="/allrecipespage"
+                                        to="/favorites"
                                     >
                                         Favorite Recipes
                                     </DropdownItem>
                                 </DropdownMenu>
                             </ButtonDropdown>
-                            <Button className="mybutton" color="danger" onClick={onLogout} to="/">Logout</Button>
+                            <Button className="mybutton" color="danger" tag={RouterNavLink} onClick={onLogout} to="/"><strong> Logout </strong></Button>
                         </div>
                     ) : (
-                        <NavLink
-                            style={{ color: 'white' }}
-                            tag={RouterNavLink}
-                            to="/login"
-                        >
-                            {' '}
-                            <strong> Login </strong>
-                        </NavLink>
+                        <Button className="mybutton" color="success" tag={RouterNavLink} to="/login"><strong> Login </strong></Button>
                     )}
                 </Container>
             </Navbar>
