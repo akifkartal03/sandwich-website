@@ -9,7 +9,7 @@ import './App.css';
 import AllRecipies from './components/AllRecipesPage/AllRecipies';
 import Recipe from './components/RecipePage/RecipeData';
 import SearchData from './components/Search/SearchData'
-import ErrorPage from './components/Error_Page/Error'
+import ErrorPage from './components/Error_Page/NotFound'
 import Redirect from './components/Error_Page/Redirect'
 import LoginPage from './components/LoginPage/LoginPage';
 export default class Example extends React.Component {
