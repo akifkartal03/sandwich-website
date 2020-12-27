@@ -4,7 +4,7 @@
 
 .jumbotron {
     padding-top: var(--jumbotron-padding-y);
-    padding-bottom: var(--jumbotron-padding-y);
+    padding-bottom: 1rem !important;
     margin-bottom: 0;
     background-color: #fff !important;
 }
@@ -16,7 +16,7 @@
 }
 
 .jumbotron p:last-child {
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 }
 
 .jumbotron-heading {

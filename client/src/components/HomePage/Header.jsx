@@ -1,14 +1,26 @@
-import React from 'react';
-import {NavLink as RouterNavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import {
     Container,
     Navbar,
     NavbarBrand,
     NavLink,
+    ButtonDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    Button
 } from 'reactstrap';
-
-const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
-
+import './button.css';
+import { useStore } from '../../contextAPI/store/Provider';
+import { clear } from '../../contextAPI/actions/LoginAction';
+const Header = () => {
+    const [dropdownOpen, setOpen] = useState(false);
+    const toggle = () => setOpen(!dropdownOpen);
+    const [{ isLogged, user }, dispatch] = useStore();
+    function onLogout() {
+        dispatch(clear());
+    }
     return (
         <header>
             <Navbar color="dark" dark>
@@ -39,13 +51,51 @@ const Header = ({ collapsed, toggleNavbar, socialLinks }) => {
                                 loading="lazy"
                             />
                         </a>
-                        <NavLink style={{color: 'white'}} tag={RouterNavLink} to="/"> Home </NavLink>
-                        <NavLink style={{color: 'white'}} tag={RouterNavLink} to="/allrecipespage"> All Recipes </NavLink>
-
+                        <NavLink
+                            style={{ color: 'white' }}
+                            tag={RouterNavLink}
+                            to="/"
+                        >
+                            {' '}
+                            Home{' '}
+                        </NavLink>
+                        <NavLink
+                            style={{ color: 'white' }}
+                            tag={RouterNavLink}
+                            to="/allrecipespage"
+                        >
+                            {' '}
+                            All Recipes{' '}
+                        </NavLink>
                     </NavbarBrand>
-                    <NavLink style={{color: 'white'}} tag={RouterNavLink} to="/login"> <strong> Login </strong></NavLink>
-                    <NavLink style={{color: 'white'}} tag={RouterNavLink} to="/signup"> <strong> Sign Up </strong></NavLink>
 
+
+                    {isLogged ? (
+                        <div className="d-flex align-items-right">
+                            <ButtonDropdown
+                                isOpen={dropdownOpen}
+                                toggle={toggle}
+                            >
+                                <DropdownToggle caret>
+                                    {user.name}
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem
+                                        tag={RouterNavLink}
+                                        to="/favorites"
+                                    >
+                                        Favorite Recipes
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </ButtonDropdown>
+                            <Button className="mybutton" color="danger" tag={RouterNavLink} onClick={onLogout} to="/"><strong> Logout </strong></Button>
+                        </div>
+                    ) : (
+                        <div className="d-flex align-items-right">
+                            <Button className="mybutton" color="success" tag={RouterNavLink} to="/login"><strong> Login </strong></Button>
+                            <Button className="mybutton" color="success" tag={RouterNavLink} to="/signup"><strong> SignUp </strong></Button>
+                        </div>
+                    )}
                 </Container>
             </Navbar>
         </header>
