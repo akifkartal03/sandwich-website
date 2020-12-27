@@ -11,6 +11,7 @@ import Recipe from './components/RecipePage/RecipeData';
 import SearchData from './components/Search/SearchData';
 import Redirect from './components/Error_Page/Redirect';
 import LoginPage from './components/LoginPage/LoginPage';
+import SignUpPage from './components/SignUpPage/SignUpPage';
 import Favorites from './components/Favorite_Recipes/Favorite_Recipes';
 import { useStore } from './contextAPI/store/Provider';
 import { setUSer } from './contextAPI/actions/LoginAction';
@@ -35,6 +36,7 @@ const App = (props) => {
                 <Route path="/allrecipespage" component={AllRecipies} />
                 <Route path="/search" component={SearchData} />
                 <Route path="/login" component={LoginPage} />
+                <Route path="/signup" component={SignUpPage} />
                 <Route path="/favorites" component={Favorites} />
                 <Route path="" component={Redirect} />
             </Switch>

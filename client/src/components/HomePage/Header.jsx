@@ -68,6 +68,8 @@ const Header = (props) => {
                             All Recipes{' '}
                         </NavLink>
                     </NavbarBrand>
+
+
                     {isLogged ? (
                         <div className="d-flex align-items-right">
                             <ButtonDropdown
@@ -89,7 +91,10 @@ const Header = (props) => {
                             <Button className="mybutton" color="danger" tag={RouterNavLink} onClick={onLogout} to="/"><strong> Logout </strong></Button>
                         </div>
                     ) : (
-                        <Button className="mybutton" color="success" tag={RouterNavLink} to="/login"><strong> Login </strong></Button>
+                        <div className="d-flex align-items-right">
+                            <Button className="mybutton" color="success" tag={RouterNavLink} to="/login"><strong> Login </strong></Button>
+                            <Button className="mybutton" color="success" tag={RouterNavLink} to="/signup"><strong> SignUp </strong></Button>
+                        </div>
                     )}
                 </Container>
             </Navbar>
