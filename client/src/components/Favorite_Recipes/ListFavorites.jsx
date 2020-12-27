@@ -1,5 +1,6 @@
-import React , { useEffect, useState } from 'react';
+import React, { useEffect, useState, Component,Suspense } from 'react';
 import RecipieDataService from '../../services/RecipieService';
+import ShowResults from '../AllRecipesPage/ShowRecipies';
 import './cont.css';
 import {
     Button,
@@ -11,7 +12,7 @@ import {
     Container,
     Row
 } from 'reactstrap';
-const ListRecipies = ({ recipies }) => {
+/*const ListRecipies = ({ recipies }) => {
     const [rec, setData] = useState([]);
     useEffect(() => {
        getData();
@@ -44,7 +45,7 @@ const ListRecipies = ({ recipies }) => {
                                         src={recipie.imgURL}
                                     />
                                     <CardBody className="text-center">
-                                        {/*THERE WILL AN item OBJECT IN DATABASE AND IT WILL BE PRINTED IN HERE*/}
+
                                         <CardText className="cardText">
                                             <strong className="strong">
                                                 {recipie.name}
@@ -74,4 +75,43 @@ const ListRecipies = ({ recipies }) => {
     );
 };
 
-export default ListRecipies;
+export default ListRecipies;*/
+class ListFav extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            recipes: [],
+            isget: false
+        };
+    }
+    retrieveRecipes = () => {
+        this.props.recipies.map(recipie1 => {
+            RecipieDataService.get(recipie1)
+                .then(response => {
+                    this.state.recipes.push(response.data);
+                    this.setState({ recipes: this.state.recipes, isget: true });
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+        });
+        this.setState({ isget: true });
+    };
+    componentDidMount() {
+        this.retrieveRecipes();
+        console.log(this.state.isget);
+        console.log(this.state.recipes);
+    }
+    render() {
+        return (
+            <div className="container">
+                <Suspense fallback={<h1>Loading recipes...</h1>}>
+                    <br/><br/><ShowResults recipies={this.state.recipes} />
+                </Suspense>
+
+            </div>
+        );
+    }
+}
+export default ListFav;
