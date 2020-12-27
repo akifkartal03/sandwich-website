@@ -49,46 +49,36 @@ class SignUpPage extends Component {
         });
     };
 
-    
-    handleOnBlur = async e => {
-        this.setState ({
-          user_name: e.target.value,
-        });
-        const data = {
-          user_name: this.state.user_name,
-        };
-        // const isUsernameTaken = await UserServices (data);
-    
-        // isUsernameTaken === 204
-        //   ? this.setState ({user_name_taken: true})
-        //   : this.setState ({user_name_taken: false});
-      };
-    
     onSubmit = async e => {
-    e.preventDefault ();
-    const data = {
-        first_name: this.state.first_name,
-        last_name: this.state.last_name,
-        user_name: this.state.user_name,
-        password: this.state.password,
+    UserServices.getByUsername(this.state.user_name)
+        .then(response => {
+            if (response.data === null) {
+                const data = {
+                    first_name: this.state.first_name,
+                    last_name: this.state.last_name,
+                    user_name: this.state.user_name,
+                    password: this.state.password,
+                };
+                if(data.password.length > 6){
+                    UserServices.create(data).then(response => {
+                        console.log("New user created")
+                    })
+                    .catch(e => {
+                        console.log(e);
+                    });
+                }
+                else
+                    console.log("Password too short")
+            }
+            else
+                console.log("Cannot create new user");
+        })
+        .catch(e => {
+            console.log(e);
+        });
     };
+
     
-    // const registerStatus = await UserServices (data);
-    //     if (registerStatus === 200) {
-    //       this.setState ({
-    //         first_name: '',
-    //         last_name: '',
-    //         user_name: '',
-    //         password: '',
-    //         register: true,
-    //         error: false,
-    //       });
-    //     } else
-    //       this.setState ({
-    //         error: true,
-    //         register: false,
-    //       });
-      };
 
     render() {
         const {register, error, user_name_taken} = this.state;
@@ -158,9 +148,10 @@ class SignUpPage extends Component {
                         <br />
                         <div className="buttons">
                             <button
-                                type="submit"
+                                type="button"
+                                onClick={this.onSubmit}
                                 className="btn btn-primary"
-                                // disabled={user_name_taken}
+                                disabled={user_name_taken}
                             >
                                 {REGISTRATION_FIELDS.REGISTER}
                             </button>
@@ -170,8 +161,11 @@ class SignUpPage extends Component {
                     </div>
                 </form>
                 <br />
-                {/* {loginSuccess && <Message message={LOGIN_MESSAGE} />}
-                {error && <Error message={ERROR_IN_LOGIN} />} */}
+                {' '}
+                {error && <Error message={ERROR_IN_REGISTRATION} />}
+                {' '}
+                {register && <Message message={REGISTRATION_MESSAGE} />}
+                {' '} 
             </div>
         );
     }
