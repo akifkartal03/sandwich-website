@@ -14,8 +14,8 @@ import LoginPage from './components/LoginPage/LoginPage';
 import Favorites from './components/Favorite_Recipes/Favorite_Recipes';
 import { useStore } from './contextAPI/store/Provider';
 import { setUSer } from './contextAPI/actions/LoginAction';
-const App = () => {
-    const [store, dispatch] = useStore();
+const App = (props) => {
+    const [store, dispatch] = useStore("");
     useEffect(() => {
         const localData = JSON.parse(localStorage.getItem('loginState'));
         if (localData.isLogged) {
