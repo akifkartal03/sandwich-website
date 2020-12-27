@@ -41,8 +41,4 @@ app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
 
-<<<<<<< HEAD
 // export default app;
-=======
-//export default app;
->>>>>>> eb89c5f5b0a4e0091ed6b0291d16d81e0a7a1bd5
