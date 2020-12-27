@@ -14,10 +14,10 @@ import {
 import './button.css';
 import { useStore } from '../../contextAPI/store/Provider';
 import { clear } from '../../contextAPI/actions/LoginAction';
-const Header = () => {
+const Header = (props) => {
     const [dropdownOpen, setOpen] = useState(false);
     const toggle = () => setOpen(!dropdownOpen);
-    const [{ isLogged, user }, dispatch] = useStore();
+    const [{ isLogged, user }, dispatch] = useStore("");
     function onLogout() {
         dispatch(clear());
     }

@@ -1,77 +1,43 @@
-import React , { useEffect, useState } from 'react';
+import React, {Component,Suspense } from 'react';
 import RecipieDataService from '../../services/RecipieService';
+import ShowResults from '../AllRecipesPage/ShowRecipies';
 import './cont.css';
-import {
-    Button,
-    Card,
-    CardImg,
-    CardText,
-    CardBody,
-    Col,
-    Container,
-    Row
-} from 'reactstrap';
-const ListRecipies = ({ recipies }) => {
-    const [rec, setData] = useState([]);
-    useEffect(() => {
-       getData();
-    }, []);
-    async function getData() {
-        let result = [];
-        recipies.map(recipie1 => {
+class ListFav extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            recipes: [],
+            isget: false
+        };
+    }
+    retrieveRecipes = () => {
+        this.props.recipies.map(recipie1 => {
             RecipieDataService.get(recipie1)
                 .then(response => {
-                    result.push(response.data);
+                    this.state.recipes.push(response.data);
+                    this.setState({ recipes: this.state.recipes, isget: true });
                 })
                 .catch(e => {
                     console.log(e);
                 });
         });
-       setData(result);
+        this.setState({ isget: true });
+    };
+    componentDidMount() {
+        this.retrieveRecipes();
+        console.log(this.state.isget);
+        console.log(this.state.recipes);
     }
-    return (
-        <div className="container">
-            <Container className="myContainer">
-                <Row className="row">
-                    {rec.map((recipie, index) => {
-                        return (
-                            <Col md="4" key={index}>
-                                <Card className="mb-4 box-shadow">
-                                    <CardImg
-                                        top
-                                        width="180"
-                                        height="250"
-                                        src={recipie.imgURL}
-                                    />
-                                    <CardBody className="text-center">
-                                        {/*THERE WILL AN item OBJECT IN DATABASE AND IT WILL BE PRINTED IN HERE*/}
-                                        <CardText className="cardText">
-                                            <strong className="strong">
-                                                {recipie.name}
-                                            </strong>
-                                        </CardText>
+    render() {
+        return (
+            <div className="container">
+                <Suspense fallback={<h1>Loading recipes...</h1>}>
+                    <br/><br/><ShowResults recipies={this.state.recipes} />
+                </Suspense>
 
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <Button
-                                                className="showButton"
-                                                href={`/recipe/${recipie._id}`}
-                                                variant="outline-dark"
-                                                color="secondary"
-                                                size="lg"
-                                                block
-                                            >
-                                                <strong>Show</strong>
-                                            </Button>
-                                        </div>
-                                    </CardBody>
-                                </Card>
-                            </Col>
-                        );
-                    })}
-                </Row>
-            </Container>
-        </div>
-    );
-};
-
-export default ListRecipies;
+            </div>
+        );
+    }
+}
+export default ListFav;

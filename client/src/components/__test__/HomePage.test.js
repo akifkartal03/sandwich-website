@@ -40,14 +40,14 @@ describe('All Recipies Page Component Tests', () => {
         wrapper = shallow(<Footer/>)
         expect(wrapper.find('a')).exist;
     });
-    it('Renders header', () => {
+    /*it('Renders header', () => {
         wrapper = shallow(<Header/>);
         expect(wrapper.find('header')).exist;
-    });
-    it('Links to other pages control', () => {
+    });*/
+    /*it('Links to other pages control', () => {
         wrapper = shallow(<Header/>);
         expect(wrapper.find('NavLink')).toHaveLength(2);
-    });  
+    }); */
     it('Renders main', () => {
         wrapper = shallow(<Main/>);
         expect(wrapper.find('main')).exist;
