@@ -26,14 +26,14 @@ class SignUpPage extends Component {
     }
 
     handleOnChangeFirstName = e => {
-        this.setState ({
-          first_name: e.target.value,
+        this.setState({
+            first_name: e.target.value
         });
-      };
-    
+    };
+
     handleOnChangeLastName = e => {
-        this.setState ({
-            last_name: e.target.value,
+        this.setState({
+            last_name: e.target.value
         });
     };
 
@@ -50,38 +50,38 @@ class SignUpPage extends Component {
     };
 
     onSubmit = async e => {
-    UserServices.getByUsername(this.state.user_name)
-        .then(response => {
-            if (response.data === null) {
-                const data = {
-                    first_name: this.state.first_name,
-                    last_name: this.state.last_name,
-                    user_name: this.state.user_name,
-                    password: this.state.password,
-                };
-                if(data.password.length > 6){
-                    UserServices.create(data).then(response => {
-                        console.log("New user created")
-                    })
-                    .catch(e => {
-                        console.log(e);
-                    });
-                }
-                else
-                    console.log("Password too short")
-            }
-            else
-                console.log("Cannot create new user");
-        })
-        .catch(e => {
-            console.log(e);
-        });
+        if (this.state.user_name.length === 0) {
+            console.log('error');
+        } else {
+            UserServices.getByUsername(this.state.user_name)
+                .then(response => {
+                    if (response.data === null) {
+                        const data = {
+                            name: this.state.first_name,
+                            surname: this.state.last_name,
+                            username: this.state.user_name,
+                            password: this.state.password,
+                            favoriteRecipes: []
+                        };
+                        if (data.password.length > 6) {
+                            UserServices.create(data)
+                                .then(response => {
+                                    console.log('New user created');
+                                })
+                                .catch(e => {
+                                    console.log(e);
+                                });
+                        } else console.log('Password too short');
+                    } else console.log('Cannot create new user');
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+        }
     };
 
-    
-
     render() {
-        const {register, error, user_name_taken} = this.state;
+        const { register, error, user_name_taken } = this.state;
 
         return (
             <div className="Login">
@@ -120,7 +120,6 @@ class SignUpPage extends Component {
                         <div className="fields">
                             <br />
                             <p> {COMMON_FIELDS.USER_NAME} </p>{' '}
-                            {' '}
                             <input
                                 type="text"
                                 // className={classNames ({error: user_name_taken})}
@@ -160,12 +159,8 @@ class SignUpPage extends Component {
                         </div>
                     </div>
                 </form>
-                <br />
-                {' '}
-                {error && <Error message={ERROR_IN_REGISTRATION} />}
-                {' '}
-                {register && <Message message={REGISTRATION_MESSAGE} />}
-                {' '} 
+                <br /> {error && <Error message={ERROR_IN_REGISTRATION} />}{' '}
+                {register && <Message message={REGISTRATION_MESSAGE} />}{' '}
             </div>
         );
     }
