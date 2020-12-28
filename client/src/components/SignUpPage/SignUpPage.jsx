@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Message from '../LoginPage/Massage';
 import Error from '../LoginPage/Error';
 import loginImg from '../LoginPage/login.png';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
     COMMON_FIELDS,
     REGISTRATION_FIELDS,
@@ -11,6 +13,7 @@ import {
     ERROR_IN_REGISTRATION
 } from '../LoginPage/MassageBundle';
 import UserServices from '../../services/UserServices';
+toast.configure();
 class SignUpPage extends Component {
     constructor(props) {
         super(props);
@@ -24,7 +27,16 @@ class SignUpPage extends Component {
             error: false
         };
     }
-
+    notify = () =>
+        toast.error('Enter user a valid username!', {
+            position: 'bottom-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined
+        });
     handleOnChangeFirstName = e => {
         this.setState({
             first_name: e.target.value
@@ -51,7 +63,7 @@ class SignUpPage extends Component {
 
     onSubmit = async e => {
         if (this.state.user_name.length === 0) {
-            console.log('error');
+            this.notify();
         } else {
             UserServices.getByUsername(this.state.user_name)
                 .then(response => {
