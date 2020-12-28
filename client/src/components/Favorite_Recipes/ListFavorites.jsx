@@ -1,6 +1,8 @@
 import React, {Component,Suspense } from 'react';
 import RecipieDataService from '../../services/RecipieService';
 import ShowResults from './ShowFavorites';
+import NoFav from './NoFav';
+import Title from './Title';
 import './cont.css';
 class ListFav extends Component {
     constructor(props) {
@@ -8,7 +10,8 @@ class ListFav extends Component {
 
         this.state = {
             recipes: [],
-            isget: false
+            isget: false,
+            number:0
         };
     }
     retrieveRecipes = () => {
@@ -22,7 +25,7 @@ class ListFav extends Component {
                     console.log(e);
                 });
         });
-        this.setState({ isget: true });
+        this.setState({ isget: true,number:this.props.recipies.length });
     };
     componentDidMount() {
         this.retrieveRecipes();
@@ -31,7 +34,8 @@ class ListFav extends Component {
         return (
             <div className="container">
                 <Suspense fallback={<h1>Loading recipes...</h1>}>
-                    <br/><br/><ShowResults recipies={this.state.recipes} />
+                    <Title/>
+                    {this.state.number!==0 ?<ShowResults recipies={this.state.recipes} />:<NoFav/>}
                 </Suspense>
             </div>
         );

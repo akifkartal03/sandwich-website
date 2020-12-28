@@ -4,13 +4,10 @@ import { Link } from 'react-router-dom';
 import loginImg from '../LoginPage/login.png';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {useStore} from '../../contextAPI/store/Provider';
-import {setUSer} from '../../contextAPI/actions/LoginAction';
+import { useStore } from '../../contextAPI/store/Provider';
+import { setUSer } from '../../contextAPI/actions/LoginAction';
 import { useHistory } from 'react-router-dom';
-import {
-    COMMON_FIELDS,
-    REGISTRATION_FIELDS,
-} from '../LoginPage/MassageBundle';
+import { COMMON_FIELDS, REGISTRATION_FIELDS } from '../LoginPage/MassageBundle';
 import UserServices from '../../services/UserServices';
 toast.configure();
 const SignUP = () => {
@@ -58,7 +55,7 @@ const SignUP = () => {
         return string.join('');
     };
     const handleOnChangeFirstName = e => {
-       setFirstName(e.target.value);
+        setFirstName(e.target.value);
     };
 
     const handleOnChangeLastName = e => {
@@ -81,7 +78,7 @@ const SignUP = () => {
         } else if (last_name.length === 0) {
             notifyError('Enter a valid Last Name');
         } else {
-            UserServices.getByUsername(user_name)
+            UserServices.getByUsername(user_name) //control
                 .then(response => {
                     if (response.data === null) {
                         if (password.length > 5) {
@@ -92,12 +89,21 @@ const SignUP = () => {
                                 password: encrypt(password),
                                 favoriteRecipes: []
                             };
-                            UserServices.create(data)
+                            UserServices.create(data) //add
                                 .then(response => {
-                                    notifySuccess('Your Account created!');
                                     delay(5000);
-                                    dispatch(setUSer(data));
-                                    history.push("/");
+                                    UserServices.getByUsername(data.username)
+                                        .then(response => {
+                                            if (response.data !== null) {
+                                                console.log(response.data);
+                                                notifySuccess('Your Account created!');
+                                                dispatch(setUSer(response.data));
+                                                history.push('/');
+                                            }
+                                        })
+                                        .catch(e => {
+                                            console.log(e);
+                                        });
                                 })
                                 .catch(e => {
                                     console.log(e);

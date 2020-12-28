@@ -38,6 +38,7 @@ const Recipies = () => {
         if(isLogged){
             if(!checkContain(id)){
                 user.favoriteRecipes.push(id);
+                console.log(user._id);
                 UserServices.update(user._id,user)
                 .then(response => {
                     dispatch(setUSer(user));
