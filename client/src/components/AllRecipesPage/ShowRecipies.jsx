@@ -1,4 +1,14 @@
 import React from 'react';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import IconButton from '@material-ui/core/IconButton';
+import { useStore } from '../../contextAPI/store/Provider';
+import {
+    notifyWarnRight,
+    notifySuccessRight,
+    notifyInfoRight
+} from '../Error_Page/Messages';
+import UserServices from '../../services/UserServices';
+import { setUSer } from '../../contextAPI/actions/LoginAction';
 import {
     Button,
     Card,
@@ -11,8 +21,37 @@ import {
 } from 'reactstrap';
 const Recipies = ({ recipies }) => {
     let len = 4;
-    if (recipies && recipies.length === 1 && recipies[0]._id === '5fb967aed21567abd722a076')
+    if (
+        recipies &&
+        recipies.length === 1 &&
+        recipies[0]._id === '5fb967aed21567abd722a076'
+    )
         len = 14;
+    const [{ isLogged, user }, dispatch] = useStore('');
+    const addToFav = id => {
+        if(isLogged){
+            if(!checkContain(id)){
+                user.favoriteRecipes.push(id);
+                UserServices.update(user._id,user)
+                .then(response => {
+                    dispatch(setUSer(user));
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+                notifySuccessRight("Recipe added to your favorite recipes!");
+            }
+            else{
+                notifyWarnRight("This recipe already added to favorites!");
+            }
+        }
+        else{
+            notifyInfoRight("To add favorites Sign up or Login!");
+        }
+    };
+    const checkContain = id => {
+        return user.favoriteRecipes.includes(id);
+    };
     return (
         <div className="container">
             <Container>
@@ -46,6 +85,15 @@ const Recipies = ({ recipies }) => {
                                             >
                                                 <strong>Show</strong>
                                             </Button>
+                                            <IconButton
+                                                color="secondary"
+                                                aria-label="add to favorites"
+                                                onClick={() => {
+                                                    addToFav(recipie._id);
+                                                }}
+                                            >
+                                                <FavoriteIcon />
+                                            </IconButton>
                                         </div>
                                     </CardBody>
                                 </Card>

@@ -17,7 +17,14 @@
     color:rgb(7, 9, 78);
     margin-bottom: 10%;
     font-weight: bolder;
+    margin-left: 25px;
+    padding-right: 1rem;
 
+  }
+  .Recipe-logo{
+    margin-right: 0px;
+    height:min-content;
+    width: 10%;
 
   }
   .title{

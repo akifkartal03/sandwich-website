@@ -1,6 +1,6 @@
 import React, {Component,Suspense } from 'react';
 import RecipieDataService from '../../services/RecipieService';
-import ShowResults from '../AllRecipesPage/ShowRecipies';
+import ShowResults from './ShowFavorites';
 import './cont.css';
 class ListFav extends Component {
     constructor(props) {

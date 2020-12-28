@@ -18,6 +18,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
