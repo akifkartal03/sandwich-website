@@ -9,7 +9,7 @@ import './App.css';
 import AllRecipies from './components/AllRecipesPage/AllRecipies';
 import Recipe from './components/RecipePage/RecipeData';
 import SearchData from './components/Search/SearchData'
-import ErrorPage from './components/Error_Page/Error'
+import Redirect from './components/Error_Page/Redirect';
 export default class Example extends React.Component {
     render() {
         return (
@@ -20,7 +20,7 @@ export default class Example extends React.Component {
                     <Route path="/recipe/:id" exact component={Recipe} />
                     <Route path="/allrecipespage" component={AllRecipies} />
                     <Route path="/search" component={SearchData} />
-                    <Route path="/notFound" component={ErrorPage} />
+                    <Route path="" component={Redirect} />
                 </Switch>
                 <Footer />
             </div>
