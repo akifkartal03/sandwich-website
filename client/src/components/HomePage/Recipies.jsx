@@ -13,7 +13,7 @@ import {
 
 const Recipies = () => {
     const [recipies, setRecipies] = useState([]);
-    
+
 
     useEffect(() => {
         retrieveRecipies();
@@ -34,13 +34,13 @@ const Recipies = () => {
         <div className="recipies">
             <Container>
                 <Row>
-                    {recipies.slice(12, recipies.length).map((recipie, index) => {
+                    {recipies.slice(12, 18).map((recipie, index) => {
                         return (
                             <Col md="4" key={index}>
                                 <Card className="mb-4 box-shadow">
                                     <CardImg
                                         top
-                                        width="180" 
+                                        width="180"
                                         height="250"
                                         src={recipie.imgURL}
                                     />

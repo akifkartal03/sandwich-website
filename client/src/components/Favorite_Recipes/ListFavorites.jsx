@@ -12,7 +12,7 @@ class ListFav extends Component {
         };
     }
     retrieveRecipes = () => {
-        this.props.recipies.map(recipie1 => {
+        this.props.recipies.forEach(recipie1 => {
             RecipieDataService.get(recipie1)
                 .then(response => {
                     this.state.recipes.push(response.data);
@@ -26,8 +26,6 @@ class ListFav extends Component {
     };
     componentDidMount() {
         this.retrieveRecipes();
-        console.log(this.state.isget);
-        console.log(this.state.recipes);
     }
     render() {
         return (
@@ -35,7 +33,6 @@ class ListFav extends Component {
                 <Suspense fallback={<h1>Loading recipes...</h1>}>
                     <br/><br/><ShowResults recipies={this.state.recipes} />
                 </Suspense>
-
             </div>
         );
     }

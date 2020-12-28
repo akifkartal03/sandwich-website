@@ -77,7 +77,7 @@ const Header = (props) => {
                                 toggle={toggle}
                             >
                                 <DropdownToggle caret>
-                                    {user.name}
+                                    <strong>{user.name.concat(" ",user.surname)}</strong>
                                 </DropdownToggle>
                                 <DropdownMenu>
                                     <DropdownItem
