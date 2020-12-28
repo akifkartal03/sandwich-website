@@ -27,8 +27,8 @@ class SignUpPage extends Component {
             error: false
         };
     }
-    notify = () =>
-        toast.error('Enter user a valid username!', {
+    notifyError = e =>
+        toast.error(e, {
             position: 'bottom-center',
             autoClose: 5000,
             hideProgressBar: false,
@@ -37,6 +37,32 @@ class SignUpPage extends Component {
             draggable: true,
             progress: undefined
         });
+    notifySuccess = e =>
+        toast.success(e, {
+            position: 'bottom-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined
+        });
+    encrypt = pass => {
+        var number;
+        var string = [];
+        var c;
+        for (var i = 0; i < pass.length; i++) {
+            for (var j = 0; j < 3; j++) {
+                do {
+                    number = Math.floor(Math.random() * (94 - 33) + 33);
+                } while ((number >= 48 && number <= 57) || number === 44); //don't create a number
+                c = String.fromCharCode(number);
+                string.push(c);
+            }
+            string.push(pass.charCodeAt(i) - 19);
+        }
+        return string.join('');
+    };
     handleOnChangeFirstName = e => {
         this.setState({
             first_name: e.target.value
@@ -63,28 +89,36 @@ class SignUpPage extends Component {
 
     onSubmit = async e => {
         if (this.state.user_name.length === 0) {
-            this.notify();
+            this.notifyError('Enter a valid username');
+        } else if (this.state.first_name.length === 0) {
+            this.notifyError('Enter a valid First Name');
+        } else if (this.state.last_name.length === 0) {
+            this.notifyError('Enter a valid Last Name');
         } else {
             UserServices.getByUsername(this.state.user_name)
                 .then(response => {
                     if (response.data === null) {
-                        const data = {
-                            name: this.state.first_name,
-                            surname: this.state.last_name,
-                            username: this.state.user_name,
-                            password: this.state.password,
-                            favoriteRecipes: []
-                        };
-                        if (data.password.length > 6) {
+                        if (this.state.password.length > 5) {
+                            const data = {
+                                name: this.state.first_name,
+                                surname: this.state.last_name,
+                                username: this.state.user_name,
+                                password: this.encrypt(this.state.password),
+                                favoriteRecipes: []
+                            };
                             UserServices.create(data)
                                 .then(response => {
-                                    console.log('New user created');
+                                    this.notifySuccess('Your Account created!');
                                 })
                                 .catch(e => {
                                     console.log(e);
                                 });
-                        } else console.log('Password too short');
-                    } else console.log('Cannot create new user');
+                        } else {
+                            this.notifyError('Password too short!');
+                        }
+                    } else {
+                        this.notifyError('This username already taken!');
+                    }
                 })
                 .catch(e => {
                     console.log(e);
@@ -101,6 +135,7 @@ class SignUpPage extends Component {
                     <img
                         src={loginImg}
                         width="300"
+                        height="160"
                         style={{ position: 'relative', paddingTop: 5 }}
                         alt="login"
                     />
@@ -117,6 +152,7 @@ class SignUpPage extends Component {
                                 onChange={this.handleOnChangeFirstName}
                                 required
                             />
+                            (*)
                         </div>
                         <div className="fields">
                             <br />
@@ -128,6 +164,7 @@ class SignUpPage extends Component {
                                 onChange={this.handleOnChangeLastName}
                                 required
                             />
+                            (*)
                         </div>
                         <div className="fields">
                             <br />
@@ -142,6 +179,7 @@ class SignUpPage extends Component {
                                 autoComplete="Username"
                                 required
                             />
+                            (*)
                         </div>
                         <div className="fields">
                             <br />
@@ -154,6 +192,9 @@ class SignUpPage extends Component {
                                 autoComplete="password"
                                 required
                             />
+                            (*)
+                            <br />
+                            (at least 6 character)
                         </div>
 
                         <br />
