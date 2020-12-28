@@ -36,6 +36,9 @@ const ShowFav = ({ recipies }) => {
             });
         notifySuccessRight('Recipe removed from favorites!');
         getRecipes();
+        if(user.favoriteRecipes.length === 0){
+            window.location.reload();
+        }
     };
     const getRecipes = () => {
         let result = [];
@@ -52,6 +55,8 @@ const ShowFav = ({ recipies }) => {
     };
     return (
         <div className="recipies">
+            <br/>
+            <br/>
             <Container>
                 <Row>
                     {recipiesAll.map((recipie, index) => {
