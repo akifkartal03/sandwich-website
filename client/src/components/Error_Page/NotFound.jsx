@@ -1,6 +1,6 @@
 import React from 'react';
 import errImg from './img.png'
-const Error = () => {
+const NoFav = () => {
     return (
         <div className="container">
             <h3 className="head" style={{textAlign:'left',color: 'black', fontWeight: 'bolder'}}>There is no recipe with your ingredients! </h3>
@@ -9,4 +9,4 @@ const Error = () => {
     );
 };
 
-export default Error;
+export default NoFav;
