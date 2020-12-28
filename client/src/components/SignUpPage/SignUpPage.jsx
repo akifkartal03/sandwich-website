@@ -1,8 +1,6 @@
 import '../LoginPage/LoginPage.css';
-import React, { Component,useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Message from '../LoginPage/Massage';
-import Error from '../LoginPage/Error';
 import loginImg from '../LoginPage/login.png';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,8 +10,6 @@ import { useHistory } from 'react-router-dom';
 import {
     COMMON_FIELDS,
     REGISTRATION_FIELDS,
-    REGISTRATION_MESSAGE,
-    ERROR_IN_REGISTRATION
 } from '../LoginPage/MassageBundle';
 import UserServices from '../../services/UserServices';
 toast.configure();
@@ -23,6 +19,7 @@ const SignUP = () => {
     const [user_name, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [store, dispatch] = useStore();
+    console.log(store);
     let history = useHistory();
     const notifyError = e =>
         toast.error(e, {

@@ -1,8 +1,6 @@
 import './LoginPage.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Message from './Massage';
-import Error from './Error';
 import UserDataService from '../../services/UserServices';
 import loginImg from './login.png';
 import {useStore} from '../../contextAPI/store/Provider';
@@ -14,14 +12,13 @@ import {
     COMMON_FIELDS,
     REGISTRATION_FIELDS,
     LOGIN_FIELDS,
-    LOGIN_MESSAGE,
-    ERROR_IN_LOGIN
 } from './MassageBundle';
 toast.configure();
 const LoginPage = () => {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [store,dispatch] = useStore();
+    console.log(store);
     let history = useHistory();
     const handleOnChangeUserName = e => {
         setUserName(e.target.value);
