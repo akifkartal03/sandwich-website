@@ -21,8 +21,6 @@ toast.configure();
 const LoginPage = () => {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(false);
-    const [loginSuccess, setloginSuccess] = useState(false);
     const [store,dispatch] = useStore();
     let history = useHistory();
     const handleOnChangeUserName = e => {
@@ -44,7 +42,7 @@ const LoginPage = () => {
     const notifySuccess = e =>
         toast.success(e, {
             position: 'top-right',
-            autoClose: 5000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -86,12 +84,8 @@ const LoginPage = () => {
                     }
                 }
                 if (loginResult !== true) {
-                    setError(true);
-                    setloginSuccess(false);
                     notifyError("Your Username or Password Wrong!");
                 } else {
-                    setError(false);
-                    setloginSuccess(true);
                     dispatch(setUSer(response.data));
                     history.push("/");
                 }

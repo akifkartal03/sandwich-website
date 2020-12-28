@@ -1,11 +1,14 @@
 import '../LoginPage/LoginPage.css';
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import { Link } from 'react-router-dom';
 import Message from '../LoginPage/Massage';
 import Error from '../LoginPage/Error';
 import loginImg from '../LoginPage/login.png';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {useStore} from '../../contextAPI/store/Provider';
+import {setUSer} from '../../contextAPI/actions/LoginAction';
+import { useHistory } from 'react-router-dom';
 import {
     COMMON_FIELDS,
     REGISTRATION_FIELDS,
@@ -14,20 +17,14 @@ import {
 } from '../LoginPage/MassageBundle';
 import UserServices from '../../services/UserServices';
 toast.configure();
-class SignUpPage extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            first_name: '',
-            last_name: '',
-            user_name: '',
-            password: '',
-            register: false,
-            error: false
-        };
-    }
-    notifyError = e =>
+const SignUP = () => {
+    const [first_name, setFirstName] = useState('');
+    const [last_name, setLastName] = useState('');
+    const [user_name, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+    const [store, dispatch] = useStore();
+    let history = useHistory();
+    const notifyError = e =>
         toast.error(e, {
             position: 'bottom-center',
             autoClose: 5000,
@@ -37,17 +34,17 @@ class SignUpPage extends Component {
             draggable: true,
             progress: undefined
         });
-    notifySuccess = e =>
+    const notifySuccess = e =>
         toast.success(e, {
-            position: 'bottom-center',
-            autoClose: 5000,
+            position: 'top-right',
+            autoClose: 4000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined
         });
-    encrypt = pass => {
+    const encrypt = pass => {
         var number;
         var string = [];
         var c;
@@ -63,61 +60,56 @@ class SignUpPage extends Component {
         }
         return string.join('');
     };
-    handleOnChangeFirstName = e => {
-        this.setState({
-            first_name: e.target.value
-        });
+    const handleOnChangeFirstName = e => {
+       setFirstName(e.target.value);
     };
 
-    handleOnChangeLastName = e => {
-        this.setState({
-            last_name: e.target.value
-        });
+    const handleOnChangeLastName = e => {
+        setLastName(e.target.value);
     };
 
-    handleOnChangeUserName = e => {
-        this.setState({
-            user_name: e.target.value
-        });
+    const handleOnChangeUserName = e => {
+        setUserName(e.target.value);
     };
 
-    handleOnChangePassword = e => {
-        this.setState({
-            password: e.target.value
-        });
+    const handleOnChangePassword = e => {
+        setPassword(e.target.value);
     };
-
-    onSubmit = async e => {
-        if (this.state.user_name.length === 0) {
-            this.notifyError('Enter a valid username');
-        } else if (this.state.first_name.length === 0) {
-            this.notifyError('Enter a valid First Name');
-        } else if (this.state.last_name.length === 0) {
-            this.notifyError('Enter a valid Last Name');
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    const onSubmit = async e => {
+        if (user_name.length === 0) {
+            notifyError('Enter a valid username');
+        } else if (first_name.length === 0) {
+            notifyError('Enter a valid First Name');
+        } else if (last_name.length === 0) {
+            notifyError('Enter a valid Last Name');
         } else {
-            UserServices.getByUsername(this.state.user_name)
+            UserServices.getByUsername(user_name)
                 .then(response => {
                     if (response.data === null) {
-                        if (this.state.password.length > 5) {
+                        if (password.length > 5) {
                             const data = {
-                                name: this.state.first_name,
-                                surname: this.state.last_name,
-                                username: this.state.user_name,
-                                password: this.encrypt(this.state.password),
+                                name: first_name,
+                                surname: last_name,
+                                username: user_name,
+                                password: encrypt(password),
                                 favoriteRecipes: []
                             };
                             UserServices.create(data)
                                 .then(response => {
-                                    this.notifySuccess('Your Account created!');
+                                    notifySuccess('Your Account created!');
+                                    delay(5000);
+                                    dispatch(setUSer(data));
+                                    history.push("/");
                                 })
                                 .catch(e => {
                                     console.log(e);
                                 });
                         } else {
-                            this.notifyError('Password too short!');
+                            notifyError('Password too short!');
                         }
                     } else {
-                        this.notifyError('This username already taken!');
+                        notifyError('This username already taken!');
                     }
                 })
                 .catch(e => {
@@ -126,96 +118,87 @@ class SignUpPage extends Component {
         }
     };
 
-    render() {
-        const { register, error, user_name_taken } = this.state;
-
-        return (
-            <div className="Login">
-                <div className="loginImage">
-                    <img
-                        src={loginImg}
-                        width="300"
-                        height="160"
-                        style={{ position: 'relative', paddingTop: 5 }}
-                        alt="login"
-                    />
-                </div>
-                <form onSubmit={this.onSubmit}>
-                    <div>
-                        <div className="fields">
-                            <br />
-                            <p> {COMMON_FIELDS.FIRST_NAME} </p>{' '}
-                            <input
-                                type="text"
-                                value={this.state.first_name}
-                                name="FirstName"
-                                onChange={this.handleOnChangeFirstName}
-                                required
-                            />
-                            (*)
-                        </div>
-                        <div className="fields">
-                            <br />
-                            <p> {COMMON_FIELDS.LAST_NAME} </p>
-                            <input
-                                type="text"
-                                value={this.state.last_name}
-                                name="LastName"
-                                onChange={this.handleOnChangeLastName}
-                                required
-                            />
-                            (*)
-                        </div>
-                        <div className="fields">
-                            <br />
-                            <p> {COMMON_FIELDS.USER_NAME} </p>{' '}
-                            <input
-                                type="text"
-                                // className={classNames ({error: user_name_taken})}
-                                value={this.state.user_name}
-                                name="Username"
-                                onBlur={this.handleOnBlur}
-                                onChange={this.handleOnChangeUserName}
-                                autoComplete="Username"
-                                required
-                            />
-                            (*)
-                        </div>
-                        <div className="fields">
-                            <br />
-                            <p> {COMMON_FIELDS.PASSWORD} </p>
-                            <input
-                                type="password"
-                                value={this.state.password}
-                                name="Password"
-                                onChange={this.handleOnChangePassword}
-                                autoComplete="password"
-                                required
-                            />
-                            (*)
-                            <br />
-                            (at least 6 character)
-                        </div>
-
-                        <br />
-                        <div className="buttons">
-                            <button
-                                type="button"
-                                onClick={this.onSubmit}
-                                className="btn btn-primary"
-                                disabled={user_name_taken}
-                            >
-                                {REGISTRATION_FIELDS.REGISTER}
-                            </button>
-                            {'    '}
-                            <Link to="/">{} Cancel </Link>
-                        </div>
-                    </div>
-                </form>
-                <br /> {error && <Error message={ERROR_IN_REGISTRATION} />}{' '}
-                {register && <Message message={REGISTRATION_MESSAGE} />}{' '}
+    return (
+        <div className="Login">
+            <div className="loginImage">
+                <img
+                    src={loginImg}
+                    width="300"
+                    height="160"
+                    style={{ position: 'relative', paddingTop: 5 }}
+                    alt="login"
+                />
             </div>
-        );
-    }
-}
-export default SignUpPage;
+            <form onSubmit={onSubmit}>
+                <div>
+                    <div className="fields">
+                        <br />
+                        <p> {COMMON_FIELDS.FIRST_NAME} </p>{' '}
+                        <input
+                            type="text"
+                            value={first_name}
+                            name="FirstName"
+                            onChange={handleOnChangeFirstName}
+                            required
+                        />
+                        (*)
+                    </div>
+                    <div className="fields">
+                        <br />
+                        <p> {COMMON_FIELDS.LAST_NAME} </p>
+                        <input
+                            type="text"
+                            value={last_name}
+                            name="LastName"
+                            onChange={handleOnChangeLastName}
+                            required
+                        />
+                        (*)
+                    </div>
+                    <div className="fields">
+                        <br />
+                        <p> {COMMON_FIELDS.USER_NAME} </p>{' '}
+                        <input
+                            type="text"
+                            value={user_name}
+                            name="Username"
+                            onChange={handleOnChangeUserName}
+                            autoComplete="Username"
+                            required
+                        />
+                        (*)
+                    </div>
+                    <div className="fields">
+                        <br />
+                        <p> {COMMON_FIELDS.PASSWORD} </p>
+                        <input
+                            type="password"
+                            value={password}
+                            name="Password"
+                            onChange={handleOnChangePassword}
+                            autoComplete="password"
+                            required
+                        />
+                        (*)
+                        <br />
+                        (at least 6 character)
+                    </div>
+
+                    <br />
+                    <div className="buttons">
+                        <button
+                            type="button"
+                            onClick={onSubmit}
+                            className="btn btn-primary"
+                        >
+                            {REGISTRATION_FIELDS.REGISTER}
+                        </button>
+                        {'    '}
+                        <Link to="/">{} Cancel </Link>
+                    </div>
+                </div>
+            </form>
+        </div>
+    );
+};
+export default SignUP;
