@@ -86,6 +86,13 @@ const Header = (props) => {
                                     >
                                         Favorite Recipes
                                     </DropdownItem>
+                                        
+                                    <DropdownItem
+                                        tag={RouterNavLink}
+                                        to="/profile"
+                                    >
+                                        Profile
+                                    </DropdownItem>
                                 </DropdownMenu>
                             </ButtonDropdown>
                             <Button className="mybutton" color="danger" tag={RouterNavLink} onClick={onLogout} to="/"><strong> Logout </strong></Button>
