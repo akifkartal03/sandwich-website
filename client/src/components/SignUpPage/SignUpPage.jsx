@@ -1,7 +1,6 @@
 import '../LoginPage/LoginPage.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import loginImg from '../LoginPage/login.png';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useStore } from '../../contextAPI/store/Provider';
@@ -125,10 +124,10 @@ const SignUP = () => {
         <div className="Login">
             <div className="loginImage">
                 <img
-                    src={loginImg}
-                    width="300"
-                    height="160"
-                    style={{ position: 'relative', paddingTop: 5 }}
+                    src="https://i.ibb.co/NjvC3BB/signup.png"
+                    width="240"
+                    height="175"
+                    style={{ position: 'relative', paddingTop: 15 }}
                     alt="login"
                 />
             </div>

@@ -14,10 +14,10 @@ import {
 import './button.css';
 import { useStore } from '../../contextAPI/store/Provider';
 import { clear } from '../../contextAPI/actions/LoginAction';
-const Header = (props) => {
+const Header = props => {
     const [dropdownOpen, setOpen] = useState(false);
     const toggle = () => setOpen(!dropdownOpen);
-    const [{ isLogged, user }, dispatch] = useStore("");
+    const [{ isLogged, user }, dispatch] = useStore('');
     function onLogout() {
         dispatch(clear());
     }
@@ -69,7 +69,6 @@ const Header = (props) => {
                         </NavLink>
                     </NavbarBrand>
 
-
                     {isLogged ? (
                         <div className="d-flex align-items-right">
                             <ButtonDropdown
@@ -77,30 +76,63 @@ const Header = (props) => {
                                 toggle={toggle}
                             >
                                 <DropdownToggle caret>
-                                    <strong>{user.name.concat(" ",user.surname)}</strong>
+                                    <strong>
+                                        {user.name.concat(' ', user.surname)}
+                                    </strong>
                                 </DropdownToggle>
                                 <DropdownMenu>
-                                    <DropdownItem
-                                        tag={RouterNavLink}
-                                        to="/favorites"
-                                    >
-                                        Favorite Recipes
+                                    <DropdownItem>
+                                        <a href="/favorites">
+                                            <img
+                                                src="https://i.ibb.co/rZx71rL/heart.png"
+                                                width="20"
+                                                height="20"
+                                                alt="login"
+                                            />{' '}
+                                            Favorite Recipes
+                                        </a>
                                     </DropdownItem>
-                                        
-                                    <DropdownItem
-                                        tag={RouterNavLink}
-                                        to="/profile"
-                                    >
-                                        Profile
+                                    <DropdownItem>
+                                        <a href="/profile" >
+                                            <img
+                                                src="https://i.ibb.co/zXmyW74/logo.png"
+                                                width="20"
+                                                height="20"
+                                                alt="login"
+                                            />{' '}
+                                            Profile
+                                        </a>
                                     </DropdownItem>
                                 </DropdownMenu>
                             </ButtonDropdown>
-                            <Button className="mybutton" color="danger" tag={RouterNavLink} onClick={onLogout} to="/"><strong> Logout </strong></Button>
+                            <Button
+                                className="mybutton"
+                                color="danger"
+                                tag={RouterNavLink}
+                                onClick={onLogout}
+                                to="/"
+                            >
+                                <strong> Logout </strong>
+                            </Button>
                         </div>
                     ) : (
                         <div className="d-flex align-items-right">
-                            <Button className="mybutton" color="success" tag={RouterNavLink} to="/login"><strong> Login </strong></Button>
-                            <Button className="mybutton" color="success" tag={RouterNavLink} to="/signup"><strong> SignUp </strong></Button>
+                            <Button
+                                className="mybutton"
+                                color="success"
+                                tag={RouterNavLink}
+                                to="/login"
+                            >
+                                <strong> Login </strong>
+                            </Button>
+                            <Button
+                                className="mybutton"
+                                color="success"
+                                tag={RouterNavLink}
+                                to="/signup"
+                            >
+                                <strong> SignUp </strong>
+                            </Button>
                         </div>
                     )}
                 </Container>

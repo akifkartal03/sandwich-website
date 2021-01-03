@@ -8,7 +8,7 @@ const Profile = () => {
 	console.log(dispatch);
 	return (
 		<div className="container">
-			{isLogged ? <ProfileForm/> : <Login/>}
+			{isLogged ? <ProfileForm/>  : <Login/>}
 		</div>
 	);
 };
