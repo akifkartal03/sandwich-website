@@ -2,7 +2,6 @@ import './LoginPage.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import UserDataService from '../../services/UserServices';
-import loginImg from './login.png';
 import {useStore} from '../../contextAPI/store/Provider';
 import {setUSer} from '../../contextAPI/actions/LoginAction';
 import { useHistory } from 'react-router-dom';
@@ -95,9 +94,9 @@ const LoginPage = () => {
         <div className="Login">
             <div className="loginImage">
                 <img
-                    src={loginImg}
-                    width="300"
-                    style={{ position: 'relative', paddingTop: 5 }}
+                    src="https://i.ibb.co/7RnSY8k/login2.png"
+                    width="200"
+                    style={{ position: 'relative', paddingTop: 25,paddingBottom:40 }}
                     alt="login"
                 />
             </div>
