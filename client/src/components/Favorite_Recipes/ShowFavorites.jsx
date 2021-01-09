@@ -8,6 +8,7 @@ import {
 } from '../Error_Page/Messages';
 import UserServices from '../../services/UserServices';
 import { setUSer } from '../../contextAPI/actions/LoginAction';
+import { useHistory } from 'react-router-dom';
 import {
     Button,
     Card,
@@ -22,6 +23,7 @@ import {
 const ShowFav = ({ recipies }) => {
     const [{ user }, dispatch] = useStore('');
     const [recipiesAll, setRecipies] = useState(recipies);
+    let history = useHistory();
     const removeFromFav = id => {
         const index = user.favoriteRecipes.indexOf(id);
         if (index > -1) {
@@ -37,7 +39,7 @@ const ShowFav = ({ recipies }) => {
         notifySuccessRight('Recipe removed from favorites!');
         getRecipes();
         if(user.favoriteRecipes.length === 0){
-            window.location.reload();
+            history.push('/nofav');
         }
     };
     const getRecipes = () => {
@@ -52,6 +54,7 @@ const ShowFav = ({ recipies }) => {
                 });
         });
         setRecipies(result);
+
     };
     return (
         <div className="recipies">

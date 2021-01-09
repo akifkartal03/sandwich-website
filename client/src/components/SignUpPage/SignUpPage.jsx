@@ -124,10 +124,10 @@ const SignUP = () => {
         <div className="Login">
             <div className="loginImage">
                 <img
-                    src="https://i.ibb.co/NjvC3BB/signup.png"
+                    src="https://i.ibb.co/GQVfRg9/Sandwich2-removebg-preview.png"
                     width="240"
                     height="175"
-                    style={{ position: 'relative', paddingTop: 15 }}
+                    style={{ position: 'relative', paddingTop: 10 }}
                     alt="login"
                 />
             </div>
