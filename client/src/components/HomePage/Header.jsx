@@ -43,9 +43,9 @@ const Header = props => {
                         />
                         <a className="navbar-brand" href="/">
                             <img
-                                src="https://i.ibb.co/12pWKWZ/Sandwich2.png"
-                                width="70"
-                                height="50"
+                                src="https://i.ibb.co/GQVfRg9/Sandwich2-removebg-preview.png"
+                                width="50"
+                                height="35"
                                 className="d-inline-block align-top"
                                 alt=""
                                 loading="lazy"

@@ -10,9 +10,10 @@ import AllRecipies from './components/AllRecipesPage/AllRecipies';
 import Recipe from './components/RecipePage/RecipeData';
 import SearchData from './components/Search/SearchData';
 import Redirect from './components/Error_Page/Redirect';
-import LoginPage from './components/LoginPage/LoginPage';
-import SignUpPage from './components/SignUpPage/SignUpPage';
+import LoginPage from './components/LoginPage/LoginDirect';
+import SignUpPage from './components/SignUpPage/SignUpDirect';
 import Favorites from './components/Favorite_Recipes/Favorite_Recipes';
+import NoFav from './components/Favorite_Recipes/NoFavDirect';
 import Profile from './components/ProfilePage/ProfilePage'
 import { useStore } from './contextAPI/store/Provider';
 import { setUSer } from './contextAPI/actions/LoginAction';
@@ -40,6 +41,7 @@ const App = (props) => {
                 <Route path="/signup" component={SignUpPage} />
                 <Route path="/favorites" component={Favorites} />
                 <Route path="/profile" component={Profile} />
+                <Route path="/nofav" component={NoFav} />
                 <Route path="" component={Redirect} />
             </Switch>
             <Footer />
