@@ -20,7 +20,6 @@ const LoginPage = () => {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [passwordShown, setPasswordShown] = useState(false);
-    const [store,dispatch] = useStore();
     const [{isLogged},dispatch] = useStore();
     const [curUser, setCurUser] = useState('');
     console.log(isLogged);
