@@ -47,9 +47,21 @@ ReactWrapper {
               </div>
               <br />
               <br />
-              <h3
-                className="Recipe-name"
-              />
+              <div
+                className="d-flex"
+              >
+                <h3
+                  className="Recipe-name"
+                />
+                <ForwardRef(WithStyles(ForwardRef(IconButton)))
+                  aria-label="add to favorites"
+                  className="Recipe-logo"
+                  color="secondary"
+                  onClick={[Function]}
+                >
+                  <UNDEFINED />
+                </ForwardRef(WithStyles(ForwardRef(IconButton)))>
+              </div>
               <div
                 className="IngredientInfo"
               >
@@ -87,9 +99,7 @@ ReactWrapper {
                     }
                   }
                 >
-                   
-                  Browse More
-                   
+                   Browse More 
                 </h3>
               </div>
               <div
@@ -159,9 +169,21 @@ ReactWrapper {
               </div>
               <br />
               <br />
-              <h3
-                className="Recipe-name"
-              />
+              <div
+                className="d-flex"
+              >
+                <h3
+                  className="Recipe-name"
+                />
+                <ForwardRef(WithStyles(ForwardRef(IconButton)))
+                  aria-label="add to favorites"
+                  className="Recipe-logo"
+                  color="secondary"
+                  onClick={[Function]}
+                >
+                  <UNDEFINED />
+                </ForwardRef(WithStyles(ForwardRef(IconButton)))>
+              </div>
               <div
                 className="IngredientInfo"
               >
@@ -281,9 +303,21 @@ ReactWrapper {
                 </div>
                 <br />
                 <br />
-                <h3
-                  className="Recipe-name"
-                />
+                <div
+                  className="d-flex"
+                >
+                  <h3
+                    className="Recipe-name"
+                  />
+                  <ForwardRef(WithStyles(ForwardRef(IconButton)))
+                    aria-label="add to favorites"
+                    className="Recipe-logo"
+                    color="secondary"
+                    onClick={[Function]}
+                  >
+                    <UNDEFINED />
+                  </ForwardRef(WithStyles(ForwardRef(IconButton)))>
+                </div>
                 <div
                   className="IngredientInfo"
                 >
@@ -321,9 +355,7 @@ ReactWrapper {
                       }
                     }
                   >
-                     
-                    Browse More
-                     
+                     Browse More 
                   </h3>
                 </div>
                 <div
@@ -402,9 +434,21 @@ ReactWrapper {
               </div>
               <br />
               <br />
-              <h3
-                className="Recipe-name"
-              />
+              <div
+                className="d-flex"
+              >
+                <h3
+                  className="Recipe-name"
+                />
+                <ForwardRef(WithStyles(ForwardRef(IconButton)))
+                  aria-label="add to favorites"
+                  className="Recipe-logo"
+                  color="secondary"
+                  onClick={[Function]}
+                >
+                  <UNDEFINED />
+                </ForwardRef(WithStyles(ForwardRef(IconButton)))>
+              </div>
               <div
                 className="IngredientInfo"
               >
@@ -541,9 +585,21 @@ ReactWrapper {
                 </div>
                 <br />
                 <br />
-                <h3
-                  className="Recipe-name"
-                />
+                <div
+                  className="d-flex"
+                >
+                  <h3
+                    className="Recipe-name"
+                  />
+                  <ForwardRef(WithStyles(ForwardRef(IconButton)))
+                    aria-label="add to favorites"
+                    className="Recipe-logo"
+                    color="secondary"
+                    onClick={[Function]}
+                  >
+                    <UNDEFINED />
+                  </ForwardRef(WithStyles(ForwardRef(IconButton)))>
+                </div>
                 <div
                   className="IngredientInfo"
                 >
@@ -581,9 +637,7 @@ ReactWrapper {
                       }
                     }
                   >
-                     
-                    Browse More
-                     
+                     Browse More 
                   </h3>
                 </div>
                 <div
@@ -653,9 +707,21 @@ ReactWrapper {
                 </div>
                 <br />
                 <br />
-                <h3
-                  className="Recipe-name"
-                />
+                <div
+                  className="d-flex"
+                >
+                  <h3
+                    className="Recipe-name"
+                  />
+                  <ForwardRef(WithStyles(ForwardRef(IconButton)))
+                    aria-label="add to favorites"
+                    className="Recipe-logo"
+                    color="secondary"
+                    onClick={[Function]}
+                  >
+                    <UNDEFINED />
+                  </ForwardRef(WithStyles(ForwardRef(IconButton)))>
+                </div>
                 <div
                   className="IngredientInfo"
                 >
@@ -775,9 +841,21 @@ ReactWrapper {
                   </div>
                   <br />
                   <br />
-                  <h3
-                    className="Recipe-name"
-                  />
+                  <div
+                    className="d-flex"
+                  >
+                    <h3
+                      className="Recipe-name"
+                    />
+                    <ForwardRef(WithStyles(ForwardRef(IconButton)))
+                      aria-label="add to favorites"
+                      className="Recipe-logo"
+                      color="secondary"
+                      onClick={[Function]}
+                    >
+                      <UNDEFINED />
+                    </ForwardRef(WithStyles(ForwardRef(IconButton)))>
+                  </div>
                   <div
                     className="IngredientInfo"
                   >
@@ -815,9 +893,7 @@ ReactWrapper {
                         }
                       }
                     >
-                       
-                      Browse More
-                       
+                       Browse More 
                     </h3>
                   </div>
                   <div
@@ -896,9 +972,21 @@ ReactWrapper {
                 </div>
                 <br />
                 <br />
-                <h3
-                  className="Recipe-name"
-                />
+                <div
+                  className="d-flex"
+                >
+                  <h3
+                    className="Recipe-name"
+                  />
+                  <ForwardRef(WithStyles(ForwardRef(IconButton)))
+                    aria-label="add to favorites"
+                    className="Recipe-logo"
+                    color="secondary"
+                    onClick={[Function]}
+                  >
+                    <UNDEFINED />
+                  </ForwardRef(WithStyles(ForwardRef(IconButton)))>
+                </div>
                 <div
                   className="IngredientInfo"
                 >
