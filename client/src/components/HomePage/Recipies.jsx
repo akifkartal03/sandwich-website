@@ -21,6 +21,7 @@ import {
 const Recipies = () => {
     const [recipies, setRecipies] = useState([]);
     const [{ isLogged, user }, dispatch] = useStore("");
+
     useEffect(() => {
         retrieveRecipies();
     }, []);
