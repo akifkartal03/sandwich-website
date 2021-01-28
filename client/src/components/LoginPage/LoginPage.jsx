@@ -21,7 +21,9 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const [passwordShown, setPasswordShown] = useState(false);
     const [store,dispatch] = useStore();
-    console.log(store);
+    const [{isLogged},dispatch] = useStore();
+    const [curUser, setCurUser] = useState('');
+    console.log(isLogged);
     let history = useHistory();
     const handleOnChangeUserName = e => {
         setUserName(e.target.value);
@@ -89,6 +91,7 @@ const LoginPage = () => {
                 if (loginResult !== true) {
                     notifyError("Your Username or Password Wrong!");
                 } else {
+                    setCurUser(response.data)
                     dispatch(setUSer(response.data));
                     history.push("/");
                 }
@@ -117,6 +120,7 @@ const LoginPage = () => {
                             name="Username"
                             onChange={handleOnChangeUserName}
                             autoComplete="Username"
+                            data-testid="input1"
                             required
                         />
                     </div>
@@ -128,6 +132,7 @@ const LoginPage = () => {
                             name="Password"
                             onChange={handleOnChangePassword}
                             autoComplete="Password"
+                            data-testid="input2"
                             required
                         />
                         <i onClick={togglePasswordVisibility}>{eye}</i>
@@ -137,6 +142,7 @@ const LoginPage = () => {
                     <div className="buttons">
                         <button
                             type="button"
+                            data-testid="loginbutton"
                             onClick={onSubmit}
                             className="btn btn-primary"
                         >
