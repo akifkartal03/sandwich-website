@@ -1,4 +1,4 @@
-import '../LoginPage/LoginPage.css';
+import './SignUpPage.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -8,12 +8,16 @@ import { setUSer } from '../../contextAPI/actions/LoginAction';
 import { useHistory } from 'react-router-dom';
 import { COMMON_FIELDS, REGISTRATION_FIELDS } from '../LoginPage/MassageBundle';
 import UserServices from '../../services/UserServices';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+const eye = <FontAwesomeIcon icon={faEye} />;
 toast.configure();
 const SignUP = () => {
     const [first_name, setFirstName] = useState('');
     const [last_name, setLastName] = useState('');
     const [user_name, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordShown, setPasswordShown] = useState(false);
     const [store, dispatch] = useStore();
     console.log(store);
     let history = useHistory();
@@ -67,6 +71,9 @@ const SignUP = () => {
 
     const handleOnChangePassword = e => {
         setPassword(e.target.value);
+    };
+    const togglePasswordVisibility = () => {
+        setPasswordShown(passwordShown ? false : true);
     };
     const delay = ms => new Promise(res => setTimeout(res, ms));
     const onSubmit = async e => {
@@ -174,14 +181,16 @@ const SignUP = () => {
                         <br />
                         <p> {COMMON_FIELDS.PASSWORD} </p>
                         <input
-                            type="password"
+                            type={passwordShown ? "text" : "password"}
                             value={password}
                             name="Password"
                             onChange={handleOnChangePassword}
                             autoComplete="password"
                             required
                         />
+                        {' '}
                         (*)
+                        <i onClick={togglePasswordVisibility}>{eye}</i>
                         <br />
                         (at least 6 character)
                     </div>

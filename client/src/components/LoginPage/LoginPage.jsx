@@ -12,10 +12,14 @@ import {
     REGISTRATION_FIELDS,
     LOGIN_FIELDS,
 } from './MassageBundle';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+const eye = <FontAwesomeIcon icon={faEye} />;
 toast.configure();
 const LoginPage = () => {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordShown, setPasswordShown] = useState(false);
     const [store,dispatch] = useStore();
     console.log(store);
     let history = useHistory();
@@ -24,6 +28,9 @@ const LoginPage = () => {
     };
     const handleOnChangePassword = e => {
         setPassword(e.target.value);
+    };
+    const togglePasswordVisibility = () => {
+        setPasswordShown(passwordShown ? false : true);
     };
     const notifyError = e =>
         toast.error(e, {
@@ -117,12 +124,13 @@ const LoginPage = () => {
                         <br />
                         <p> {COMMON_FIELDS.PASSWORD} </p>
                         <input
-                            type="password"
+                            type={passwordShown ? "text" : "password"}
                             name="Password"
                             onChange={handleOnChangePassword}
                             autoComplete="Password"
                             required
                         />
+                        <i onClick={togglePasswordVisibility}>{eye}</i>
                     </div>
 
                     <br />
