@@ -43,7 +43,7 @@ const Main = () => {
                                     </Button>
                                 </InputGroupAddon>
                                 <Input
-                                    placeholder="e.g. Sugar,Salt,Water,Tomato"
+                                    placeholder="e.g. Sugar,Salt,Water,Tomato & e.g. Big Mac"
                                     onChange={e =>
                                         onChange(`${e.target.value}`)
                                     }
