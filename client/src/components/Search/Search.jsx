@@ -37,18 +37,16 @@ const Search = ({ recipes, param }) => {
     function searchByRecipe() {
         const searcher = new FuzzySearch(
             recipes,
-            ['category','name', 'ingredients'],
+            ['name', 'category', 'ingredients'],
             {
                 sort: true
             }
         );
         const result = searcher.search(param);
-        console.log("res= " + result);
-
         result.forEach(element => {
             results.push(element);
         });
-        if(results.length !== 0) {
+        if (results.length !== 0) {
             isFound = true;
         }
     }
