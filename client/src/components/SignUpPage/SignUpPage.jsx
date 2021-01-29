@@ -206,7 +206,7 @@ const SignUP = () => {
                         />
 
                     </div>
-                    <div className="fields">
+                    <div className="pass-wrapper">
                         <br />
                         <input
                             type={passwordShown ? "text" : "password"}

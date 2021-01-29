@@ -121,7 +121,6 @@ const LoginPage = () => {
                     alt="login"
                 />
             </div>
-            <br />
             <form onSubmit={onSubmit}>
                 <div>
                     <div className="fields">
@@ -138,7 +137,7 @@ const LoginPage = () => {
                             required
                         />
                     </div>
-                    <div className="fields">
+                    <div className="pass-wrapper">
                         <br />
                         <input
                             type={passwordShown ? 'text' : 'password'}

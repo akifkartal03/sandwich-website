@@ -6,21 +6,25 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 input{
+    position:relative;
     border-radius: 5px;
     border: 2.1px solid #697DA1;
+
 }
 input:focus{
     border: 2px solid #343A40;
 }
 .pass {
-    position: absolute;
-    margin-left: 0.3%;
-    margin-top: 0.2%;
-    top: 68.5%;
-    right: 42.2%;
+    position:relative;
+    top: 2px;
+    right: 25px;
+    cursor: pointer;
 }
 .pass:hover {
     color: #00fcb6;
     cursor: pointer;
 }
+.pass-wrapper {
+    margin-left: 17px;
+  }
 .error { border: 2px solid red; }
