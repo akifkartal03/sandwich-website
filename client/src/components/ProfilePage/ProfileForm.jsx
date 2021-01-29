@@ -1,5 +1,6 @@
 import '../LoginPage/LoginPage.css';
 import React, { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useStore } from '../../contextAPI/store/Provider';
@@ -18,6 +19,10 @@ const ProfileForm = () => {
     const [last_name, setLastName] = useState('');
     const [user_name, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [firstNameError, setFirstNameError] = useState('');
+    const [lastNameError, setLastNameError] = useState('');
+    const [userNameError, setUserNameError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
     const [passwordShown, setPasswordShown] = useState(false);
     console.log(dispatch);
 	let history = useHistory();
@@ -25,7 +30,6 @@ const ProfileForm = () => {
 		setFirstName(user.name);
 		setLastName(user.surname);
 		setUserName(user.username);
-		setPassword(decrypt(user.password));
     }, []);
     const notifyError = e =>
         toast.error(e, {
@@ -63,172 +67,92 @@ const ProfileForm = () => {
         }
         return string.join('');
 	};
-	const decrypt = encPass => {
-        var string = [];
-        var string1 = [];
-        var c;
-        for (var i = 0; i < encPass.length; i++) {
-            c = encPass.charAt(i);
-            if (c.charCodeAt(0) > 47 && c.charCodeAt(0) < 58) {
-                do {
-                    string.push(c);
-                    i = i + 1;
-                    if (i < encPass.length) {
-                        c = encPass.charAt(i);
-                    } else {
-                        break;
-                    }
-                } while (c.charCodeAt(0) > 47 && c.charCodeAt(0) < 58);
-                string1.push(
-                    String.fromCharCode(parseInt(string.join('')) + 19)
-                );
-                string = [];
-            }
-        }
-        return string1.join('');
-    };
     const handleOnChangeFirstName = e => {
         setFirstName(e.target.value);
+        validateFirstName();
     };
 
     const handleOnChangeLastName = e => {
         setLastName(e.target.value);
+        validateLastName();
     };
 
     const handleOnChangeUserName = e => {
         setUserName(e.target.value);
+        validateUserName();
     };
 
     const handleOnChangePassword = e => {
         setPassword(e.target.value);
+        validatePassword();
+    };
+    const validateFirstName = () => {
+        setFirstNameError(first_name.length > 0 ? null : 'First Name cannot be empty!');
+    };
+
+    const validateLastName = () => {
+        setLastNameError(last_name.length > 0 ? null : 'Last Name cannot be empty!');
+    };
+    const validateUserName = () => {
+        setUserNameError(user_name.length > 0 ? null : 'Username cannot be empty!');
+    };
+
+    const validatePassword = () => {
+        setPasswordError(password.length > 5 || password.length === 0 ? null : 'Please Enter at least 6 characters!');
     };
     const togglePasswordVisibility = () => {
         setPasswordShown(passwordShown ? false : true);
     };
     const delay = ms => new Promise(res => setTimeout(res, ms));
-    const onSubmitFirstName = async e => {
-        if (first_name.length === 0 || first_name === user.name) {
-            notifyError('Enter a valid first name');
-        } else {
-            const data = {
-                name: first_name,
-                surname: user.surname,
-                username: user.username,
-                password: user.password,
-                favoriteRecipes: user.favoriteRecipes
-            };
-            UserServices.update(user._id, data)
-                .then(response => {
-                    delay(1000);
-                    UserServices.getByUsername(data.username)
-                        .then(response => {
-                            console.log(response.data);
-                            if (response.data !== null && response.data.name === first_name) {
-                                notifySuccess("Your first name has been updated successfully");
-                                dispatch(setUSer(response.data));
-                                history.push('/');
-                            }
-                        })
-                        .catch(e => {
-                            console.log(e);
-                        });
-                });
-        }
-    };
-    const onSubmitLastName = async e => {
-        if (last_name.length === 0 || last_name === user.surname) {
-            notifyError('Enter a valid last name');
-        } else {
-            const data = {
-                name: user.name,
-                surname: last_name,
-                username: user.username,
-                password: user.password,
-                favoriteRecipes: user.favoriteRecipes
-            };
-            UserServices.update(user._id, data)
-                .then(response => {
-                    delay(1000);
-                    UserServices.getByUsername(data.username)
-                        .then(response => {
-                            console.log(response.data);
-                            if (response.data !== null && response.data.surname === last_name) {
-                                notifySuccess("Your last name has been updated successfully");
-                                dispatch(setUSer(response.data));
-                                history.push('/');
-                            }
-                        })
-                        .catch(e => {
-                            console.log(e);
-                        });
-                });
-        }
-    };
-    const onSubmitUsername = async e => {
-        if (user_name.length === 0 || user_name === user.username) {
+    const onSubmit = async e => {
+        if (user_name.length === 0) {
             notifyError('Enter a valid username');
+        } else if (first_name.length === 0) {
+            notifyError('Enter a valid first name');
+        } else if (last_name.length === 0) {
+            notifyError('Enter a valid last name');
+        } else if (first_name === user.name && last_name === user.surname && user_name === user.username && password.length === 0) {
+            notifyError('You don\'t changed anything');
         } else {
-            UserServices.getByUsername(user_name)
+            UserServices.getByUsername(user_name) //control
                 .then(response => {
-                    if (response.data === null) {
-                        const data = {
-                            name: user.name,
-                            surname: user.surname,
-                            username: user_name,
-                            password: user.password,
-                            favoriteRecipes: user.favoriteRecipes
-                        };
-                        UserServices.update(user._id, data)
-                            .then(response => {
-                                delay(1000);
-                                UserServices.getByUsername(data.username)
-                                    .then(response => {
-                                        console.log(response.data);
-                                        if (response.data !== null) {
-                                            notifySuccess('Your username has been updated successfully');
-                                            dispatch(setUSer(response.data));
-                                            history.push('/');
-                                        }
-                                    })
-                                    .catch(e => {
-                                        console.log(e);
-                                    });
-                            })
+                    if (response.data === null || user_name === user.username) {
+                        if (password.length > 5 || password.length === 0) {
+                            const data = {
+                                name: first_name,
+                                surname: last_name,
+                                username: user_name,
+                                password: password.length > 5 ? encrypt(password) : user.password,
+                                favoriteRecipes: user.favoriteRecipes
+                            };
+                            UserServices.update(user._id,data) //update
+                                .then(response => {
+                                    delay(1000);
+                                    UserServices.getByUsername(data.username)
+                                        .then(response => {
+                                            if (response.data !== null) {
+                                                console.log(response.data);
+                                                notifySuccess('Your Information has been updated!');
+                                                dispatch(setUSer(response.data));
+                                                history.push('/');
+                                            }
+                                        })
+                                        .catch(e => {
+                                            console.log(e);
+                                        });
+                                })
+                                .catch(e => {
+                                    console.log(e);
+                                });
+                        } else {
+                            notifyError('Password too short!');
+                        }
                     } else {
-                        notifyError('This username has already taken');
+                        notifyError('This username already taken!');
                     }
                 })
                 .catch(e => {
                     console.log(e);
-                });
-        }
-    };
-    const onSubmitPassword = async e => {
-        if (password.length < 6 || password.length === 0) {
-            notifyError('Password must be at least 6 characters');
-        } else {
-            const data = {
-                name: user.name,
-                surname: user.surname,
-                username: user.username,
-                password: encrypt(password),
-                favoriteRecipes: user.favoriteRecipes
-            };
-            UserServices.update(user._id, data)
-                .then(response => {
-                    delay(1000);
-                    UserServices.getByUsername(data.username)
-                        .then(response => {
-                            console.log(response.data);
-                            if (response.data !== null && decrypt(response.data.password) === password) {
-                                notifySuccess("Your password has been updated successfully");
-                                dispatch(setUSer(response.data));
-                                history.push('/');
-                            }
-                        })
-                        .catch(e => {
-                            console.log(e);
-                        });
                 });
         }
     };
@@ -238,100 +162,89 @@ const ProfileForm = () => {
             <div className="container">
 				<Title/>
             </div>
-            <form>
+            <br/>
+            <form onSubmit={onSubmit}>
                 <div>
                     <div className="fields">
                         <br />
-                        <p> {COMMON_FIELDS.FIRST_NAME} </p>{' '}
+                        <p> { COMMON_FIELDS.FIRST_NAME } </p>
                         <input
                             type="text"
-                            defaultValue={user.name}
+                            placeholder={`${firstNameError ? firstNameError : 'First Name'}`}
+                            value={first_name}
+                            className={`${firstNameError ? 'error' : ''}`}
                             name="FirstName"
                             onChange={handleOnChangeFirstName}
+                            onBlur={validateFirstName}
+                            defaultValue={first_name}
                             required
                         />
-                        (*)
-                        <br />
-                        <br />
-                        <button
-                            type="button"
-                            onClick={onSubmitFirstName}
-                            className="btn btn-primary"
-                        >
-                            Update
-                        </button>
+
                     </div>
                     <div className="fields">
                         <br />
-                        <br />
-                        <p> {COMMON_FIELDS.LAST_NAME} </p>
+                        <p> { COMMON_FIELDS.LAST_NAME } </p>
                         <input
                             type="text"
-                            defaultValue={user.surname}
+                            value={last_name}
+                            className={`${lastNameError ? 'error' : ''}`}
+                            placeholder={`${lastNameError ? lastNameError : 'Last Name'}`}
                             name="LastName"
                             onChange={handleOnChangeLastName}
+                            onBlur={validateLastName}
+                            defaultValue={last_name}
                             required
                         />
-                        (*)
-                        <br />
-                        <br />
-                        <button
-                            type="button"
-                            onClick={onSubmitLastName}
-                            className="btn btn-primary"
-                        >
-                            Update
-                        </button>
+
                     </div>
                     <div className="fields">
                         <br />
-                        <br />
-                        <p> {COMMON_FIELDS.USER_NAME} </p>{' '}
+                        <p> { COMMON_FIELDS.USER_NAME } </p>
                         <input
                             type="text"
-                            defaultValue={user.username}
+                            value={user_name}
                             name="Username"
+                            placeholder={`${userNameError ? userNameError : 'Username'}`}
+                            className={`${userNameError ? 'error' : ''}`}
                             onChange={handleOnChangeUserName}
+                            onBlur={validateUserName}
                             autoComplete="Username"
+                            defaultValue={user_name}
                             required
                         />
-                        (*)
-                        <br />
-                        <br />
-                        <button
-                            type="button"
-                            onClick={onSubmitUsername}
-                            className="btn btn-primary"
-                        >
-                            Update
-                        </button>
+
                     </div>
-                    <div className="fields">
+                    <div className="pass-wrapper">
                         <br />
-                        <br />
-                        <p> {COMMON_FIELDS.PASSWORD} </p>
+                        <p> { COMMON_FIELDS.PASSWORD } </p>
                         <input
                             type={passwordShown ? "text" : "password"}
+                            value={password}
                             name="Password"
+                            placeholder={`${passwordError ? passwordError : 'Password'}`}
+                            className={`${passwordError ? 'error' : ''}`}
                             onChange={handleOnChangePassword}
+                            onBlur={validatePassword}
                             autoComplete="password"
                             required
                         />
-                        (*)
-                        <i onClick={togglePasswordVisibility}>{eye}</i>
+                        <i className="pass" onClick={togglePasswordVisibility}>{eye}</i>
+
                         <br />
-                        (at least 6 character)
-                        <br />
+                    </div>
+
+                    <br />
+                    <div className="buttons">
                         <button
                             type="button"
-                            onClick={onSubmitPassword}
+                            onClick={onSubmit}
                             className="btn btn-primary"
                         >
                             Update
                         </button>
+                        {'    '}
+                        <Link to="/">{} Cancel </Link>
                     </div>
-
-
                 </div>
             </form>
         </div>
