@@ -1,0 +1,23 @@
+.Login {
+    text-align: center;
+    font-family:Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold;
+    color: #343A40;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input{
+    border-radius: 5px;
+    border: 1.5px solid #697DA1;
+}
+input:focus{
+    border: 2px solid #343A40;
+}
+i {
+    position: absolute;
+    margin-left: 0.3%;
+    margin-top: 0.2%;
+}
+i:hover {
+    color: #00fcb6;
+    cursor: pointer;
+}
