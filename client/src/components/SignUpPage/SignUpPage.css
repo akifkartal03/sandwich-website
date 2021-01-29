@@ -1,4 +1,4 @@
-.Login {
+.SignUp {
     text-align: center;
     font-family:Comic Sans MS, Comic Sans, cursive;
     font-weight: bold;
@@ -7,17 +7,20 @@
 }
 input{
     border-radius: 5px;
-    border: 1.5px solid #697DA1;
+    border: 2.1px solid #697DA1;
 }
 input:focus{
     border: 2px solid #343A40;
 }
-i {
+.pass {
     position: absolute;
     margin-left: 0.3%;
     margin-top: 0.2%;
+    top: 68.5%;
+    right: 42.2%;
 }
-i:hover {
+.pass:hover {
     color: #00fcb6;
     cursor: pointer;
 }
+.error { border: 2px solid red; }

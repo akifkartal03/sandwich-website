@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useStore } from '../../contextAPI/store/Provider';
 import { setUSer } from '../../contextAPI/actions/LoginAction';
 import { useHistory } from 'react-router-dom';
-import { COMMON_FIELDS, REGISTRATION_FIELDS } from '../LoginPage/MassageBundle';
+import { REGISTRATION_FIELDS } from '../LoginPage/MassageBundle';
 import UserServices from '../../services/UserServices';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
@@ -17,6 +17,10 @@ const SignUP = () => {
     const [last_name, setLastName] = useState('');
     const [user_name, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [firstNameError, setFirstNameError] = useState('');
+    const [lastNameError, setLastNameError] = useState('');
+    const [userNameError, setUserNameError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
     const [passwordShown, setPasswordShown] = useState(false);
     const [store, dispatch] = useStore();
     console.log(store);
@@ -59,18 +63,36 @@ const SignUP = () => {
     };
     const handleOnChangeFirstName = e => {
         setFirstName(e.target.value);
+        validateFirstName();
     };
 
     const handleOnChangeLastName = e => {
         setLastName(e.target.value);
+        validateLastName();
     };
 
     const handleOnChangeUserName = e => {
         setUserName(e.target.value);
+        validateUserName();
     };
 
     const handleOnChangePassword = e => {
         setPassword(e.target.value);
+        validatePassword();
+    };
+    const validateFirstName = () => {
+        setFirstNameError(first_name.length > 0 ? null : 'First Name cannot be empty!');
+    };
+
+    const validateLastName = () => {
+        setLastNameError(last_name.length > 0 ? null : 'Last Name cannot be empty!');
+    };
+    const validateUserName = () => {
+        setUserNameError(user_name.length > 0 ? null : 'Username cannot be empty!');
+    };
+
+    const validatePassword = () => {
+        setPasswordError(password.length > 5 ? null : 'Please Enter at least 6 characters!');
     };
     const togglePasswordVisibility = () => {
         setPasswordShown(passwordShown ? false : true);
@@ -128,81 +150,89 @@ const SignUP = () => {
     };
 
     return (
-        <div className="Login">
+        <div className="SignUp">
             <div className="loginImage">
                 <img
                     src="https://i.ibb.co/GQVfRg9/Sandwich2-removebg-preview.png"
-                    width="240"
-                    height="175"
+                    width="280"
+                    height="200"
                     style={{ position: 'relative', paddingTop: 10 }}
                     alt="login"
                 />
             </div>
+            <br />
             <form onSubmit={onSubmit}>
                 <div>
                     <div className="fields">
                         <br />
-                        <p> {COMMON_FIELDS.FIRST_NAME} </p>{' '}
                         <input
                             type="text"
+                            placeholder={`${firstNameError ? firstNameError : 'First Name'}`}
                             value={first_name}
+                            className={`${firstNameError ? 'error' : ''}`}
                             name="FirstName"
                             onChange={handleOnChangeFirstName}
+                            onBlur={validateFirstName}
                             required
                         />
-                        (*)
+
                     </div>
                     <div className="fields">
                         <br />
-                        <p> {COMMON_FIELDS.LAST_NAME} </p>
                         <input
                             type="text"
                             value={last_name}
+                            className={`${lastNameError ? 'error' : ''}`}
+                            placeholder={`${lastNameError ? lastNameError : 'Last Name'}`}
                             name="LastName"
                             onChange={handleOnChangeLastName}
+                            onBlur={validateLastName}
                             required
                         />
-                        (*)
+
                     </div>
                     <div className="fields">
                         <br />
-                        <p> {COMMON_FIELDS.USER_NAME} </p>{' '}
                         <input
                             type="text"
                             value={user_name}
                             name="Username"
+                            placeholder={`${userNameError ? userNameError : 'Username'}`}
+                            className={`${userNameError ? 'error' : ''}`}
                             onChange={handleOnChangeUserName}
+                            onBlur={validateUserName}
                             autoComplete="Username"
                             required
                         />
-                        (*)
+
                     </div>
                     <div className="fields">
                         <br />
-                        <p> {COMMON_FIELDS.PASSWORD} </p>
                         <input
                             type={passwordShown ? "text" : "password"}
                             value={password}
                             name="Password"
+                            placeholder={`${passwordError ? passwordError : 'Password'}`}
+                            className={`${passwordError ? 'error' : ''}`}
                             onChange={handleOnChangePassword}
+                            onBlur={validatePassword}
                             autoComplete="password"
                             required
                         />
-                        {' '}
-                        (*)
-                        <i onClick={togglePasswordVisibility}>{eye}</i>
+                        <i className="pass" onClick={togglePasswordVisibility}>{eye}</i>
+
                         <br />
-                        (at least 6 character)
                     </div>
 
                     <br />
                     <div className="buttons">
                         <button
+                            style={{ marginRight: 20 }}
                             type="button"
                             onClick={onSubmit}
                             className="btn btn-primary"
                         >
-                            {REGISTRATION_FIELDS.REGISTER}
+                            <strong>{REGISTRATION_FIELDS.REGISTER}</strong>
                         </button>
                         {'    '}
                         <Link to="/">{} Cancel </Link>

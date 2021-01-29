@@ -2,35 +2,45 @@ import './LoginPage.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import UserDataService from '../../services/UserServices';
-import {useStore} from '../../contextAPI/store/Provider';
-import {setUSer} from '../../contextAPI/actions/LoginAction';
+import { useStore } from '../../contextAPI/store/Provider';
+import { setUSer } from '../../contextAPI/actions/LoginAction';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {
-    COMMON_FIELDS,
     REGISTRATION_FIELDS,
-    LOGIN_FIELDS,
+    LOGIN_FIELDS
 } from './MassageBundle';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 const eye = <FontAwesomeIcon icon={faEye} />;
 toast.configure();
 const LoginPage = () => {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [passwordShown, setPasswordShown] = useState(false);
-    const [{isLogged},dispatch] = useStore();
+    const [usernameError, setUserNameError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [{ isLogged }, dispatch] = useStore();
     console.log(isLogged);
     let history = useHistory();
     const handleOnChangeUserName = e => {
         setUserName(e.target.value);
+        validateUserName();
     };
     const handleOnChangePassword = e => {
         setPassword(e.target.value);
+        validatePassword();
     };
     const togglePasswordVisibility = () => {
         setPasswordShown(passwordShown ? false : true);
+    };
+    const validateUserName = () => {
+        setUserNameError(username.length > 0 ? null : 'Username cannot be empty!');
+    };
+
+    const validatePassword = () => {
+        setPasswordError(password.length > 0 ? null : 'Password cannot be empty!');
     };
     const notifyError = e =>
         toast.error(e, {
@@ -83,14 +93,14 @@ const LoginPage = () => {
                 if (response.data !== null) {
                     if (decrypt(response.data.password) === password) {
                         loginResult = true;
-                        notifySuccess("Login Success");
+                        notifySuccess('Login Success');
                     }
                 }
                 if (loginResult !== true) {
-                    notifyError("Your Username or Password Wrong!");
+                    notifyError('Your Username or Password Wrong!');
                 } else {
                     dispatch(setUSer(response.data));
-                    history.push("/");
+                    history.push('/');
                 }
             })
             .catch(e => {
@@ -103,19 +113,26 @@ const LoginPage = () => {
                 <img
                     src="https://i.ibb.co/7RnSY8k/login2.png"
                     width="200"
-                    style={{ position: 'relative', paddingTop: 25,paddingBottom:40 }}
+                    style={{
+                        position: 'relative',
+                        paddingTop: 25,
+                        paddingBottom: 40
+                    }}
                     alt="login"
                 />
             </div>
+            <br />
             <form onSubmit={onSubmit}>
                 <div>
                     <div className="fields">
                         <br />
-                        <p> {COMMON_FIELDS.USER_NAME} </p>{' '}
                         <input
                             type="text"
                             name="Username"
+                            className={`${usernameError ? 'error' : ''}`}
+                            placeholder={`${usernameError ? usernameError : 'Username'}`}
                             onChange={handleOnChangeUserName}
+                            onBlur={validateUserName}
                             autoComplete="Username"
                             data-testid="input1"
                             required
@@ -123,11 +140,13 @@ const LoginPage = () => {
                     </div>
                     <div className="fields">
                         <br />
-                        <p> {COMMON_FIELDS.PASSWORD} </p>
                         <input
-                            type={passwordShown ? "text" : "password"}
+                            type={passwordShown ? 'text' : 'password'}
                             name="Password"
+                            className={`${passwordError ? 'error' : ''}`}
+                            placeholder={`${passwordError ? passwordError : 'Password'}`}
                             onChange={handleOnChangePassword}
+                            onBlur={validatePassword}
                             autoComplete="Password"
                             data-testid="input2"
                             required
@@ -138,18 +157,22 @@ const LoginPage = () => {
                     <br />
                     <div className="buttons">
                         <button
+                            style={{ marginRight: 10 }}
                             type="button"
                             data-testid="loginbutton"
                             onClick={onSubmit}
                             className="btn btn-primary"
                         >
-                            {LOGIN_FIELDS.LOGIN}
+                            <strong>{LOGIN_FIELDS.LOGIN}</strong>
                         </button>
                         {'    '}
-                        <Link to="/signup">{REGISTRATION_FIELDS.REGISTER} </Link>
+                        <Link to="/signup">
+                            {REGISTRATION_FIELDS.REGISTER}{' '}
+                        </Link>
                     </div>
                 </div>
             </form>
+            <br />
         </div>
     );
 };
