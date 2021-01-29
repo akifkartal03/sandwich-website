@@ -21,7 +21,6 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const [passwordShown, setPasswordShown] = useState(false);
     const [{isLogged},dispatch] = useStore();
-    const [curUser, setCurUser] = useState('');
     console.log(isLogged);
     let history = useHistory();
     const handleOnChangeUserName = e => {
@@ -90,7 +89,6 @@ const LoginPage = () => {
                 if (loginResult !== true) {
                     notifyError("Your Username or Password Wrong!");
                 } else {
-                    setCurUser(response.data)
                     dispatch(setUSer(response.data));
                     history.push("/");
                 }
