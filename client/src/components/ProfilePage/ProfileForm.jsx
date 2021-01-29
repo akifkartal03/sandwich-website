@@ -236,11 +236,12 @@ const ProfileForm = () => {
                     <br />
                     <div className="buttons">
                         <button
+                            style={{ marginRight: 20 }}
                             type="button"
                             onClick={onSubmit}
                             className="btn btn-primary"
                         >
-                            Update
+                            <strong>Update</strong>
                         </button>
                         {'    '}
                         <Link to="/">{} Cancel </Link>
