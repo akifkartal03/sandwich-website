@@ -1,7 +1,7 @@
   .App {
     text-align: center;
     display: flex;
-    font-family:Comic Sans MS, Comic Sans, cursive;
+    font-family:Comic Sans MS, Comic Sans;
     font-size: medium;
     font-weight: bold;
     justify-content: space-evenly;
