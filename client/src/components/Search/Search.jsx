@@ -8,12 +8,16 @@ const Search = ({ recipes, param }) => {
     var results = [];
     var isFound = false;
 
-    param = param.replace(/%20/g, ' ');
-
-    if (param.includes(',')) {
-        searchByIngredient();
-    } else {
-        searchByRecipe();
+    if(param.length === 0){
+        isFound = true;
+    }
+    else{
+        param = param.replace(/%20/g, ' ');
+        if (param.includes(',')) {
+            searchByIngredient();
+        } else {
+            searchByRecipe();
+        }
     }
 
     function searchByIngredient() {
@@ -28,7 +32,7 @@ const Search = ({ recipes, param }) => {
         recipes.forEach(element => {
             counter = 0;
             searchList.forEach(val => isInclude(element, val));
-            if (counter >= searchList.length * 0.7) {
+            if (counter >= element.ingredients.length * 0.7) {
                 results.push(element);
                 isFound = true;
             }
