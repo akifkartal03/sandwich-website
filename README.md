@@ -16,3 +16,5 @@
 - Details of testing can be found on the wiki [Testing](https://github.com/akifkartal03/sandwich-recipe-app/wiki/Testing).
 ### All Software Engineering Documents
 - All Software Engineering Documents about this project can be found [here](https://drive.google.com/drive/folders/1r1hAf49-6icioclAkpMs6auiL0NAM41M?usp=sharing).
+### Contributing
+- Details of the Contributions to the project can be found [here](https://github.com/akifkartal03/sandwich-recipe-website/graphs/contributors).
