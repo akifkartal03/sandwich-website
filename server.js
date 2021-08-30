@@ -6,6 +6,7 @@ const categoriesRouter = require("./routes/categories");
 const ingredientsRouter = require("./routes/ingredients");
 const recipesRouter = require("./routes/recipes");
 const usersRouter = require("./routes/users");
+const  campaignRouter = require("./crmApi/api/cmp_route");
 require("dotenv").config();
 
 const app = express();
@@ -29,6 +30,7 @@ app.use("/categories", categoriesRouter);
 app.use("/ingredients", ingredientsRouter);
 app.use("/recipes", recipesRouter);
 app.use("/users", usersRouter);
+app.use("/api/v1", campaignRouter);
 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('client/build'));
