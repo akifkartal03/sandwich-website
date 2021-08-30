@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Main from './components/HomePage/Main';
-import Footer from './components/HomePage/Footer';
-import Header from './components/HomePage/Header';
+//import Main from './components/HomePage/Main';
+import API from './components/HomePage/Api';
+//import Footer from './components/HomePage/Footer';
+//import Header from './components/HomePage/Header';
 import './Filter.css';
 import './App.css';
 import AllRecipies from './components/AllRecipesPage/AllRecipies';
@@ -31,9 +32,9 @@ const App = (props) => {
     });
     return (
         <div>
-            <Header />
+            
             <Switch>
-                <Route path="/" exact component={Main} />
+                <Route path="/" exact component={API} />
                 <Route path="/recipe/:id" exact component={Recipe} />
                 <Route path="/allrecipespage" component={AllRecipies} />
                 <Route path="/search" component={SearchData} />
@@ -44,7 +45,7 @@ const App = (props) => {
                 <Route path="/nofav" component={NoFav} />
                 <Route path="" component={Redirect} />
             </Switch>
-            <Footer />
+            
         </div>
     );
 };
