@@ -18,7 +18,7 @@ const Api = (props) => {
           <p>https://crm5api.herokuapp.com/api/v1/GetCustomerChannelCampaignList</p>
       </Row>
       <Row>
-          <p>https://crm5api.herokuapp.com/api/v1/GetCustomerDefinedCampaigns/CostumerId</p>
+          <p>https://crm5api.herokuapp.com/api/v1/GetCustomerDefinedCampaigns/:CustomerId</p>
       </Row>
     </div>
   );
