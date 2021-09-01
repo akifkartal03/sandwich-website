@@ -1,0 +1,68 @@
+[
+    {
+      "campaignId": 1,
+      "campaingStartDate": "2021-07-28T00:00:00",
+      "campaingEndDate": "2021-08-28T00:00:00",
+      "campaignExplanation": "300 TL Üzeri Alışverişe 50 TL indirim",
+      "campaignName": "GEL300",
+      "customerNo": 1,
+      "imgUrl": "https://i.ibb.co/0Yft13D/2.jpg",
+      "avatarUrl": "https://i.ibb.co/mTMjJnK/hot-sale.png", 
+      "tag": "Genel"
+    },
+    {
+      "campaignId": 2,
+      "campaingStartDate": "2021-06-20T00:00:00",
+      "campaingEndDate": "2021-07-28T00:00:00",
+      "campaignExplanation": "Sepette %20 İndirim",
+      "campaignName": "Sepet20",
+      "customerNo": 2,
+      "imgUrl": "https://i.ibb.co/XYDSGQg/3.png",
+      "avatarUrl": "https://i.ibb.co/GWzvJrD/50-percent.png", 
+      "tag": "Genel"
+    },
+    {
+      "campaignId": 3,
+      "campaingStartDate": "2021-09-01T00:00:00",
+      "campaingEndDate": "2021-10-31T00:00:00",
+      "campaignExplanation": "200 TL Kırtasiye ALışverişine 20 TL İndirilm",
+      "campaignName": "Okul200",
+      "customerNo": 3,
+      "imgUrl": "https://i.ibb.co/VWhrLTY/4.jpg",
+      "avatarUrl": "https://i.ibb.co/kSjfvRd/gift2.png", 
+      "tag": "Kırtasiye"
+    },
+    {
+      "campaignId": 4,
+      "campaingStartDate": "2021-05-01T00:00:00",
+      "campaingEndDate": "2021-10-31T00:00:00",
+      "campaignExplanation": "500 TL üstü Uçak biletine 0-6 yaş arası çocuk bileti Hediye",
+      "campaignName": "Tatil500",
+      "customerNo": 1,
+      "imgUrl": "https://i.ibb.co/f1wB7SM/4.png",
+      "avatarUrl": "https://i.ibb.co/nbrkDmy/percentage.png", 
+      "tag": "Bilet"
+    },
+    {
+      "campaignId": 5,
+      "campaingStartDate": "2021-12-01T00:00:00",
+      "campaingEndDate": "2021-12-31T00:00:00",
+      "campaignExplanation": "Yılbaşında 300 TL Alışverişe Kıyafet %50 indirimli",
+      "campaignName": "YeniYıl50",
+      "customerNo": 1,
+      "imgUrl": "https://i.ibb.co/7kLWmpT/5.jpg",
+      "avatarUrl": "https://i.ibb.co/mTMjJnK/hot-sale.png", 
+      "tag": "Giyim"
+    },
+    {
+      "campaignId": 6,
+      "campaingStartDate": "2021-08-23T00:00:00",
+      "campaingEndDate": "2021-08-30T00:00:00",
+      "campaignExplanation": "Dijital ürünlerde %10 inidirim",
+      "campaignName": "Donus10",
+      "customerNo": 2,
+      "imgUrl": "https://i.ibb.co/z5btPjZ/1.png",
+      "avatarUrl": "https://i.ibb.co/mTMjJnK/hot-sale.png", 
+      "tag": "Elektronik"
+    }
+  ]
