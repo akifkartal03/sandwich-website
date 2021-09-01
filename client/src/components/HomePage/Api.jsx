@@ -4,7 +4,8 @@ const Api = props => {
     const serviceList = [
         'https://crm5api.herokuapp.com/api/v1/GetCustomerChannelCampaignList',
         'https://crm5api.herokuapp.com/api/v1/GetCustomerDefinedCampaigns/:CustomerId',
-        'https://crm5api.herokuapp.com/api/v1/GetDummyCampaigns'
+        'https://crm5api.herokuapp.com/api/v1/GetDummyCampaigns',
+        'https://crm5api.herokuapp.com/api/v1/GetDummyCampaigns/:id'
     ];
     return (
         <div

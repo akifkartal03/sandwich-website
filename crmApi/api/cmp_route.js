@@ -29,5 +29,17 @@ router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
 router.route("/GetDummyCampaigns").get((req, res) => {
   res.json(example_json);
 });
+router.route("/GetDummyCampaigns/:id").get((req, res) => {
+  let isFound = false;
+  example_json.map((value, index) => {
+    if(value.campaignId == req.params.id){
+      isFound = true;
+      res.status(200).json(value);
+    }
+  })
+  if(!isFound){
+    res.status(400).json({"Error":"Not Found"});
+  }
+});
 
 module.exports = router;
