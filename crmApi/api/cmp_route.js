@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { response } = require("express");
 let cmpService = require("./service");
+let example_json = require("../campaign_example.json");
 
 router.route("/GetCustomerChannelCampaignList").get((req, res) => {
   cmpService
@@ -23,6 +24,10 @@ router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
     .catch((e) => {
       console.log(e);
     });
+});
+
+router.route("/GetDummyCampaigns").get((req, res) => {
+  res.json(example_json);
 });
 
 module.exports = router;

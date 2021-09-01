@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 //import Main from './components/HomePage/Main';
 import API from './components/HomePage/Api';
 //import Footer from './components/HomePage/Footer';
