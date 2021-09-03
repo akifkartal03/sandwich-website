@@ -42,4 +42,18 @@ router.route("/GetDummyCampaigns/:id").get((req, res) => {
   }
 });
 
+router.route("/GetTemplateCustomerChannelCampaignList").get((req, res) => {
+  cmpService
+    .GetCustomerChannelCampaignList()
+    .then((response) => {
+      //console.log(response);
+      res.json(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+});
+
+
+
 module.exports = router;

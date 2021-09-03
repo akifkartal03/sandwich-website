@@ -10,7 +10,7 @@ const Api = props => {
     return (
         <div
             style={{
-                paddingLeft: 50,
+                paddingLeft: 60,
                 paddingTop: 15
             }}
         >
@@ -20,7 +20,7 @@ const Api = props => {
             <Row>
                 <h5>Some Services are following</h5>
             </Row>
-            <br></br>
+            <br />
             {serviceList.map((value, index) => {
                 return (
                     <Row>
@@ -28,6 +28,16 @@ const Api = props => {
                     </Row>
                 );
             })}
+            <br />
+            <Row>
+                <h4>How it works?</h4>
+            </Row>
+            <Row>
+            <img style={{
+                paddingTop: 5,
+                paddingLeft: 30,
+            }} src="https://i.ibb.co/HKZm3Sz/backend.jpg" alt="backend" width="1200" height="250"/>
+            </Row>
         </div>
     );
 };
