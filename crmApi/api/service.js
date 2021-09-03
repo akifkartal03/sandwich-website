@@ -22,7 +22,7 @@ const getAll1 = () => {
       {
         ChannelType: "24",
         ApplicationCode: "DKAPP",
-        Filter: -1,
+        Filter: 1,
       },
     ],
   };
@@ -69,9 +69,11 @@ const getAll2 = (customerNo) => {
 
   return http.post("/GetCustomerDefinedCampaigns", options, axiosConfig);
 };
+
+
 module.exports = {
-    getAll1,
-    GetCustomerChannelCampaignList,
-    GetCustomerDefinedCampaigns,
-    getAll2,
+  getAll1,
+  GetCustomerChannelCampaignList,
+  GetCustomerDefinedCampaigns,
+  getAll2,
 };
