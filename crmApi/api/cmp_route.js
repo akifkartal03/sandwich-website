@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { response } = require("express");
 let cmpService = require("./service");
-let example_json = require("../campaign_example.json");
+let example_json = require("../interApi_example.json");
 
 router.route("/GetCustomerChannelCampaignList").get((req, res) => {
   cmpService
@@ -32,7 +32,7 @@ router.route("/GetDummyCampaigns").get((req, res) => {
 router.route("/GetDummyCampaigns/:id").get((req, res) => {
   let isFound = false;
   example_json.map((value, index) => {
-    if(value.campaignId == req.params.id){
+    if(value.CampaignId == req.params.id){
       isFound = true;
       res.status(200).json(value);
     }
@@ -42,12 +42,20 @@ router.route("/GetDummyCampaigns/:id").get((req, res) => {
   }
 });
 
-router.route("/GetTemplateCustomerChannelCampaignList").get((req, res) => {
+router.route("/GetCustomerChannelCampaignList/:id").get((req, res) => {
+  let isFound = false;
   cmpService
     .GetCustomerChannelCampaignList()
     .then((response) => {
-      //console.log(response);
-      res.json(response);
+      response.map((value, index) => {
+        if(value.CampaignId == req.params.id){
+          isFound = true;
+          res.status(200).json(value);
+        }
+      })
+      if(!isFound){
+        res.status(400).json({"Error":"Not Found"});
+      }
     })
     .catch((e) => {
       console.log(e);
