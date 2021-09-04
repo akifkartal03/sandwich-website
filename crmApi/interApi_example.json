@@ -2,6 +2,7 @@
   {
     "$type": "CampaignStatus",
     "CampaignCausesExp": "Bireysel Kampanya",
+    "avatarUrl": "https://i.ibb.co/mTMjJnK/hot-sale.png",
     "CampaignCauses": 1,
     "CouponDefinition": null,
     "CrmProductCode": null,
@@ -64,6 +65,7 @@
   {
     "$type": "CampaignStatus",
     "CampaignCausesExp": "Bireysel Kampanya",
+    "avatarUrl": "https://i.ibb.co/GWzvJrD/50-percent.png", 
     "CampaignCauses": 1,
     "CouponDefinition": null,
     "CrmProductCode": null,
@@ -126,6 +128,7 @@
   {
     "$type": "CampaignStatus",
     "CampaignCausesExp": "Bireysel Kampanya",
+    "avatarUrl": "https://i.ibb.co/kSjfvRd/gift2.png", 
     "CampaignCauses": 1,
     "CouponDefinition": null,
     "CrmProductCode": null,
@@ -188,6 +191,7 @@
   {
     "$type": "CampaignStatus",
     "CampaignCausesExp": "Bireysel Kampanya",
+    "avatarUrl": "https://i.ibb.co/nbrkDmy/percentage.png", 
     "CampaignCauses": 1,
     "CouponDefinition": null,
     "CrmProductCode": null,
@@ -250,6 +254,7 @@
   {
     "$type": "CampaignStatus",
     "CampaignCausesExp": "Bireysel Kampanya",
+    "avatarUrl": "https://i.ibb.co/mTMjJnK/hot-sale.png", 
     "CampaignCauses": 1,
     "CouponDefinition": null,
     "CrmProductCode": null,
@@ -312,6 +317,7 @@
   {
     "$type": "CampaignStatus",
     "CampaignCausesExp": "Bireysel Kampanya",
+    "avatarUrl": "https://i.ibb.co/mTMjJnK/hot-sale.png", 
     "CampaignCauses": 1,
     "CouponDefinition": null,
     "CrmProductCode": null,
