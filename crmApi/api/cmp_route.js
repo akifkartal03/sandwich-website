@@ -13,6 +13,7 @@ router.route("/GetCustomerChannelCampaignList").get((req, res) => {
     .catch((e) => {
       console.log(e);
     });
+    
 });
 router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
   cmpService
@@ -27,6 +28,7 @@ router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
 });
 
 router.route("/GetDummyCampaigns").get((req, res) => {
+  console.log(req.body);
   res.json(example_json);
 });
 router.route("/GetDummyCampaigns/:id").get((req, res) => {
