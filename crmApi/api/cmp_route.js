@@ -64,11 +64,10 @@ router.route("/GetCustomerChannelCampaignList/:id").get((req, res) => {
     });
 });
 
-router.route("/SaveCustomerAnswer").get((req, res) => {
+router.route("/SaveCustomerAnswer").post((req, res) => {
   cmpService
     .saveCustomer(req.body)
     .then((response) => {
-      //console.log(response);
       res.json(response);
     })
     .catch((e) => {
