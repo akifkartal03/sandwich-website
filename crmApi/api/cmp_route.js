@@ -13,6 +13,7 @@ router.route("/GetCustomerChannelCampaignList").get((req, res) => {
     .catch((e) => {
       console.log(e);
     });
+    
 });
 router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
   cmpService
@@ -27,6 +28,7 @@ router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
 });
 
 router.route("/GetDummyCampaigns").get((req, res) => {
+  console.log(req.body);
   res.json(example_json);
 });
 router.route("/GetDummyCampaigns/:id").get((req, res) => {
@@ -60,6 +62,19 @@ router.route("/GetCustomerChannelCampaignList/:id").get((req, res) => {
     .catch((e) => {
       console.log(e);
     });
+});
+
+router.route("/SaveCustomerAnswer").get((req, res) => {
+  cmpService
+    .saveCustomer(req.body)
+    .then((response) => {
+      //console.log(response);
+      res.json(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+    
 });
 
 
