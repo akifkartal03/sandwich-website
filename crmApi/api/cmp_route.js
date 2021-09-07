@@ -64,6 +64,19 @@ router.route("/GetCustomerChannelCampaignList/:id").get((req, res) => {
     });
 });
 
+router.route("/SaveCustomerAnswer").get((req, res) => {
+  cmpService
+    .saveCustomer(req.body)
+    .then((response) => {
+      //console.log(response);
+      res.json(response);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+    
+});
+
 
 
 module.exports = router;

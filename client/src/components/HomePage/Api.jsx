@@ -5,8 +5,8 @@ const Api = props => {
         'https://crm5api.herokuapp.com/api/v1/GetCustomerChannelCampaignList',
         'https://crm5api.herokuapp.com/api/v1/GetCustomerChannelCampaignList/:CampaignId',
         'https://crm5api.herokuapp.com/api/v1/GetCustomerDefinedCampaigns/:CustomerNo',
+        'https://crm5api.herokuapp.com/api/v1/SaveCustomerAnswer',
         'https://crm5api.herokuapp.com/api/v1/GetDummyCampaigns',
-        'https://crm5api.herokuapp.com/api/v1/GetDummyCampaigns/:CampaignId'
     ];
     return (
         <div
