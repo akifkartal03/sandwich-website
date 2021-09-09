@@ -15,6 +15,18 @@ router.route("/GetCustomerChannelCampaignList").get((req, res) => {
     });
     
 });
+router.route("/GetDefaults").get((req, res) => {
+  res.json(cmpService.GetGeneral());
+    
+});
+router.route("/GetStories").get((req, res) => {
+  res.json(cmpService.GetStories());
+    
+});
+router.route("/GetDonations").get((req, res) => {
+  res.json(cmpService.GetDonation());
+    
+});
 router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
   cmpService
     .GetCustomerDefinedCampaigns(req.params.id)
