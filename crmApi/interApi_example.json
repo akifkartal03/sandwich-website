@@ -184,7 +184,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Game intro 2020-2021",
-    "CampaignId": 91289,
+    "CampaignId": 84820,
     "ScenarioId": 59317,
     "CampaignPrizesExp": "Deniz Bonus kredi kartıyla 10 - 28 Ekim 2021 tarihleri arasında market sektörinde yapılan her 100 TL ve üzeri alışverişe 10 TL bonus ; toplamda 10 adet 100 TL alışverişe tam 100 TL Bonus kazanılabilecektir. Kazanılan bonuslar 30 Ekim 2021'de kartlara yüklenecektir, 08 Kasım 2021 gün sonuna kadar kullanılmayan bonuslar geri alınacaktır. Aynı gün içinde yapılan ilk işlem geçerli olacaktır. Kampanyaya katılımdan itibaren yapılan alışverişler geçerli olacaktır. Bonus kullanımları kampanyaya dahil değildir. Kampanyaya ticari kartlar dahil değildir."
   },
@@ -557,7 +557,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Hepsiburada’da 30 TL indirim Deniz’den!",
-    "CampaignId": 91289,
+    "CampaignId": 90073,
     "ScenarioId": 59442,
     "CampaignPrizesExp": "Zorunlu Bilgilendirme"
   },
@@ -719,7 +719,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Gelecek Nesiller için Nefes Olmak İster Misiniz?",
-    "CampaignId": 91291,
+    "CampaignId": 92495,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -769,7 +769,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Alışveriş Yaparken İyilik Yapmak İster Misiniz?",
-    "CampaignId": 91505,
+    "CampaignId": 91497,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
