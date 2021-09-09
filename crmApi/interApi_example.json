@@ -278,7 +278,7 @@
         "ActionEndDate": "2020-12-31T23:59:00",
         "Priority": 5,
         "TemplateCode": "Default",
-        "Json": "{\"ImageUrl\":\"https://www.dogtas.com/images/uploaded/blogimages/okula-donus/okul-cantasi-ve-kitaplar.jpg\",\"Tag\":\"\",\"ShortExplanation\":\"Hemen Katıl\",\"Summary\":\"1– 30 Eylül 2021 tarihleri arasında kampanyaya DenizKartım’dan ya da SMS ile katıldıktan sonra, eğitim kurumlarında yapacağınız 500 TL - 150.000 TL arası peşin ödemeleriniz sonradan 4 taksite bölünecektir. Sadece yurtiçinde yapılan peşin işlemler harcamalar dahildir. DenizBank’ın kampanyayı herhangi bir zamanda sonlandırma hakkı ve kampanya şartlarında değişiklik yapma hakkı saklıdır. Bu durumda katılımcılar hiçbir hak iddia etmeyeceklerini kabul eder. Kampanyaya Bonus sanal kartlar, internetten yapılan harcamalar, MoTo (Mail order, Telephone order), temassız işlemler dahildir.\",\"CampaignConditions\":\"adadasd\",\"WillAskForEnrollment\":false,\"CanUserShareCampaign\":false,\"IsAnonymous\":false,\"IsWeb\":false,\"IsAppluaseShow\":false,\"IsAttendeesCount\":false,\"RewardAmountDescription\":\"\",\"ActivityName\":\"\",\"ActivityDate\":null}",
+        "Json": "{\"ImageUrl\":\"https://www.dogtas.com/images/uploaded/blog-images/okula-donus/okul-cantasi-ve-kitaplar.jpg\",\"Tag\":\"\",\"ShortExplanation\":\"Hemen Katıl\",\"Summary\":\"1– 30 Eylül 2021 tarihleri arasında kampanyaya DenizKartım’dan ya da SMS ile katıldıktan sonra, eğitim kurumlarında yapacağınız 500 TL - 150.000 TL arası peşin ödemeleriniz sonradan 4 taksite bölünecektir. Sadece yurtiçinde yapılan peşin işlemler harcamalar dahildir. DenizBank’ın kampanyayı herhangi bir zamanda sonlandırma hakkı ve kampanya şartlarında değişiklik yapma hakkı saklıdır. Bu durumda katılımcılar hiçbir hak iddia etmeyeceklerini kabul eder. Kampanyaya Bonus sanal kartlar, internetten yapılan harcamalar, MoTo (Mail order, Telephone order), temassız işlemler dahildir.\",\"CampaignConditions\":\"adadasd\",\"WillAskForEnrollment\":false,\"CanUserShareCampaign\":false,\"IsAnonymous\":false,\"IsWeb\":false,\"IsAppluaseShow\":false,\"IsAttendeesCount\":false,\"RewardAmountDescription\":\"\",\"ActivityName\":\"\",\"ActivityDate\":null}",
         "Actions": null
       },
       {
@@ -340,7 +340,7 @@
         "ActionEndDate": "2020-12-31T23:59:00",
         "Priority": 5,
         "TemplateCode": "Default",
-        "Json": "{\"ImageUrl\":\"https://www.otoraf.com/wpcontent/uploads/2020/07/BP.jpg\",\"Tag\":\"\",\"ShortExplanation\":\"Hemen Katıl\",\"Summary\":\"Kampanya 16 Ağustos – 30 Eylül 2021 tarihleri arasında Bonus üyesi BP istasyonlarında geçerlidir. 16 Ağustos – 30 Eylül 2021 tarihleri arasında kampanyaya SMS veya DenizKampanyam’la katılarak Bonus üyesi BP istasyonlarında; farklı günlerde ve tek seferde, Bonus poslarından 4 defa 125 TL ve üzeri akaryakıt ya da oto gaz harcaması yapın; 30 TL indirim kazanın. Kampanyadan yararlanabilmek için işlemlerin mutlaka Bonus POS'undan geçmesi gerekmektedir. Müşteriler 6 20 Ekim 2021 tarihleri arasında Bonus üyesi BP istasyonlarında 5. kez yapılacak akaryakıt ve/veya oto gaz alımlarında indirim alacaklardır. 5. harcama için minimum harcama tutarı bulunmamaktadır. BP Taşıtmatik kullanıcıları kampanyadan faydalanamazlar.\",\"CampaignConditions\":\"adadasd\",\"WillAskForEnrollment\":false,\"CanUserShareCampaign\":false,\"IsAnonymous\":false,\"IsWeb\":false,\"IsAppluaseShow\":false,\"IsAttendeesCount\":false,\"RewardAmountDescription\":\"\",\"ActivityName\":\"\",\"ActivityDate\":null}",
+        "Json": "{\"ImageUrl\":\"https://www.otoraf.com/wp-content/uploads/2020/07/BP.jpg\",\"Tag\":\"\",\"ShortExplanation\":\"Hemen Katıl\",\"Summary\":\"Kampanya 16 Ağustos – 30 Eylül 2021 tarihleri arasında Bonus üyesi BP istasyonlarında geçerlidir. 16 Ağustos – 30 Eylül 2021 tarihleri arasında kampanyaya SMS veya DenizKampanyam’la katılarak Bonus üyesi BP istasyonlarında; farklı günlerde ve tek seferde, Bonus poslarından 4 defa 125 TL ve üzeri akaryakıt ya da oto gaz harcaması yapın; 30 TL indirim kazanın. Kampanyadan yararlanabilmek için işlemlerin mutlaka Bonus POS'undan geçmesi gerekmektedir. Müşteriler 6 20 Ekim 2021 tarihleri arasında Bonus üyesi BP istasyonlarında 5. kez yapılacak akaryakıt ve/veya oto gaz alımlarında indirim alacaklardır. 5. harcama için minimum harcama tutarı bulunmamaktadır. BP Taşıtmatik kullanıcıları kampanyadan faydalanamazlar.\",\"CampaignConditions\":\"adadasd\",\"WillAskForEnrollment\":false,\"CanUserShareCampaign\":false,\"IsAnonymous\":false,\"IsWeb\":false,\"IsAppluaseShow\":false,\"IsAttendeesCount\":false,\"RewardAmountDescription\":\"\",\"ActivityName\":\"\",\"ActivityDate\":null}",
         "Actions": null
       },
       {
@@ -650,7 +650,7 @@
         "ActionEndDate": "2021-12-30T23:00:00",
         "Priority": 1,
         "TemplateCode": "Discover",
-        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Bu ay Deniz’in Kalbi Kampanyamızda Eslem bebeğimiz var. Tedavisi onun minik kalbi ve ailesi için zor. Tedavi olmak için çoğu zaman aç olmak zorunda. Tedavinin tamamlanması için çok az süremiz kaldı. Bu süreyi daha da kısaltmak bizim elimizde. Eslem için DenizBank müşterisi olarak el eleyiz. Sizde Eslem’in gülümsemesinin daim olmasını istiyorsanız Deniz’in Kalbi kampanyamızı katılabilirsiniz. Deniz’in kalbi kampanyalarımızı takip etmek isterseniz bildirimleri aktif hale getirebilirsiniz.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://pbs.twimg.com/media/E-bDgrWUAMDmqQ?format=jpg&name=medium\"}",
+        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Bu ay Deniz’in Kalbi Kampanyamızda Eslem bebeğimiz var. Tedavisi onun minik kalbi ve ailesi için zor. Tedavi olmak için çoğu zaman aç olmak zorunda. Tedavinin tamamlanması için çok az süremiz kaldı. Bu süreyi daha da kısaltmak bizim elimizde. Eslem için DenizBank müşterisi olarak el eleyiz. Sizde Eslem’in gülümsemesinin daim olmasını istiyorsanız Deniz’in Kalbi kampanyamızı katılabilirsiniz. Deniz’in kalbi kampanyalarımızı takip etmek isterseniz bildirimleri aktif hale getirebilirsiniz.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://pbs.twimg.com/media/E-bD-grWUAMDmqQ?format=jpg&name=medium\"}",
         "Actions": null
       },
       {
@@ -700,7 +700,7 @@
         "ActionEndDate": "2021-12-30T23:00:00",
         "Priority": 1,
         "TemplateCode": "Discover",
-        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Ülkemizin farklı bölgelerinde meydana gelen ve hepimizi derinden yaralayan yangınlarda hayatını kaybedenler başta olmak üzere etkilenen tüm canlıların ve ormanlarımızın acısını içimizde hissediyoruz. Gelecek nesillerimiz için ormanlarımızı yeniden canlandırmak ister misiniz ? Denizbank müşterisi olarak bir fidan siz de dikebilirsiniz. Tek yapmanız gereken kampanyaya katılmak ve ülkemizin yeniden yeşillenmesine katkıda bulunmak.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://assets.change.org/photos/8/oa/vr/QCOAvrYyIEcqwDj- 800x450-noPad.jpg?1628057440\"}",
+        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Ülkemizin farklı bölgelerinde meydana gelen ve hepimizi derinden yaralayan yangınlarda hayatını kaybedenler başta olmak üzere etkilenen tüm canlıların ve ormanlarımızın acısını içimizde hissediyoruz. Gelecek nesillerimiz için ormanlarımızı yeniden canlandırmak ister misiniz ? Denizbank müşterisi olarak bir fidan siz de dikebilirsiniz. Tek yapmanız gereken kampanyaya katılmak ve ülkemizin yeniden yeşillenmesine katkıda bulunmak.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://assets.change.org/photos/8/oa/vr/QCOAvrYyIEcqwDj-800x450-noPad.jpg?1628057440\"}",
         "Actions": null
       },
       {
@@ -750,7 +750,7 @@
         "ActionEndDate": "2021-12-30T23:00:00",
         "Priority": 1,
         "TemplateCode": "Discover",
-        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Denizkartımla yaptığınız her alışverişte iyilik yapabilirsiniz. Denizbank yaptığınız harcamaların % 0.5’ini her ay kullanıcılarımız tarafından vakfa bağışta bulunur. Sizden herhangi bir koşul ya da ücret talep edilmeyecektir. Tek yapmanız gereken kampanyaya katılmak. Birlikte fark yaratabiliriz.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://www.antevenio.com/usa/wpcontent/uploads/2019/08/Techniques-for-an-NGO-dest.jpg\"}",
+        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Denizkartımla yaptığınız her alışverişte iyilik yapabilirsiniz. Denizbank yaptığınız harcamaların % 0.5’ini her ay kullanıcılarımız tarafından vakfa bağışta bulunur. Sizden herhangi bir koşul ya da ücret talep edilmeyecektir. Tek yapmanız gereken kampanyaya katılmak. Birlikte fark yaratabiliriz.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://www.antevenio.com/usa/wp-content/uploads/2019/08/Techniques-for-an-NGO-dest.jpg\"}",
         "Actions": null
       },
       {
@@ -775,7 +775,7 @@
   },
   {
     "$type": "CampaignStatus",
-    "CampaignCausesExp": "Bireysel Kampanya",
+    "CampaignCausesExp": "Team5",
     "CampaignCauses": 1,
     "CouponDefinition": null,
     "CrmProductCode": null,
@@ -800,7 +800,7 @@
         "ActionEndDate": "2021-12-30T23:00:00",
         "Priority": 1,
         "TemplateCode": "Discover",
-        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Döndür döndür test 1\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://www.vetbilgi.com/wp-content/uploads/2017/01/kedi-vekar-9.jpg\"}",
+        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Kış mevsimi olanca sertliğiyle yüzünü gösteriyor. Oysa sokaklarda yaşayanlar kış gelsin istemiyor. Yalnızca sokakta yaşayan insanlar için değil hayvanlar için de kış acımasız. Sahipsiz hayvanların sokaktaki yaşamı kış şartlarıyla birlikte iyice zorlaşıyor. Sığınacak bir yer bulamayanlar donarak ölürken, yiyecek bulamadığı için açlıktan ölenler de oldukça fazla. Buna artık bir dur denmeli ve bir şeyler yapmalıyız. Bu kampanyayı destekleyerek bu kış onları donarak ölmekten kurtarabilirsiniz. Unutma kampanyaya DenizPuanları da gönderebilirsin ya da sadece onlar için burada olduğunu gösterebilirsin.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://www.vetbilgi.com/wp-content/uploads/2017/01/kedi-ve-kar-9.jpg\"}",
         "Actions": null
       },
       {
@@ -825,7 +825,7 @@
   },
   {
     "$type": "CampaignStatus",
-    "CampaignCausesExp": "Bireysel Kampanya",
+    "CampaignCausesExp": "Team5",
     "CampaignCauses": 1,
     "CouponDefinition": null,
     "CrmProductCode": null,
