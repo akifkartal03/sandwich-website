@@ -750,7 +750,7 @@
         "ActionEndDate": "2021-12-30T23:00:00",
         "Priority": 1,
         "TemplateCode": "Discover",
-        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Denizkartımla yaptığınız her alışverişte iyilik yapabilirsiniz. Denizbank yaptığınız harcamaların % 0.5’ini her ay kullanıcılarımız tarafından vakfa bağışta bulunur. Sizden herhangi bir koşul ya da ücret talep edilmeyecektir. Tek yapmanız gereken kampanyaya katılmak. Birlikte fark yaratabiliriz.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://www.antevenio.com/usa/wp-content/uploads/2019/08/Techniques-for-an-NGO-dest.jpg\"}",
+        "Json": "{\"Header\":\"Keşfet 1\",\"ShortExplanation\":\"Denizkartımla yaptığınız her alışverişte iyilik yapabilirsiniz. Denizbank yaptığınız harcamaların % 0.5’ini her ay kullanıcılarımız tarafından vakfa bağışta bulunur. Sizden herhangi bir koşul ya da ücret talep edilmeyecektir. Tek yapmanız gereken kampanyaya katılmak. Birlikte fark yaratabiliriz.\",\"MenuCode\":\"90\",\"MenuName\":\"Parola belirle\",\"SimilarGroupCode\":\"Parola belirle\",\"Title\":\"Parola belirle\",\"IsAnonymous\":false,\"ButtonCode\":\"90\",\"ButtonName\":\"Parola belirle\",\"ExternalLink\":\"https://i.ibb.co/ZLpFGyt/rcp.jpg\"}",
         "Actions": null
       },
       {
