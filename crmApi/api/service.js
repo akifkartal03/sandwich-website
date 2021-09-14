@@ -1,7 +1,5 @@
 const http = require("./htpp_common");
-const axios = require("axios");
 let example_json = require("../interApi_example.json");
-
 function GetCustomerChannelCampaignList() {
   return getAll1()
     .then((response) => {
@@ -26,7 +24,6 @@ function GetCustomerChannelCampaignList() {
       console.log(e);
     });
 }*/
-
 function GetStories() {
   let arr = [];
   example_json.map((value) => {
@@ -63,6 +60,7 @@ function GetGeneral() {
   });
   return arr;
 }
+
 
 const getAll1 = () => {
   const options = {
