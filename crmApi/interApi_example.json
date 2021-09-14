@@ -58,7 +58,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Game intro 2020-2021",
-    "CampaignId": 84682,
+    "CampaignId": 96108,
     "ScenarioId": 59317,
     "CampaignPrizesExp": "1– 30 Kasım 2021 tarihleri arasında kampanyaya DenizKartım’dan ya da SMS ile katıldıktan sonra, yabancı dil eğitim kurumlarında yapacağınız 500 TL – 10000 arası peşin ödemeleriniz sonradan 4 taksite bölünecektir. Sadece yurtiçinde yapılan peşin işlemler harcamalar dahildir. DenizBank’ın kampanyayı herhangi bir zamanda sonlandırma hakkı ve kampanya şartlarında değişiklik yapma hakkı saklıdır. Bu durumda katılımcılar hiçbir hak iddia etmeyeceklerini kabul eder. Kampanyaya Bonus sanal kartlar, internetten yapılan harcamalar, MoTo (Mail order, Telephone order), temassız işlemler dahildir."
   },
@@ -121,7 +121,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Game intro 2020-2021",
-    "CampaignId": 85283,
+    "CampaignId": 96109,
     "ScenarioId": 59317,
     "CampaignPrizesExp": "Kampanya 10 Haziran-10 Temmuz 2021 tarih aralığında KFC restoranlarında yapılacak harcamalarda, “Kemiksiz Kutu” özelinde geçerlidir. İndirim, ödeme esnasında manuel olarak restoran tarafından uygulanacaktır. Kampanya kapsamındaki indirimden faydalanmak için DenizKartım uygulamasından tek seferde alacağınız kampanya kodunun ödeme esnasında restoran görevlisine, belirtilmesi ile indirim yapılabilecektir. İndirim kodu tek kullanımlıktır ve bir müşteri kampanyadan sadece 1 kez yararlanabilir. Kampanya başka promosyon ve indirimlerle birleştirilemez. DenizBank ve KFC süre ya da koşullar konusunda önceden haber vermeksizin değişiklik yapma ve yürürlükten kaldırma hakkını saklı tutar."
   },
@@ -184,7 +184,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Game intro 2020-2021",
-    "CampaignId": 84820,
+    "CampaignId": 96110,
     "ScenarioId": 59317,
     "CampaignPrizesExp": "Deniz Bonus kredi kartıyla 10 - 28 Ekim 2021 tarihleri arasında market sektörinde yapılan her 100 TL ve üzeri alışverişe 10 TL bonus ; toplamda 10 adet 100 TL alışverişe tam 100 TL Bonus kazanılabilecektir. Kazanılan bonuslar 30 Ekim 2021'de kartlara yüklenecektir, 08 Kasım 2021 gün sonuna kadar kullanılmayan bonuslar geri alınacaktır. Aynı gün içinde yapılan ilk işlem geçerli olacaktır. Kampanyaya katılımdan itibaren yapılan alışverişler geçerli olacaktır. Bonus kullanımları kampanyaya dahil değildir. Kampanyaya ticari kartlar dahil değildir."
   },
@@ -247,7 +247,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Game intro 2020-2021",
-    "CampaignId": 91291,
+    "CampaignId": 96111,
     "ScenarioId": 59317,
     "CampaignPrizesExp": "Kampanyaya katılarak, e-ticaret sitelerinden yapılacak giyim ve elektronik alışverişlerinde tek seferde 150 TL ve üzeri her 2. harcamaya 25 TL, toplam 100 TL kazan! Kampanyaya sadece internetten yapılan harcamalar dahildir. Aynı gün aynı işyerinden yapılan harcamaların sadece ilki kampanyaya dahil edilecektir. Kampanyaya düzenli ödeme talimatı, otomatik ödemeler, bonus kullanımları, fatura ödemeleri dahil değildir."
   },
@@ -309,7 +309,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Eğitim Harcamalarınıza Ücretsiz 4 Taksit!",
-    "CampaignId": 90071,
+    "CampaignId": 96112,
     "ScenarioId": 59442,
     "CampaignPrizesExp": "Zorunlu Bilgilendirme"
   },
@@ -371,7 +371,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "BP’de 30 TL İndirim!",
-    "CampaignId": 90251,
+    "CampaignId": 96113,
     "ScenarioId": 59442,
     "CampaignPrizesExp": "Zorunlu Bilgilendirme"
   },
@@ -433,7 +433,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Joker’de 7 taksit!",
-    "CampaignId": 91505,
+    "CampaignId": 96114,
     "ScenarioId": 59442,
     "CampaignPrizesExp": "Zorunlu Bilgilendirme"
   },
@@ -495,7 +495,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Müzelerde Ayrıcalık",
-    "CampaignId": 90699,
+    "CampaignId": 96115,
     "ScenarioId": 59442,
     "CampaignPrizesExp": "Zorunlu Bilgilendirme"
   },
@@ -557,7 +557,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Hepsiburada’da 30 TL indirim Deniz’den!",
-    "CampaignId": 90073,
+    "CampaignId": 96116,
     "ScenarioId": 59442,
     "CampaignPrizesExp": "Zorunlu Bilgilendirme"
   },
@@ -619,7 +619,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Oxxo’da 6 Taksit!",
-    "CampaignId": 96104,
+    "CampaignId": 96117,
     "ScenarioId": 59442,
     "CampaignPrizesExp": "Zorunlu Bilgilendirme"
   },
@@ -669,7 +669,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Deniz’in Kalbi Eslem",
-    "CampaignId": 91289,
+    "CampaignId": 96118,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -719,7 +719,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Gelecek Nesiller için Nefes Olmak İster Misiniz?",
-    "CampaignId": 92495,
+    "CampaignId": 96119,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -769,7 +769,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Alışveriş Yaparken İyilik Yapmak İster Misiniz?",
-    "CampaignId": 91497,
+    "CampaignId": 96120,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -819,7 +819,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Sokak hayvanları üşümesin",
-    "CampaignId": 92496,
+    "CampaignId": 96121,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -869,7 +869,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "HER KIZIMIZ BİR İNCİ",
-    "CampaignId": 92912,
+    "CampaignId": 96122,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   }
