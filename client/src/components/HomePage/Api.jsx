@@ -9,7 +9,10 @@ const Api = props => {
         'https://crm5api.herokuapp.com/api/v1/GetDummyCampaigns',
         'https://crm5api.herokuapp.com/api/v1/GetStories',
         'https://crm5api.herokuapp.com/api/v1/GetDefaults',
-        'https://crm5api.herokuapp.com/api/v1/GetDonations'
+        'https://crm5api.herokuapp.com/api/v1/GetDonations',
+        'https://crm5api.herokuapp.com/api/v1/GetInterStories',
+        'https://crm5api.herokuapp.com/api/v1/GetInterDefaults',
+        'https://crm5api.herokuapp.com/api/v1/GetInterDonations'
     ];
     return (
         <div
@@ -38,7 +41,7 @@ const Api = props => {
                     </Col>
                     
                     <Col>
-                        {serviceList.slice(5, 8).map((value, index) => {
+                        {serviceList.slice(5, 11).map((value, index) => {
                             return (
                                 <Row>
                                     <p style={{paddingLeft:"50px"}}>{value}</p>
