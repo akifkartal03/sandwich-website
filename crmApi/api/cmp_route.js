@@ -26,9 +26,9 @@ router.route("/GetDonations").get((req, res) => {
 router.route("/GetInterDefaults").get((req, res) => {
   let arr = [];
   cmpService
-    .GetCustomerChannelCampaignList()
+    .getAll1()
     .then((response) => {
-      response.map((value) => {
+      (response.data).Data.CampaignList.map((value) => {
         if (
           value.CampaignId > 96107 &&
           value.CampaignId < 96123 &&
@@ -46,9 +46,9 @@ router.route("/GetInterDefaults").get((req, res) => {
 router.route("/GetInterStories").get((req, res) => {
   let arr = [];
   cmpService
-    .GetCustomerChannelCampaignList()
+    .getAll1()
     .then((response) => {
-      response.map((value) => {
+      (response.data).Data.CampaignList.map((value) => {
         if (
           value.CampaignId > 96107 &&
           value.CampaignId < 96123 &&
@@ -66,9 +66,9 @@ router.route("/GetInterStories").get((req, res) => {
 router.route("/GetInterDonations").get((req, res) => {
   let arr = [];
   cmpService
-    .GetCustomerChannelCampaignList()
+    .getAll1()
     .then((response) => {
-      response.map((value) => {
+      (response.data).Data.CampaignList.map((value) => {
         if (
           value.CampaignId > 96107 &&
           value.CampaignId < 96123 &&
@@ -85,10 +85,10 @@ router.route("/GetInterDonations").get((req, res) => {
 });
 router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
   cmpService
-    .GetCustomerDefinedCampaigns(req.params.id)
+    .getAll2(req.params.id)
     .then((response) => {
       //console.log(response);
-      res.json(response);
+      res.json((response.data).Data.DefinedCampaignList);
     })
     .catch((e) => {
       console.log(e);
