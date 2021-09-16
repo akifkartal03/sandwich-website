@@ -27,7 +27,7 @@
         "ActionEndDate": "2021-12-31T23:59:00",
         "Priority": 1,
         "TemplateCode": "Story",
-        "Json": "{\"Title\":\"Dil Öğren\",\"MediaUrl\":\"https://i.hizliresim.com/p3ursjs.png\",\"ButtonCode\":\"15\",\"ButtonName\":\"BONUS KAZAN\",\"IsVideo\":false,\"IsAnonymous\":true,\"ImageUrl\":\"https://i.hizliresim.com/hjxo2zq.png\",\"ExternalLink\":\"\"}",
+        "Json": "{\"Title\":\"Dil Öğren\",\"MediaUrl\":\"https://i.hizliresim.com/hjxo2zq.png\",\"ButtonCode\":\"15\",\"ButtonName\":\"BONUS KAZAN\",\"IsVideo\":false,\"IsAnonymous\":true,\"ImageUrl\":\"https://i.hizliresim.com/p3ursjs.png\",\"ExternalLink\":\"\"}",
         "Actions": null
       },
       {
@@ -90,7 +90,7 @@
         "ActionEndDate": "2021-12-31T23:59:00",
         "Priority": 1,
         "TemplateCode": "Story",
-        "Json": "{\"Title\":\"KFC İndirim\",\"MediaUrl\":\"https://i.hizliresim.com/pejn5v7.png\",\"ButtonCode\":\"15\",\"ButtonName\":\"BONUS KAZAN\",\"IsVideo\":false,\"IsAnonymous\":true,\"ImageUrl\":\"https://i.hizliresim.com/2sreszw.png\",\"ExternalLink\":\"\"}",
+        "Json": "{\"Title\":\"KFC İndirim\",\"MediaUrl\":\"https://i.hizliresim.com/2sreszw.png\",\"ButtonCode\":\"15\",\"ButtonName\":\"BONUS KAZAN\",\"IsVideo\":false,\"IsAnonymous\":true,\"ImageUrl\":\"https://i.hizliresim.com/pejn5v7.png\",\"ExternalLink\":\"\"}",
         "Actions": null
       },
       {
@@ -153,7 +153,7 @@
         "ActionEndDate": "2021-12-31T23:59:00",
         "Priority": 1,
         "TemplateCode": "Story",
-        "Json": "{\"Title\":\"Market Alışverişi\",\"MediaUrl\":\"https://i.hizliresim.com/4gjcou2.png\",\"ButtonCode\":\"15\",\"ButtonName\":\"BONUS KAZAN\",\"IsVideo\":false,\"IsAnonymous\":true,\"ImageUrl\":\"https://i.hizliresim.com/edmgvv9.png\",\"ExternalLink\":\"\"}",
+        "Json": "{\"Title\":\"Market Alışverişi\",\"MediaUrl\":\"https://i.hizliresim.com/edmgvv9.png\",\"ButtonCode\":\"15\",\"ButtonName\":\"BONUS KAZAN\",\"IsVideo\":false,\"IsAnonymous\":true,\"ImageUrl\":\"https://i.hizliresim.com/4gjcou2.png\",\"ExternalLink\":\"\"}",
         "Actions": null
       },
       {
@@ -216,7 +216,7 @@
         "ActionEndDate": "2021-12-31T23:59:00",
         "Priority": 1,
         "TemplateCode": "Story",
-        "Json": "{\"Title\":\"Giyim ve Teknoloji\",\"MediaUrl\":\"https://i.hizliresim.com/8c870nx.png\",\"ButtonCode\":\"15\",\"ButtonName\":\"BONUS KAZAN\",\"IsVideo\":false,\"IsAnonymous\":true,\"ImageUrl\":\"https://i.ibb.co/tHK5MpD/MicrosoftTeams-image-7.jpg\",\"ExternalLink\":\"\"}",
+        "Json": "{\"Title\":\"Giyim ve Teknoloji\",\"MediaUrl\":\"https://i.ibb.co/tHK5MpD/Microsoft-Teams-image-7.jpg\",\"ButtonCode\":\"15\",\"ButtonName\":\"BONUS KAZAN\",\"IsVideo\":false,\"IsAnonymous\":true,\"ImageUrl\":\"https://i.hizliresim.com/8c870nx.png\",\"ExternalLink\":\"\"}",
         "Actions": null
       },
       {
