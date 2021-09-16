@@ -669,7 +669,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Deniz’in Kalbi Eslem",
-    "CampaignId": 96118,
+    "CampaignId": 96120,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -719,7 +719,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Gelecek Nesiller için Nefes Olmak İster Misiniz?",
-    "CampaignId": 96119,
+    "CampaignId": 96121,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -769,7 +769,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Alışveriş Yaparken İyilik Yapmak İster Misiniz?",
-    "CampaignId": 96120,
+    "CampaignId": 96118,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -819,7 +819,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "Sokak hayvanları üşümesin",
-    "CampaignId": 96121,
+    "CampaignId": 96122,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   },
@@ -869,7 +869,7 @@
     "ReferenceCampaignId": null,
     "IsActive": true,
     "CampaignName": "HER KIZIMIZ BİR İNCİ",
-    "CampaignId": 96122,
+    "CampaignId": 96119,
     "ScenarioId": 65782,
     "CampaignPrizesExp": "Bireysel Kampanya"
   }
