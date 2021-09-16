@@ -35,7 +35,7 @@
     "CampaignName": "Dil Öğren",
     "CampaignId": 96108,
     "ScenarioId": 70373,
-    "CampaignPrizesExp": "Bireysel Kampanya"
+    "CampaignPrizesExp": "1 – 30 Kasım 2021 tarihleri arasında kampanyaya DenizKartım’dan ya da SMS ile katıldıktan sonra, yabancı dil eğitim kurumlarında yapacağınız 500 TL – 10000 arası peşin ödemeleriniz sonradan 4 taksite bölünecektir. Sadece yurtiçinde yapılan peşin işlemler harcamalar dahildir. DenizBank’ın kampanyayı herhangi bir zamanda sonlandırma hakkı ve kampanya şartlarında değişiklik yapma hakkı saklıdır. Bu durumda katılımcılar hiçbir hak iddia etmeyeceklerini kabul eder. Kampanyaya Bonus sanal kartlar, internetten yapılan harcamalar, MoTo (Mail order, Telephone order), temassız işlemler dahildir."
   },
   {
     "$type": "CampaignStatus",
@@ -73,7 +73,7 @@
     "CampaignName": "KFC İndirim",
     "CampaignId": 96109,
     "ScenarioId": 70374,
-    "CampaignPrizesExp": "Bireysel Kampanya"
+    "CampaignPrizesExp": "Kampanya 10 Haziran-10 Temmuz 2021 tarih aralığında KFC restoranlarında yapılacak harcamalarda, “Kemiksiz Kutu” özelinde geçerlidir. İndirim, ödeme esnasında manuel olarak restoran tarafından uygulanacaktır. Kampanya kapsamındaki indirimden faydalanmak için DenizKartım uygulamasından tek seferde alacağınız kampanya kodunun ödeme esnasında restoran görevlisine, belirtilmesi ile indirim yapılabilecektir. İndirim kodu tek kullanımlıktır ve bir müşteri kampanyadan sadece 1 kez yararlanabilir. Kampanya başka promosyon ve indirimlerle birleştirilemez. DenizBank ve KFC süre ya da koşullar konusunda önceden haber vermeksizin değişiklik yapma ve yürürlükten kaldırma hakkını saklı tutar."
   },
   {
     "$type": "CampaignStatus",
@@ -111,7 +111,7 @@
     "CampaignName": "Market Alışverişi",
     "CampaignId": 96110,
     "ScenarioId": 70375,
-    "CampaignPrizesExp": "Bireysel Kampanya"
+    "CampaignPrizesExp": "Deniz Bonus kredi kartıyla 10 - 28 Ekim 2021 tarihleri arasında market sektörinde yapılan her 100 TL ve üzeri alışverişe 10 TL bonus ; toplamda 10 adet 100 TL alışverişe tam 100 TL Bonus kazanılabilecektir. Kazanılan bonuslar 30 Ekim 2021'de kartlara yüklenecektir, 08 Kasım 2021 gün sonuna kadar kullanılmayan bonuslar geri alınacaktır. Aynı gün içinde yapılan ilk işlem geçerli olacaktır. Kampanyaya katılımdan itibaren yapılan alışverişler geçerli olacaktır. Bonus kullanımları kampanyaya dahil değildir. Kampanyaya ticari kartlar dahil değildir."
   },
   {
     "$type": "CampaignStatus",
@@ -149,7 +149,7 @@
     "CampaignName": "Giyim ve Teknoloji",
     "CampaignId": 96111,
     "ScenarioId": 70376,
-    "CampaignPrizesExp": "Bireysel Kampanya"
+    "CampaignPrizesExp": "Kampanyaya katılarak, e-ticaret sitelerinden yapılacak giyim ve elektronik alışverişlerinde tek seferde 150 TL ve üzeri her 2. harcamaya 25 TL, toplam 100 TL kazan! Kampanyaya sadece internetten yapılan harcamalar dahildir. Aynı gün aynı işyerinden yapılan harcamaların sadece ilki kampanyaya dahil edilecektir. Kampanyaya düzenli ödeme talimatı, otomatik ödemeler, bonus kullanımları, fatura ödemeleri dahil değildir."
   },
   {
     "$type": "CampaignStatus",
@@ -292,7 +292,7 @@
         "ActionEndDate": "2021-12-09T23:59:00",
         "Priority": 1,
         "TemplateCode": "Default",
-        "Json": "{\"ImageUrl\":\"https://i.ibb.co/JqjxHZv/Resim1-424x270.jpg\",\"Tag\":\"\",\"ShortExplanation\":\"Müzelerde Ayrıcalık\",\"Summary\":\"Fırsatı Yakala\",\"CampaignConditions\":\"<div>DenizBank ile Müzekart'a ücretsiz sahip olabilir; tüm Müzekart avantajlarından dilediğince faydalanabilirsin. Ücretsiz Müzekart'ını al gezilecek görülecek birçok müzeyi listene ekle tüm Müzekart ayrıcalıklarından yararlan.</div><div>15 Ocak – 31 Aralık 2021 tarihleri arasında; Mobil Deniz üzerinden kampanyaya kayıt olursan, DenizBank kredi kartları ile muze.gov.tr web sitesi üzerinden gerçekleştireceğin \\\"Müzekart+\\\" satın alımlarında, ödediğin tutarın tamamı kadar yani 67,5 TL indirim yansıtılır.</div><div>Kampanya kapsamında kişi başı en fazla 1 kez ve 67,5 TL tutarında</div><div>indirim kazanabilirsin.</div><div>İndirim tutarı 2 iş günü içinde ekstrene yansıtılacaktır.</div><div>İptal / iade işlemlerinde kazandığın indirim de geri alınacaktır.</div>\",\"WillAskForEnrollment\":false,\"CanUserShareCampaign\":false,\"IsAnonymous\":true,\"IsWeb\":false,\"IsAppluaseShow\":false,\"IsAttendeesCount\":false,\"RewardAmountDescription\":\"\",\"ActivityName\":\"\",\"ActivityDate\":null}",
+        "Json": "{\"ImageUrl\":\"https://i.ibb.co/JqjxHZv/Resim1-424x270.jpg\",\"Tag\":\"\",\"ShortExplanation\":\"Müzelerde Ayrıcalık\",\"Summary\":\"Fırsatı Yakala\",\"CampaignConditions\":\"DenizBank ile Müzekart'a ücretsiz sahip olabilir; tüm Müzekart avantajlarından dilediğince faydalanabilirsin. Ücretsiz Müzekart'ını al gezilecek görülecek birçok müzeyi listene ekle tüm Müzekart ayrıcalıklarından yararlan. 15 Ocak – 31 Aralık 2021 tarihleri arasında; Mobil Deniz üzerinden kampanyaya kayıt olursan, DenizBank kredi kartları ile muze.gov.tr web sitesi üzerinden gerçekleştireceğin Müzekart satın alımlarında, ödediğin tutarın tamamı kadar yani 67,5 TL indirim yansıtılır. Kampanya kapsamında kişi başı en fazla 1 kez ve 67,5 TL tutarında indirim kazanabilirsin. İndirim tutarı 2 iş günü içinde ekstrene yansıtılacaktır. İptal / iade işlemlerinde kazandığın indirim de geri alınacaktır.\",\"WillAskForEnrollment\":false,\"CanUserShareCampaign\":false,\"IsAnonymous\":true,\"IsWeb\":false,\"IsAppluaseShow\":false,\"IsAttendeesCount\":false,\"RewardAmountDescription\":\"\",\"ActivityName\":\"\",\"ActivityDate\":null}",
         "Actions": null
       }
     ],
@@ -406,7 +406,7 @@
         "ActionEndDate": "2021-12-09T23:59:00",
         "Priority": 1,
         "TemplateCode": "Discover",
-        "Json": "{\"Header\":\"Alışveriş Yaparken İyilik Yapmak İster Misiniz?\",\"ShortExplanation\":\"Denizkartımla yaptığınız her alışverişte iyilik yapabilirsiniz. Denizbank yaptığınız harcamaların % 0.5’ini her ay kullanıcılarımız tarafından vakfa bağışta bulunur. Sizden herhangi bir koşul ya da ücret talep edilmeyecektir. Tek yapmanız gereken kampanyaya katılmak. Birlikte fark yaratabiliriz.\",\"MenuCode\":\"\",\"MenuName\":\"\",\"SimilarGroupCode\":\"5\",\"Title\":\"Alışveriş Yaparken İyilik Yapmak İster Misiniz?\",\"IsAnonymous\":true,\"ButtonCode\":\"\",\"ButtonName\":\"\",\"ExternalLink\":\"https://www.antevenio.com/usa/wp-content/uploads/2019/08/Techniques-for-an-NGO-dest.jpg\"}",
+        "Json": "{\"Header\":\"Alışveriş Yaparken İyilik Yapmak İster Misiniz?\",\"ShortExplanation\":\"Denizkartımla yaptığınız her alışverişte iyilik yapabilirsiniz. Denizbank yaptığınız harcamaların % 0.5’ini her ay kullanıcılarımız tarafından vakfa bağışta bulunur. Sizden herhangi bir koşul ya da ücret talep edilmeyecektir. Tek yapmanız gereken kampanyaya katılmak. Birlikte fark yaratabiliriz.\",\"MenuCode\":\"\",\"MenuName\":\"\",\"SimilarGroupCode\":\"5\",\"Title\":\"Alışveriş Yaparken İyilik Yapmak İster Misiniz?\",\"IsAnonymous\":true,\"ButtonCode\":\"\",\"ButtonName\":\"\",\"ExternalLink\":\"https://i.ibb.co/ZLpFGyt/rcp.jpg\"}",
         "Actions": null
       }
     ],
@@ -444,7 +444,7 @@
         "ActionEndDate": "2021-12-09T23:59:00",
         "Priority": 1,
         "TemplateCode": "Discover",
-        "Json": "{\"Header\":\"HER KIZIMIZ BİR İNCİ\",\"ShortExplanation\":\"Denizbank toplumda kadının her alanda hak ettiği güce kavuşması, kadınlara sosyal ve ekonomik hayatta fırsat eşitliği tanınması için sizi ‘Her kızımız Bir inci’ kampanyasına davet ediyor. İlk hedefimiz eğitime imkan bulamayan kızlarımızı hak ettikleri şartlarda eğitim sağlamak. Unutmayalım ‘Güçlü Kadınlar, Güçlü Yarınlar ‘ demektir. Sizde farkındalık oluşturmak istiyorsanız kampanyamıza katılarak destek verebilirsiniz. Eğitim alanlarımıza kitap, defter, kalem ve benzeri yardımlarınızı gönderebilirsiniz. Biz sizin adınıza yardımlarınızı gerekli bölgeleri göndereceğiz.\\nGüçlü yarınlar ve yürek ısıtan gülümsemeler için Denizbank müşterileri el ele!\",\"MenuCode\":\"\",\"MenuName\":\"\",\"SimilarGroupCode\":\"5\",\"Title\":\"HER KIZIMIZ BİR İNCİ\",\"IsAnonymous\":true,\"ButtonCode\":\"\",\"ButtonName\":\"\",\"ExternalLink\":\"https://images.beyazgazete.com/haber/2016/11/10/20161110_bin-395-kiz-cocugu-okula-kazandirildi.jpg\"}",
+        "Json": "{\"Header\":\"HER KIZIMIZ BİR İNCİ\",\"ShortExplanation\":\"Denizbank toplumda kadının her alanda hak ettiği güce kavuşması, kadınlara sosyal ve ekonomik hayatta fırsat eşitliği tanınması için sizi ‘Her kızımız Bir inci’ kampanyasına davet ediyor. İlk hedefimiz eğitime imkan bulamayan kızlarımızı hak ettikleri şartlarda eğitim sağlamak. Unutmayalım ‘Güçlü Kadınlar, Güçlü Yarınlar ‘ demektir. Sizde farkındalık oluşturmak istiyorsanız kampanyamıza katılarak destek verebilirsiniz. Eğitim alanlarımıza kitap, defter, kalem ve benzeri yardımlarınızı gönderebilirsiniz. Biz sizin adınıza yardımlarınızı gerekli bölgeleri göndereceğiz. Güçlü yarınlar ve yürek ısıtan gülümsemeler için Denizbank müşterileri el ele!\",\"MenuCode\":\"\",\"MenuName\":\"\",\"SimilarGroupCode\":\"5\",\"Title\":\"HER KIZIMIZ BİR İNCİ\",\"IsAnonymous\":true,\"ButtonCode\":\"\",\"ButtonName\":\"\",\"ExternalLink\":\"https://images.beyazgazete.com/haber/2016/11/10/20161110_bin-395-kiz-cocugu-okula-kazandirildi.jpg\"}",
         "Actions": null
       }
     ],

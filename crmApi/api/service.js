@@ -1,5 +1,5 @@
 const http = require("./htpp_common");
-let example_json = require("../interApi_example.json");
+let example_json = require("../interApi2_example.json");
 function GetCustomerChannelCampaignList() {
   return getAll1()
     .then((response) => {
@@ -28,7 +28,8 @@ function GetStories() {
   let arr = [];
   example_json.map((value) => {
     if (
-      value.CampaignCausesExp == "Team5" &&
+      value.CampaignId > 96107 &&
+      value.CampaignId < 96123 &&
       value.Details[0].TemplateCode == "Story"
     ) {
       arr.push(value);
@@ -40,7 +41,8 @@ function GetDonation() {
   let arr = [];
   example_json.map((value) => {
     if (
-      value.CampaignCausesExp == "Team5" &&
+      value.CampaignId > 96107 &&
+      value.CampaignId < 96123 &&
       value.Details[0].TemplateCode == "Discover"
     ) {
       arr.push(value);
@@ -52,7 +54,8 @@ function GetGeneral() {
   let arr = [];
   example_json.map((value) => {
     if (
-      value.CampaignCausesExp == "Team5" &&
+      value.CampaignId > 96107 &&
+      value.CampaignId < 96123 &&
       value.Details[0].TemplateCode == "Default"
     ) {
       arr.push(value);
@@ -60,7 +63,6 @@ function GetGeneral() {
   });
   return arr;
 }
-
 
 const getAll1 = () => {
   const options = {
