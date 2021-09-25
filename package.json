@@ -27,7 +27,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.15",
     "nodemon": "^2.0.6",
-    "react-notifications": "^1.7.2"
+    "react-notifications": "^1.7.2",
+    "wil-react-sticky": "^1.0.5"
   },
   "devDependencies": {
     "chai": "^4.2.0",
