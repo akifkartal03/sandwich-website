@@ -16,3 +16,5 @@
 - All Software Engineering Documents about this project can be found [here](https://drive.google.com/drive/folders/1r1hAf49-6icioclAkpMs6auiL0NAM41M?usp=sharing).
 ### Contribution
 - Details of contributors can be found here [Contributors](https://github.com/akifkartal03/sandwich-website/graphs/contributors).
+### Project Management
+- Jira was used as a Project Management tool.

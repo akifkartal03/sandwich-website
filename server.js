@@ -6,7 +6,7 @@ const categoriesRouter = require("./routes/categories");
 const ingredientsRouter = require("./routes/ingredients");
 const recipesRouter = require("./routes/recipes");
 const usersRouter = require("./routes/users");
-const  campaignRouter = require("./crmApi/api/cmp_route");
+const  campaignRouter = require("./tempApi/api/cmp_route");
 require("dotenv").config();
 
 const app = express();
