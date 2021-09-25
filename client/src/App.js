@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
-//import Main from './components/HomePage/Main';
-import API from './components/HomePage/Api';
-//import Footer from './components/HomePage/Footer';
-//import Header from './components/HomePage/Header';
+import Main from './components/HomePage/Main';
+import Footer from './components/HomePage/Footer';
+import Header from './components/HomePage/Header';
+import Sticky from "wil-react-sticky";
 import './Filter.css';
 import './App.css';
 import AllRecipies from './components/AllRecipesPage/AllRecipies';
@@ -14,11 +14,11 @@ import LoginPage from './components/LoginPage/LoginDirect';
 import SignUpPage from './components/SignUpPage/SignUpDirect';
 import Favorites from './components/Favorite_Recipes/Favorite_Recipes';
 import NoFav from './components/Favorite_Recipes/NoFavDirect';
-import Profile from './components/ProfilePage/ProfilePage'
+import Profile from './components/ProfilePage/ProfilePage';
 import { useStore } from './contextAPI/store/Provider';
 import { setUSer } from './contextAPI/actions/LoginAction';
-const App = (props) => {
-    const [store, dispatch] = useStore("");
+const App = props => {
+    const [store, dispatch] = useStore('');
     useEffect(() => {
         const localData = JSON.parse(localStorage.getItem('loginState'));
         if (localData.isLogged) {
@@ -31,9 +31,11 @@ const App = (props) => {
     });
     return (
         <div>
-            
+            <Sticky>
+                <Header />
+            </Sticky>
             <Switch>
-                <Route path="/" exact component={API} />
+                <Route path="/" exact component={Main} />
                 <Route path="/recipe/:id" exact component={Recipe} />
                 <Route path="/allrecipespage" component={AllRecipies} />
                 <Route path="/search" component={SearchData} />
@@ -44,7 +46,7 @@ const App = (props) => {
                 <Route path="/nofav" component={NoFav} />
                 <Route path="" component={Redirect} />
             </Switch>
-            
+            <Footer />
         </div>
     );
 };

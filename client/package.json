@@ -31,7 +31,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.2",
     "react-toastify": "^6.2.0",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "wil-react-sticky": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
