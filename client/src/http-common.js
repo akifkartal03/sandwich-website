@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 export default axios.create({
-    baseURL: "https://crm5api.herokuapp.com/"
-  });
+    baseURL: 'https://sandwichrw.herokuapp.com/',
+});
