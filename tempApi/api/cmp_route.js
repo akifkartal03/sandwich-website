@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { response } = require("express");
 let cmpService = require("./service");
 let example_json = require("../interApi_example.json");
+let customerDefined = require("../customer.json");
 
 router.route("/GetCustomerChannelCampaignList").get((req, res) => {
   cmpService
@@ -28,7 +29,7 @@ router.route("/GetInterDefaults").get((req, res) => {
   cmpService
     .getAll1()
     .then((response) => {
-      (response.data).Data.CampaignList.map((value) => {
+      response.data.Data.CampaignList.map((value) => {
         if (
           value.CampaignId > 96107 &&
           value.CampaignId < 96123 &&
@@ -48,7 +49,7 @@ router.route("/GetInterStories").get((req, res) => {
   cmpService
     .getAll1()
     .then((response) => {
-      (response.data).Data.CampaignList.map((value) => {
+      response.data.Data.CampaignList.map((value) => {
         if (
           value.CampaignId > 96107 &&
           value.CampaignId < 96123 &&
@@ -68,7 +69,7 @@ router.route("/GetInterDonations").get((req, res) => {
   cmpService
     .getAll1()
     .then((response) => {
-      (response.data).Data.CampaignList.map((value) => {
+      response.data.Data.CampaignList.map((value) => {
         if (
           value.CampaignId > 96107 &&
           value.CampaignId < 96123 &&
@@ -84,15 +85,7 @@ router.route("/GetInterDonations").get((req, res) => {
     });
 });
 router.route("/GetCustomerDefinedCampaigns/:id").get((req, res) => {
-  cmpService
-    .getAll2(req.params.id)
-    .then((response) => {
-      //console.log(response);
-      res.json((response.data).Data.DefinedCampaignList);
-    })
-    .catch((e) => {
-      console.log(e);
-    });
+  res.json(customerDefined);
 });
 
 router.route("/GetDummyCampaigns").get((req, res) => {
