@@ -18,3 +18,10 @@
 - Details of contributors can be found here [Contributors](https://github.com/akifkartal03/sandwich-website/graphs/contributors).
 ### Project Management
 - Jira was used as a Project Management tool.
+### Tools and Technologies
+
+- In order to make this project following tools and technologies have been used.
+
+<p align="center">
+  <img width="700" height="400" src="https://i.ibb.co/qkFJbQm/testt22.png">
+</p>
